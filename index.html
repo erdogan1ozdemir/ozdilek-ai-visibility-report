@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Özdilekteyim AI Görünürlük Raporu · Temmuz 2026</title>
-<meta name="description" content="ChatGPT ve Gemini'ye sorulan 56 marka-nötr soru üzerinden Özdilekteyim'in AI cevaplarındaki görünürlüğü incelenmiştir. Marka sorularında %65,2, satın alma sorularında %5,4 visibility ölçülmüştür.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FF7B52'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%23fff' stroke-width='12'/%3E%3C/svg%3E">
+<meta name="description" content="Inbound Visibility Tool ile ChatGPT ve Gemini'ye sorulan 56 marka-nötr soru üzerinden Özdilekteyim'in AI cevaplarındaki görünürlüğü incelenmiştir.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2310332F'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%23FF7B52' stroke-width='12'/%3E%3C/svg%3E">
 <style>
 /* ================= Inbound Design System tokens ================= */
 @font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
@@ -18,8 +18,8 @@
 @font-face{font-family:'Outfit';src:url('fonts/Outfit-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
 @font-face{font-family:'Outfit';src:url('fonts/Outfit-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
 :root{
-  --coral:#FF7B52; --coral-tint:#FFE3D8; --coral-deep:#E85F36;
-  --teal:#10332F; --teal-soft:#1A4238; --mint:#E8F5E9;
+  --coral:#FF7B52; --coral-tint:#FFE3D8; --coral-deep:#E85F36; --coral-soft:#FFB399;
+  --teal:#10332F; --teal-soft:#1A4238; --teal-deep:#0B221E; --mint:#E8F5E9;
   --white:#FFFFFF; --ink:#10332F; --ink-2:#4A4A4A; --ink-3:#8A8A8A;
   --line:#E0E0E0; --line-soft:#F0EDE8;
   --red:#D32F2F; --red-wash:#FFCDD2; --green:#2E7D32; --green-wash:#C8E6C9;
@@ -44,14 +44,11 @@ img{vertical-align:middle}
 .fav.sm{width:15px;height:15px}
 b,strong{font-weight:600}
 .num-b{font-family:var(--font-display);font-weight:700}
-
-/* accent line & DS signature */
 .accent-line{width:44px;height:4px;border-radius:99px;background:var(--coral);margin:0 0 14px}
 
 /* ---------- term tooltips ---------- */
 .term{border-bottom:1.5px dashed var(--coral);cursor:help;position:relative;white-space:nowrap;font-weight:500;color:var(--ink)}
-.term::after{
-  content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%) translateY(4px);
+.term::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%) translateY(4px);
   width:min(300px,72vw);background:var(--teal);color:#fff;font-family:var(--font-body);font-weight:400;
   font-size:12.5px;line-height:1.5;padding:10px 13px;border-radius:var(--r-md);box-shadow:var(--shadow-pop);
   opacity:0;pointer-events:none;transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease);
@@ -60,6 +57,11 @@ b,strong{font-weight:600}
   border:6px solid transparent;border-top-color:var(--teal);opacity:0;transition:opacity var(--dur) var(--ease);z-index:60}
 .term:hover::after,.term:focus-visible::after,.term.open::after,
 .term:hover::before,.term:focus-visible::before,.term.open::before{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* soru popup tetikleyicisi */
+.q-open{border-bottom:2px solid var(--coral);cursor:pointer;font-weight:600;color:inherit;white-space:nowrap}
+.q-open:hover{color:var(--coral-deep)}
+.q-open::after{content:" ↗";font-size:.8em;color:var(--coral)}
 
 /* ---------- progress + nav ---------- */
 #bar{position:fixed;top:0;left:0;height:3px;background:var(--coral);z-index:100;width:0}
@@ -74,17 +76,28 @@ b,strong{font-weight:600}
 #nav a{font-size:12px;font-weight:500;text-decoration:none;color:var(--ink-2);padding:6px 10px;border-radius:var(--r-pill);white-space:nowrap;transition:background var(--dur) var(--ease)}
 #nav a:hover{background:var(--coral-tint);color:var(--coral-deep)}
 
-/* ---------- hero (DS cover: coral full-bleed) ---------- */
-.hero{background:var(--coral);color:#fff;position:relative;overflow:hidden;padding:0 0 56px}
-.hero .ring{position:absolute;right:-160px;top:-160px;width:520px;height:520px;border:56px solid rgba(255,255,255,.16);border-radius:50%;pointer-events:none}
-.hero .ring2{position:absolute;left:-120px;bottom:-220px;width:380px;height:380px;border:44px solid rgba(255,255,255,.1);border-radius:50%;pointer-events:none}
-.hero-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:22px 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;flex-wrap:wrap}
-.hero-top .lg{font-family:var(--font-display);font-weight:800;font-size:15px;letter-spacing:0;text-transform:none}
-.hero h1{color:#fff;font-size:clamp(32px,5.2vw,58px);font-weight:800;line-height:1.08;max-width:820px;margin-top:30px}
-.hero .lead{margin-top:18px;max-width:680px;font-size:clamp(15.5px,1.6vw,18px);font-weight:300;color:rgba(255,255,255,.95)}
-.hero .lead b{font-weight:600}
+/* ---------- hero: premium teal gradient ---------- */
+.hero{color:#fff;position:relative;overflow:hidden;padding:0 0 60px;
+  background:
+    radial-gradient(950px 520px at 88% -12%,rgba(255,123,82,.30),transparent 58%),
+    radial-gradient(760px 460px at -8% 108%,rgba(127,200,174,.14),transparent 62%),
+    radial-gradient(520px 300px at 55% 118%,rgba(255,123,82,.10),transparent 70%),
+    linear-gradient(140deg,var(--teal-deep) 0%,var(--teal) 52%,#174A41 100%)}
+.hero .ring{position:absolute;right:-170px;top:-170px;width:540px;height:540px;border:58px solid rgba(255,123,82,.14);border-radius:50%;pointer-events:none}
+.hero .ring2{position:absolute;left:-130px;bottom:-230px;width:400px;height:400px;border:46px solid rgba(255,255,255,.05);border-radius:50%;pointer-events:none}
+.hero .glowline{position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,123,82,.55),transparent)}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:22px 0;flex-wrap:wrap}
+.hero-top .lt{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
+.hero-top .rt{display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75)}
+.hero-top .rt img{height:22px;width:auto;display:block}
+.hero h1{color:#fff;font-size:clamp(32px,5.2vw,58px);font-weight:800;line-height:1.08;max-width:840px;margin-top:28px}
+.hero h1 .hl{color:var(--coral-soft)}
+.hero .lead{margin-top:18px;max-width:700px;font-size:clamp(15.5px,1.6vw,18px);font-weight:300;color:rgba(255,255,255,.92)}
+.hero .lead b{font-weight:600;color:#fff}
+.hero .lead .q-open{border-color:var(--coral);color:#fff}
+.hero .term{color:#fff;border-color:var(--coral-soft)}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:38px;position:relative;z-index:2}
-.kpi{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:20px 22px;color:var(--ink);text-align:center}
+.kpi{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-pop);padding:20px 22px;color:var(--ink);text-align:center}
 .kpi .v{font-family:var(--font-display);font-weight:800;font-size:clamp(34px,3.6vw,46px);line-height:1.05;color:var(--teal)}
 .kpi .v small{font-size:.5em;font-weight:600}
 .kpi.good .v{color:var(--green)}
@@ -92,22 +105,36 @@ b,strong{font-weight:600}
 .kpi .k{font-size:12.5px;color:var(--ink-2);margin-top:6px;line-height:1.45}
 .kpi .tag{display:inline-block;margin-top:10px;font-size:11px;font-weight:600;padding:3px 12px;border-radius:var(--r-pill);background:var(--coral-tint);color:var(--coral-deep)}
 .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;font-size:12px}
-.hero-meta span{background:rgba(255,255,255,.16);padding:5px 13px;border-radius:var(--r-pill);font-weight:500}
+.hero-meta span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);padding:5px 13px;border-radius:var(--r-pill);font-weight:500}
+.hero-meta .q-open{border-bottom:none;border-color:rgba(255,123,82,.6);background:rgba(255,123,82,.2)}
+
+/* ---------- ToC ---------- */
+.tocwrap{margin-top:-26px;position:relative;z-index:5}
+.toc{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-pop);overflow:hidden}
+.toc>button{all:unset;display:flex;align-items:center;gap:10px;width:100%;box-sizing:border-box;padding:15px 22px;cursor:pointer;
+  font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--teal)}
+.toc>button .chev{margin-left:auto;color:var(--coral);transition:transform var(--dur) var(--ease);font-size:13px}
+.toc.open>button .chev{transform:rotate(180deg)}
+.toc>button .ic{color:var(--coral);font-size:16px}
+.toc ol{list-style:none;display:none;grid-template-columns:1fr 1fr;gap:2px 26px;padding:4px 22px 18px;border-top:1px solid var(--line-soft)}
+.toc.open ol{display:grid}
+.toc li a{display:flex;gap:10px;align-items:baseline;padding:7px 4px;text-decoration:none;color:var(--ink-2);font-size:14px;border-radius:var(--r-sm)}
+.toc li a:hover{background:var(--coral-tint);color:var(--coral-deep)}
+.toc li a .no{font-family:var(--font-display);font-weight:700;font-size:12px;color:var(--coral);min-width:20px}
+@media(max-width:700px){.toc ol{grid-template-columns:1fr}}
 
 /* ---------- sections ---------- */
-section{padding:72px 0}
+section{padding:68px 0}
 section.alt{background:#FAF8F5}
-section.tight{padding:56px 0}
+section.tight{padding:52px 0}
 .crumb{display:inline-flex;gap:7px;align-items:baseline;font-size:12px;color:var(--coral-deep);margin-bottom:12px}
 .crumb .s{font-family:var(--font-display);font-weight:700;letter-spacing:.04em}
-.crumb .t{opacity:.9}
-h2{font-size:clamp(25px,2.6vw,35px);font-weight:700;line-height:1.15;max-width:820px}
-.lede{font-size:clamp(15.5px,1.5vw,17.5px);color:var(--ink-2);max-width:780px;margin-top:14px}
+h2{font-size:clamp(25px,2.6vw,35px);font-weight:700;line-height:1.15;max-width:840px}
+.lede{font-size:clamp(15.5px,1.5vw,17.5px);color:var(--ink-2);max-width:800px;margin-top:14px}
 .lede b,.lede .num-b{color:var(--ink)}
-p{color:var(--ink-2);margin:12px 0;max-width:780px}
+p{color:var(--ink-2);margin:12px 0;max-width:800px}
 p b{color:var(--ink)}
 
-/* split layout */
 .split{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:start;margin-top:34px}
 .split.rev{grid-template-columns:1.15fr 1fr}
 .split .txt p{max-width:none}
@@ -115,7 +142,6 @@ p b{color:var(--ink)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
 @media(max-width:900px){.two{grid-template-columns:1fr}}
 
-/* panels */
 .panel{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:24px 24px 18px;transition:box-shadow var(--dur) var(--ease)}
 .panel:hover{box-shadow:var(--shadow-card-hover)}
 .panel .ph{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px}
@@ -124,19 +150,26 @@ p b{color:var(--ink)}
 .pnote{font-size:13px;color:var(--ink-2);margin-top:14px;border-top:1px solid var(--line-soft);padding-top:12px;max-width:none;line-height:1.55}
 .pnote b{color:var(--ink)}
 
-/* insight list ➔ */
+/* scrollable chart/list area */
+.scrolly{max-height:340px;overflow-y:auto;padding-right:8px;scrollbar-width:thin;scrollbar-color:var(--coral) var(--line-soft)}
+.scrolly::-webkit-scrollbar{width:6px}
+.scrolly::-webkit-scrollbar-track{background:var(--line-soft);border-radius:99px}
+.scrolly::-webkit-scrollbar-thumb{background:var(--coral);border-radius:99px}
+.scrolly.tall{max-height:430px}
+
 .insight-list{list-style:none;margin-top:26px;display:grid;gap:0}
 .insight-list li{position:relative;padding:17px 4px 17px 30px;border-bottom:1px solid var(--line-soft);font-size:15.5px;line-height:1.6;color:var(--ink-2);max-width:900px}
 .insight-list li::before{content:"➔";position:absolute;left:0;top:18px;color:var(--coral);font-weight:600}
 .insight-list b{color:var(--ink);font-weight:600}
 
-/* tiles */
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-top:32px}
 .tile{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:18px 14px;text-align:center}
 .tile .v{font-family:var(--font-display);font-weight:800;font-size:clamp(25px,2.5vw,33px);color:var(--teal)}
 .tile .k{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.45}
+.tile.click{cursor:pointer;transition:box-shadow var(--dur) var(--ease)}
+.tile.click:hover{box-shadow:var(--shadow-card-hover)}
+.tile.click .k u{text-decoration:none;border-bottom:1.5px dashed var(--coral);color:var(--coral-deep);font-weight:600}
 
-/* bar rows */
 .brow{display:grid;grid-template-columns:24px 132px 1fr 54px;align-items:center;gap:10px;padding:6px 0;font-size:13.5px}
 .brow .bn{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink-2)}
 .brow.you .bn{font-weight:700;color:var(--coral-deep)}
@@ -147,11 +180,9 @@ p b{color:var(--ink)}
 .brow.you .bv{color:var(--coral-deep)}
 .brow.wide{grid-template-columns:24px minmax(150px,300px) 1fr 108px}
 .brow.wide .bn{white-space:normal;font-size:13px;line-height:1.35}
-.brow.gold .bf{background:var(--gold)}
 @media(max-width:640px){
   .brow{grid-template-columns:20px 92px 1fr 46px;font-size:12px}
   .brow.wide{grid-template-columns:20px minmax(0,1.3fr) 1fr 84px}
-  .brow.wide .bv{font-size:10.5px;white-space:normal}
   .fav{width:15px;height:15px}
 }
 
@@ -172,11 +203,9 @@ p b{color:var(--ink)}
 .legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
 @media(max-width:640px){.drow{grid-template-columns:20px 88px 1fr;font-size:12px}}
 
-/* donut */
 .donut-wrap{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
 .donut{width:148px;height:148px;flex:none}
 
-/* stacked flow */
 .flow{display:flex;height:52px;border-radius:var(--r-md);overflow:hidden;margin-top:8px;box-shadow:inset 0 0 0 1px rgba(16,51,47,.06)}
 .flow div{min-width:3px}
 .flow-leg{display:grid;grid-template-columns:1fr 1fr;gap:7px 18px;margin-top:14px;font-size:12.5px;color:var(--ink-2)}
@@ -184,6 +213,18 @@ p b{color:var(--ink)}
 .flow-leg i{width:10px;height:10px;border-radius:3px;flex:none}
 .flow-leg b{font-family:var(--font-display);margin-left:auto}
 @media(max-width:640px){.flow-leg{grid-template-columns:1fr}}
+
+/* cluster chart (yeniden tasarım) */
+.cl-row{padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.cl-row:last-child{border-bottom:none}
+.cl-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.cl-head .cn{font-size:13.5px;font-weight:600;color:var(--ink)}
+.cl-head .ck{font-size:11.5px;color:var(--ink-3);font-weight:500}
+.cl-head .cv{font-family:var(--font-display);font-weight:800;font-size:19px;color:var(--teal)}
+.cl-row.weak .cl-head .cv{color:var(--coral-deep)}
+.cl-bar{height:10px;border-radius:99px;background:var(--line-soft);margin-top:8px;position:relative;overflow:hidden}
+.cl-bar i{position:absolute;inset:0 auto 0 0;width:0;border-radius:99px;background:var(--teal);transition:width .9s var(--ease)}
+.cl-row.weak .cl-bar i{background:var(--coral)}
 
 /* tables */
 .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:12px}
@@ -202,50 +243,78 @@ p b{color:var(--ink)}
 
 /* heatmap */
 .hm{width:100%;border-collapse:collapse;font-size:13.5px}
-.hm th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:8px 9px;border-bottom:1.5px solid var(--line);font-weight:600}
+.hm th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:8px 9px;border-bottom:1.5px solid var(--line);font-weight:600;position:sticky;top:0;background:#fff}
 .hm th.c{text-align:center}
 .hm td{padding:8px 9px;border-bottom:1px solid var(--line-soft);color:var(--ink-2)}
 .hm td.nm{display:flex;align-items:center;gap:8px}
 .hm .cv{font-family:var(--font-display);font-weight:600;font-size:12.5px;text-align:center;border-radius:6px;color:var(--teal)}
 .hm tr.you td.nm{font-weight:700;color:var(--coral-deep)}
 
-/* quote */
 .quote{margin:48px auto 0;max-width:860px;position:relative;padding-left:24px}
 .quote::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:99px;background:var(--coral)}
 .quote blockquote{font-family:var(--font-display);font-size:clamp(16.5px,1.8vw,20px);font-weight:400;line-height:1.5;color:var(--ink)}
 .quote cite{display:block;margin-top:12px;font-size:12.5px;font-style:normal;color:var(--ink-3);line-height:1.6}
 
-/* note */
 .note{background:var(--coral-tint);border-radius:var(--r-lg);padding:20px 24px;margin-top:26px}
 .note .nt{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;margin-bottom:6px}
 .note p{margin:0;max-width:none;color:var(--ink)}
 .note.mint{background:var(--mint)}
 .note.mint .nt{color:var(--green)}
 
-/* method cards */
-.mcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:30px}
-.mc{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:20px}
-.mc .mi{font-family:var(--font-display);font-weight:800;font-size:14px;color:var(--coral)}
-.mc h4{font-size:15px;margin:7px 0 5px;font-weight:600}
-.mc p{font-size:13px;margin:0;color:var(--ink-2)}
+/* kompakt metodoloji notları */
+.mnotes{display:grid;grid-template-columns:1fr 1fr;gap:0 34px;margin-top:26px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:10px 26px}
+.mnotes div{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);font-size:13.5px;line-height:1.55;color:var(--ink-2)}
+.mnotes div:nth-last-child(-n+2){border-bottom:none}
+.mnotes .mi{font-family:var(--font-display);font-weight:800;font-size:13px;color:var(--coral);min-width:16px;padding-top:1px}
+.mnotes b{color:var(--ink)}
+@media(max-width:760px){.mnotes{grid-template-columns:1fr}.mnotes div:nth-last-child(2){border-bottom:1px solid var(--line-soft)}}
+
+/* ---------- soru modal ---------- */
+.qmodal{position:fixed;inset:0;z-index:200;display:none;align-items:flex-start;justify-content:center;padding:4vh 16px}
+.qmodal.on{display:flex}
+.qmodal .backdrop{position:absolute;inset:0;background:rgba(11,34,30,.6);backdrop-filter:blur(3px)}
+.qbox{position:relative;background:#fff;border-radius:20px;box-shadow:var(--shadow-pop);width:min(820px,100%);max-height:88vh;display:flex;flex-direction:column;overflow:hidden}
+.qhead{padding:20px 24px 14px;border-bottom:1px solid var(--line-soft)}
+.qhead .row1{display:flex;align-items:center;gap:12px}
+.qhead h3{font-size:18px;font-weight:700;margin-right:auto}
+.qhead .ext{font-size:12px;font-weight:600;text-decoration:none;color:var(--coral-deep);white-space:nowrap}
+.qhead .x{all:unset;cursor:pointer;font-size:20px;line-height:1;color:var(--ink-3);padding:4px 8px;border-radius:8px}
+.qhead .x:hover{background:var(--line-soft);color:var(--ink)}
+.qtabs{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.qtabs button{all:unset;cursor:pointer;font-size:12px;font-weight:600;padding:6px 14px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2)}
+.qtabs button.on{background:var(--teal);color:#fff}
+.qbody{overflow-y:auto;padding:14px 24px 22px;scrollbar-width:thin;scrollbar-color:var(--coral) var(--line-soft)}
+.qbody::-webkit-scrollbar{width:6px}
+.qbody::-webkit-scrollbar-thumb{background:var(--coral);border-radius:99px}
+.qc{padding:15px 2px;border-bottom:1px solid var(--line-soft)}
+.qc:last-child{border-bottom:none}
+.qc .qq{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.45}
+.qc .qmeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px;align-items:center}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2.5px 10px;border-radius:var(--r-pill)}
+.pill.m{background:var(--mint);color:var(--green)}
+.pill.z{background:#E3F0FA;color:#1565C0}
+.pill.c{background:var(--line-soft);color:var(--ink-2)}
+.pill.n{background:var(--teal);color:#fff;font-family:var(--font-display)}
+.pill.zero{background:var(--red-wash);color:var(--red)}
+.pill.pos{background:var(--green-wash);color:var(--green)}
+.qc .qs{margin-top:8px}
+@media(max-width:640px){.qmodal{padding:0}.qbox{max-height:100vh;border-radius:0;width:100%}}
 
 /* footer */
-footer{background:var(--teal);color:rgba(255,255,255,.82);padding:60px 0 42px;font-size:14px}
-footer .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+footer{background:var(--teal);color:rgba(255,255,255,.82);padding:60px 0 42px;font-size:14px;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;right:-140px;bottom:-200px;width:420px;height:420px;border:48px solid rgba(255,123,82,.12);border-radius:50%}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;position:relative}
 @media(max-width:760px){footer .wrap{grid-template-columns:1fr}}
 footer h4{font-family:var(--font-display);color:#fff;font-size:20px;margin-bottom:10px}
 footer .fine{font-size:12px;color:rgba(255,255,255,.62);margin-top:22px;line-height:1.7}
 footer .gl{font-size:12.5px;line-height:1.85}
 footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
+footer .wm{height:20px;width:auto;opacity:.9;margin-top:26px;display:block}
 
-/* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.brow .bf{transition:none}}
-@media(max-width:640px){
-  section{padding:50px 0}
-  .panel{padding:18px 14px 14px}
-}
+@media(max-width:640px){section{padding:50px 0}.panel{padding:18px 14px 14px}}
 </style>
 </head>
 <body>
@@ -269,51 +338,71 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="ring"></div><div class="ring2"></div>
+  <div class="ring"></div><div class="ring2"></div><div class="glowline"></div>
   <div class="wrap">
     <div class="hero-top">
-      <span class="lg">Inbound <span style="opacity:.75">×</span> Özdilekteyim</span>
-      <span>AI Görünürlük Raporu · Temmuz 2026</span>
+      <span class="lt">Özdilekteyim · AI Görünürlük Raporu</span>
+      <span class="rt">Temmuz 2026 <img src="assets/brand/inbound-wordmark-white.png" alt="Inbound"></span>
     </div>
-    <h1>Özdilekteyim AI görünürlük raporu</h1>
-    <p class="lead">ChatGPT ve Gemini'ye <b>56 marka-nötr soru</b> yöneltilmiş; modellerin hangi markaları kendiliğinden andığı ve cevap yazarken hangi kaynakları okuduğu ölçülmüştür. Marka odaklı sorularda güçlü, satın alma odaklı sorularda sınırlı bir görünürlük ölçülmektedir & iki ölçüm arasında yaklaşık <b>12 kat</b> fark bulunmaktadır.</p>
+    <h1>Özdilekteyim <span class="hl">AI görünürlük</span> raporu</h1>
+    <p class="lead">ChatGPT ve Gemini'ye <span class="q-open" data-f="all">56 marka-nötr soru</span> yöneltilmiş; modellerin hangi markaları kendiliğinden <span class="term" data-tip="Mention: markanın AI cevabı metninde yer alması.">mention</span> ettiği ve cevap yazarken hangi kaynakları okuduğu ölçülmüştür. Marka odaklı sorularda güçlü, satın alma odaklı sorularda sınırlı bir görünürlük ölçülmektedir; iki değer arasında yaklaşık <b>12 kat</b> fark bulunmaktadır.</p>
     <div class="kpis">
       <div class="kpi good">
         <div class="v" data-count="65.2">0<small>%</small></div>
-        <div class="k">Marka merceği visibility<br>"hangi marka iyi?" tipi 28 soru</div>
+        <div class="k">Marka perspektifi visibility<br>"hangi marka iyi?" tipi 28 soru</div>
         <span class="tag">#2 / 13 marka · SOV %42,2</span>
       </div>
       <div class="kpi bad">
         <div class="v" data-count="5.4">0<small>%</small></div>
-        <div class="k">Pazaryeri merceği visibility<br>"nereden alınır?" tipi 28 soru</div>
+        <div class="k">Pazaryeri perspektifi visibility<br>"nereden alınır?" tipi 28 soru</div>
         <span class="tag">#5 / 13 platform · SOV %3,5</span>
       </div>
       <div class="kpi">
         <div class="v">3,5</div>
-        <div class="k">Avg. position<br>marka merceğinde anıldığında ortalama sıra</div>
+        <div class="k">Avg. position<br>marka perspektifinde mention edildiğinde ortalama sıra</div>
         <span class="tag">Sentiment 63/100</span>
       </div>
     </div>
     <div class="hero-meta">
-      <span>2 model · ChatGPT + Gemini</span><span>2.098 citation</span><span>618 tekil kaynak domain</span><span>Son 7 gün penceresi</span>
+      <span>2 model · ChatGPT + Gemini</span><span>2.098 citation</span><span>618 tekil kaynak domain</span><span class="q-open" data-f="all">Soru setini görüntüle</span>
     </div>
   </div>
 </header>
 
+<!-- ================= TOC ================= -->
+<div class="tocwrap wrap">
+  <div class="toc" id="toc">
+    <button id="tocbtn" aria-expanded="false"><span class="ic">☰</span> İçindekiler <span class="chev">▾</span></button>
+    <ol id="toclist">
+      <li><a href="#bulgular"><span class="no">01</span> Öne çıkan bulgular</a></li>
+      <li><a href="#metod"><span class="no">02</span> Metodoloji</a></li>
+      <li><a href="#siralama"><span class="no">03</span> İki perspektifte sıralamalar</a></li>
+      <li><a href="#kaynak"><span class="no">04</span> Mention & source visibility</a></li>
+      <li><a href="#dagilim"><span class="no">05</span> Citation kaynakları</a></li>
+      <li><a href="#domainler"><span class="no">06</span> Özdilek domain'leri</a></li>
+      <li><a href="#kategori"><span class="no">07</span> Kategori görünümü</a></li>
+      <li><a href="#market"><span class="no">08</span> Online market soruları</a></li>
+      <li><a href="#model"><span class="no">09</span> Model karşılaştırması</a></li>
+      <li><a href="#soru-tipi"><span class="no">10</span> Soru tipleri & düşük eşikli alanlar</a></li>
+      <li><a href="#notlar"><span class="no">11</span> Metodoloji notları</a></li>
+    </ol>
+  </div>
+</div>
+
 <!-- ================= 01 BULGULAR ================= -->
 <section id="bulgular">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">01</span><span>|</span><span class="t">Öne çıkan bulgular</span></div>
+    <div class="crumb reveal"><span class="s">01</span><span>|</span><span>Öne çıkan bulgular</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal">Öne çıkan bulgular</h2>
     <p class="lede reveal">Altı bulgu aynı tabloyu farklı açılardan göstermektedir: model cevaplarında marka bilinirliği güçlü, ticari görünürlük ise sınırlıdır.</p>
     <ul class="insight-list">
-      <li class="reveal"><b>İki mercek arasında belirgin fark ölçülmüştür.</b> <span class="term" data-tip="Visibility (mention rate): markanın, sorulan soruların yüzde kaçının cevabında anıldığı.">Visibility</span> marka sorularında <span class="num-b">%65,2</span> (13 marka içinde 2. sıra), satın alma sorularında <span class="num-b">%5,4</span> (5. sıra) olarak ölçülmüştür. Modeller Özdilek'i marka olarak tanımakta, alışveriş adresi olarak ise nadiren önermektedir.</li>
-      <li class="reveal"><b>Mention görünürlüğü büyük ölçüde üçüncü taraf kaynaklara dayanmaktadır.</b> Marka sorularındaki <span class="num-b">929</span> <span class="term" data-tip="Citation: AI cevabında kaynak olarak gösterilen URL. Mention'dan farklıdır; cevapta anılmak değil, kaynakça linki olmaktır.">citation</span>'dan yalnızca <span class="num-b">6</span>'sı (%0,6) ozdilekteyim.com'a aittir. Tek bir çeyiz <span class="term" data-tip="Listicle: 'en iyi X markaları' formatındaki liste içerikleri.">listicle</span>'ı tek başına 12 citation almıştır.</li>
-      <li class="reveal"><b>Karaca ile fark mention'da değil, kaynak tarafında görülmektedir.</b> <span class="term" data-tip="Mention: markanın AI cevabının metninde anılması.">Mention</span> farkı 8,9 puan iken (%74,1'e karşı %65,2), <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> farkı yaklaşık 4,6 kattır (%25,0'a karşı %5,4). Karaca'ya ait siteler 46 citation alırken ozdilekteyim.com 6 citation'da kalmaktadır.</li>
+      <li class="reveal"><b>İki perspektif arasında belirgin fark ölçülmüştür.</b> <span class="term" data-tip="Visibility (mention rate): markanın, sorulan soruların yüzde kaçının cevabında yer aldığı.">Visibility</span> marka sorularında <span class="num-b">%65,2</span> (13 marka içinde 2. sıra), satın alma sorularında <span class="num-b">%5,4</span> (5. sıra) olarak ölçülmüştür. Modeller Özdilek'i marka olarak tanımakta, alışveriş adresi olarak ise nadiren önermektedir.</li>
+      <li class="reveal"><b>Mention görünürlüğü büyük ölçüde üçüncü taraf kaynaklara dayanmaktadır.</b> Marka sorularındaki <span class="num-b">929</span> <span class="term" data-tip="Citation: AI cevabında kaynak olarak gösterilen URL. Mention'dan farklıdır; cevapta yer almak değil, kaynakça linki olmaktır.">citation</span>'dan yalnızca <span class="num-b">6</span>'sı (%0,6) ozdilekteyim.com'a aittir. Tek bir çeyiz <span class="term" data-tip="Listicle: 'en iyi X markaları' formatındaki liste içerikleri.">listicle</span>'ı tek başına 12 citation almıştır.</li>
+      <li class="reveal"><b>Karaca ile fark mention'da değil, kaynak tarafında görülmektedir.</b> <span class="term" data-tip="Mention: markanın AI cevabı metninde yer alması.">Mention</span> farkı 8,9 puan iken (%74,1'e karşı %65,2), <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> farkı yaklaşık 4,6 kattır (%25,0'a karşı %5,4). Karaca'ya ait siteler 46 citation alırken ozdilekteyim.com 6 citation'da kalmaktadır.</li>
       <li class="reveal"><b>Güçlü kategorilerde de kaynak payı sınırlıdır.</b> Havlu & bornoz & peştemal ailesindeki 8 soruda dağıtılan <span class="num-b">236</span> görünür citation'dan <span class="num-b">4</span>'ü Özdilek ekosistemine aittir ve dördü de PDF formatındaki katalog dosyalarıdır. "En iyi yerli havlu markası" sorusunda Özdilek adına citation alan tek sayfa Trendyol'daki Özdilek rafıdır.</li>
-      <li class="reveal"><b>Online market kümesinde görünürlük ölçülememiştir.</b> 7 market sorusunda dağıtılan <span class="num-b">293</span> görünür citation içinde Özdilek ekosistemi yer almamaktadır. Hibrit modeli birebir tarif eden "hem tekstil hem market, tek platform" sorusunda dahi cevaplar 12 farklı siteden kaynak göstermektedir.</li>
-      <li class="reveal"><b>Görünürlük iki model arasında farklılaşmaktadır.</b> Pazaryeri merceğinde ChatGPT görünürlüğü <span class="num-b">%1,8</span> (1/56), Gemini <span class="num-b">%9,1</span> (5/55) düzeyindedir. Panel genelinde Gemini +9,9 puan artarken ChatGPT -8,8 puan gerilemiştir.</li>
+      <li class="reveal"><b>Online market cluster'ında görünürlük ölçülememiştir.</b> 7 market sorusunda dağıtılan <span class="num-b">293</span> görünür citation içinde Özdilek ekosistemi yer almamaktadır. Hibrit modeli birebir tarif eden "hem tekstil hem market, tek platform" sorusunda dahi cevaplar 12 farklı siteden kaynak göstermektedir.</li>
+      <li class="reveal"><b>Görünürlük iki model arasında farklılaşmaktadır.</b> Pazaryeri perspektifinde ChatGPT görünürlüğü <span class="num-b">%1,8</span> (1/56), Gemini <span class="num-b">%9,1</span> (5/55) düzeyindedir. Panel genelinde Gemini +9,9 puan artarken ChatGPT -8,8 puan gerilemiştir.</li>
     </ul>
   </div>
 </section>
@@ -321,16 +410,16 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 02 METODOLOJI ================= -->
 <section id="metod" class="alt tight">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">02</span><span>|</span><span class="t">Metodoloji</span></div>
+    <div class="crumb reveal"><span class="s">02</span><span>|</span><span>Metodoloji</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal">Nasıl ölçüldü</h2>
-    <p class="lede reveal">Soruların hiçbirinde marka adı geçmemektedir; "en iyi havlu markası hangisi?" gibi nötr <span class="term" data-tip="Prompt: AI asistanına sorulan soru. Bu çalışmada 56 marka-nötr prompt kullanılmıştır.">prompt</span>'lar kullanılmış, modellerin kendiliğinden andığı markalar ve kaynak gösterdiği sayfalar kaydedilmiştir. Sorular iki mercekte tasarlanmıştır: <b>marka merceği</b> ("hangisi iyi?") & <b>pazaryeri merceği</b> ("nereden alınır?").</p>
+    <p class="lede reveal">Ölçüm <b>Inbound Visibility Tool</b> ile yapılmıştır. Soruların hiçbirinde marka adı geçmemektedir; "en iyi havlu markası hangisi?" gibi nötr <span class="term" data-tip="Prompt: AI asistanına sorulan soru. Bu çalışmada 56 marka-nötr prompt kullanılmıştır.">prompt</span>'lar kullanılmış, modellerin kendiliğinden mention ettiği markalar ve kaynak gösterdiği sayfalar kaydedilmiştir. Sorular iki perspektifte tasarlanmıştır: <b>marka perspektifi</b> ("hangisi iyi?") & <b>pazaryeri perspektifi</b> ("nereden alınır?").</p>
     <div class="tiles">
-      <div class="tile reveal"><div class="v">56</div><div class="k">marka-nötr prompt<br>28 + 28</div></div>
+      <div class="tile click q-open2 reveal" data-f="all"><div class="v">56</div><div class="k">marka-nötr prompt<br><u>soruları görüntüle</u></div></div>
+      <div class="tile click q-open2 reveal" data-f="m"><div class="v">28</div><div class="k">marka perspektifi sorusu<br><u>görüntüle</u></div></div>
+      <div class="tile click q-open2 reveal" data-f="z"><div class="v">28</div><div class="k">pazaryeri perspektifi sorusu<br><u>görüntüle</u></div></div>
       <div class="tile reveal"><div class="v">2</div><div class="k">model<br>ChatGPT + Gemini</div></div>
-      <div class="tile reveal"><div class="v">~223</div><div class="k">sorgu çalıştırması<br>model başına 55-56 koşu</div></div>
       <div class="tile reveal"><div class="v">2.098</div><div class="k">citation<br>929 marka + 1.169 pazaryeri</div></div>
-      <div class="tile reveal"><div class="v">618</div><div class="k">tekil kaynak domain</div></div>
       <div class="tile reveal"><div class="v">%79,8</div><div class="k"><span class="term" data-tip="Cross-LLM consensus: iki modelin aynı soruya verdiği cevapların tutarlılık oranı.">cross-LLM consensus</span></div></div>
     </div>
   </div>
@@ -339,25 +428,25 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 03 SIRALAMALAR ================= -->
 <section id="siralama">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">03</span><span>|</span><span class="t">İki mercekte sıralamalar</span></div>
+    <div class="crumb reveal"><span class="s">03</span><span>|</span><span>İki perspektifte sıralamalar</span></div>
     <div class="accent-line reveal"></div>
-    <h2 class="reveal">İki mercekte sıralamalar</h2>
-    <p class="lede reveal">Marka merceğinde sıralama Karaca ve Özdilekteyim arasında şekillenmekte, diğer markalar tek haneli değerlerde kalmaktadır. Pazaryeri merceğinde ise Trendyol ve Hepsiburada öne çıkmakta; Özdilekteyim <span class="num-b">%5,4</span> ile 5. sırada yer almaktadır.</p>
+    <h2 class="reveal">İki perspektifte sıralamalar</h2>
+    <p class="lede reveal">Marka perspektifinde sıralama Karaca ve Özdilekteyim arasında şekillenmekte, diğer markalar tek haneli değerlerde kalmaktadır. Pazaryeri perspektifinde ise Trendyol ve Hepsiburada öne çıkmakta; Özdilekteyim <span class="num-b">%5,4</span> ile 5. sırada yer almaktadır.</p>
     <div class="two">
       <div class="panel reveal">
-        <div class="ph"><h3>Marka merceği</h3><span class="pk">visibility %</span></div>
-        <div id="chart-marka"></div>
-        <div class="pnote">"En iyi havlu / nevresim / çeyiz markası hangisi?" tipi 28 soruda mention oranı. Kaynak: izleme paneli, son 7 gün. %0 ölçülen Wellmatt grafikte gösterilmemiştir.</div>
+        <div class="ph"><h3>Marka perspektifi</h3><span class="pk q-open" data-f="m" style="cursor:pointer">28 soru · visibility %</span></div>
+        <div class="scrolly tall" id="chart-marka"></div>
+        <div class="pnote">"En iyi havlu / nevresim / çeyiz markası hangisi?" tipi sorularda mention oranı. İzlenen 13 markanın tamamı gösterilmektedir. Kaynak: Inbound Visibility Tool.</div>
       </div>
       <div class="panel reveal">
-        <div class="ph"><h3>Pazaryeri merceği</h3><span class="pk">visibility %</span></div>
-        <div id="chart-pazaryeri"></div>
-        <div class="pnote">"Online nereden alınır / hangi site?" tipi 28 soruda mention oranı. Kaynak: izleme paneli, son 7 gün. %0 ölçülen Wellmatt grafikte gösterilmemiştir.</div>
+        <div class="ph"><h3>Pazaryeri perspektifi</h3><span class="pk q-open" data-f="z" style="cursor:pointer">28 soru · visibility %</span></div>
+        <div class="scrolly tall" id="chart-pazaryeri"></div>
+        <div class="pnote">"Online nereden alınır / hangi site?" tipi sorularda mention oranı. İzlenen 13 markanın tamamı gösterilmektedir. Kaynak: Inbound Visibility Tool.</div>
       </div>
     </div>
     <div class="note reveal">
-      <div class="nt">Okuma notu</div>
-      <p>İki tablo aynı hafta, aynı iki modelle ve aynı yöntemle ölçülmüştür. Fark modellerden değil, sorunun niyetinden kaynaklanmaktadır: satın alma niyeti devreye girdiğinde Özdilek anlatısı büyük ölçüde tablodan çıkmaktadır.</p>
+      <div class="nt">Not</div>
+      <p>İki tablo aynı dönemde, aynı iki modelle ve aynı yöntemle ölçülmüştür. Fark modellerden değil, sorunun niyetinden kaynaklanmaktadır: satın alma niyeti devreye girdiğinde Özdilek anlatısı büyük ölçüde tablodan çıkmaktadır.</p>
     </div>
   </div>
 </section>
@@ -365,20 +454,20 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 04 MENTION vs SOURCE ================= -->
 <section id="kaynak" class="alt">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">04</span><span>|</span><span class="t">Mention & source visibility</span></div>
+    <div class="crumb reveal"><span class="s">04</span><span>|</span><span>Mention & source visibility</span></div>
     <div class="accent-line reveal"></div>
-    <h2 class="reveal">Anılmak & okunmak: iki ayrı ölçüm</h2>
+    <h2 class="reveal">Mention edilmek & kaynak gösterilmek</h2>
     <div class="split rev">
       <div class="panel reveal">
-        <div class="ph"><h3>Mention & source visibility</h3><span class="pk">marka merceği · %</span></div>
+        <div class="ph"><h3>Mention & source visibility</h3><span class="pk">marka perspektifi · %</span></div>
         <div id="dumbbell"></div>
         <div class="legend"><span><i style="background:var(--teal)"></i> Mention (visibility)</span><span><i style="background:var(--coral)"></i> Source visibility</span></div>
-        <div class="pnote">Karaca dengeli bir profil çizmektedir: karaca.com (29) + karaca-home.com (17) toplam <b>46 citation</b>. Özdilekteyim'de iki değer arasında belirgin açıklık görülmektedir: %65,2 mention'a karşılık %5,4 source visibility.</div>
+        <div class="pnote">Karaca dengeli bir profil çizmektedir: karaca.com (29) + karaca-home.com (17) toplam <b>46 citation</b>. Özdilekteyim'de iki değer arasında belirgin açıklık görülmektedir: %65,2 mention'a karşılık %5,4 source visibility. Kaynak: Inbound Visibility Tool.</div>
       </div>
       <div class="txt reveal">
-        <p><span class="term" data-tip="Mention: markanın AI cevabının metninde anılması.">Mention</span> ve <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> iki ayrı ölçümdür. İlki cevabın metninde anılmayı, ikincisi cevabın kaynakçasında yer almayı gösterir.</p>
-        <p>Grafikte her marka için iki nokta bulunmaktadır. Karaca'da iki nokta birbirine yakındır: anıldığı ölçüde okunmaktadır. Özdilekteyim'de ise aradaki açıklık dikkat çekmektedir.</p>
-        <p>Madame Coco, Yataş Bedding ve Hepsiburada ters profildedir: bu soru setinde mention almadıkları hâlde modeller tarafından <b>%19-23</b> oranında kaynak olarak okunmaktadır. Trendyol da marka merceğinde benzer bir görünümdedir: %5,4 mention'a karşılık %25,0 source visibility. Okunmak tek başına anılma garantisi vermemekte; iki ölçümün birlikte değerlendirilmesi gerekmektedir.</p>
+        <p><span class="term" data-tip="Mention: markanın AI cevabı metninde yer alması.">Mention</span> ve <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> iki ayrı metriktir. İlki cevabın metninde yer almayı, ikincisi cevabın kaynakçasında yer almayı gösterir.</p>
+        <p>Grafikte her marka için iki nokta bulunmaktadır. Karaca'da iki nokta birbirine yakındır: mention edildiği ölçüde kaynak olarak da okunmaktadır. Özdilekteyim'de ise aradaki açıklık dikkat çekmektedir.</p>
+        <p>Madame Coco, Yataş Bedding ve Hepsiburada ters profildedir: bu soru setinde mention edilmedikleri hâlde modeller tarafından <b>%19-23</b> oranında kaynak olarak okunmaktadır. Trendyol da marka perspektifinde benzer bir görünümdedir: %5,4 mention'a karşılık %25,0 source visibility. Kaynak olarak okunmak tek başına mention garantisi vermemekte; iki metriğin birlikte değerlendirilmesi gerekmektedir.</p>
       </div>
     </div>
   </div>
@@ -387,23 +476,23 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 05 KAYNAK DAGILIMI ================= -->
 <section id="dagilim">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">05</span><span>|</span><span class="t">Citation kaynakları</span></div>
+    <div class="crumb reveal"><span class="s">05</span><span>|</span><span>Citation kaynakları</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal">Citation'lar hangi kaynaklara gidiyor</h2>
     <div class="split">
       <div class="txt reveal">
         <p>Marka sorularında dağıtılan <b>929 citation</b>'ın kaynak tipi dağılımı yanda görülmektedir. En büyük pay üçüncü taraf kurumsal sitelere (listicle, marka ve rehber siteleri) aittir.</p>
-        <p>ozdilekteyim.com'un payı <span class="num-b">6 citation (%0,6)</span> düzeyindedir & 250 domain arasında 39. sırada yer almaktadır. En çok citation alan kaynaklar sırasıyla trendyol.com (40), hepsiburada.com (30), karaca.com (29), yatasbedding.com.tr (28) ve madamecoco.com (27) olarak ölçülmüştür.</p>
+        <p>ozdilekteyim.com'un payı <span class="num-b">6 citation (%0,6)</span> düzeyindedir; 250 domain arasında 39. sırada yer almaktadır. En çok citation alan kaynaklar sırasıyla trendyol.com (40), hepsiburada.com (30), karaca.com (29), yatasbedding.com.tr (28) ve madamecoco.com (27) olarak ölçülmüştür.</p>
         <div class="donut-wrap" style="margin-top:16px">
           <svg class="donut" viewBox="0 0 120 120" id="donut" role="img" aria-label="ozdilekteyim.com citation payı yüzde 0,6"></svg>
-          <div style="font-size:13.5px;color:var(--ink-2);max-width:230px">Marka merceğindeki 929 citation içinde <b style="color:var(--coral-deep)">ozdilekteyim.com</b> payı</div>
+          <div style="font-size:13.5px;color:var(--ink-2);max-width:230px">Marka perspektifindeki 929 citation içinde <b style="color:var(--coral-deep)">ozdilekteyim.com</b> payı</div>
         </div>
       </div>
       <div class="panel reveal">
-        <div class="ph"><h3>929 citation'ın kaynak tipi dağılımı</h3><span class="pk">marka merceği</span></div>
+        <div class="ph"><h3>929 citation'ın kaynak tipi dağılımı</h3><span class="pk">marka perspektifi</span></div>
         <div class="flow" id="flow"></div>
         <div class="flow-leg" id="flow-leg"></div>
-        <div class="pnote">Kaynak tipleri izleme aracının sınıflandırmasıdır. "Özdilek'in diğer domain'leri": ozdilekevtekstili.com.tr (13), ozdilek.com.tr (2), ozdilekholding.com.tr (2).</div>
+        <div class="pnote">Kaynak tipleri Inbound Visibility Tool sınıflandırmasıdır. "Özdilek'in diğer domain'leri": ozdilekevtekstili.com.tr (13), ozdilek.com.tr (2), ozdilekholding.com.tr (2).</div>
       </div>
     </div>
     <div class="two">
@@ -421,10 +510,10 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
             <tr><td><span class="chip"><img class="fav sm" src="assets/logos/neoldu-com-tr.png" alt="" loading="lazy">neoldu.com.tr</span> En İyi Banyo Paspası</td><td class="num c">6</td></tr>
           </tbody>
         </table></div>
-        <div class="pnote">Marka merceğinde <b>46 listicle URL'si</b> toplam <b>154 citation</b> almıştır. "En iyi X" tipi soruların cevapları büyük oranda bu listelerden derlenmektedir.</div>
+        <div class="pnote">Marka perspektifinde <b>46 listicle URL'si</b> toplam <b>154 citation</b> almıştır. "En iyi X" tipi soruların cevapları büyük oranda bu listelerden derlenmektedir.</div>
       </div>
       <div class="panel reveal">
-        <div class="ph"><h3><span class="term" data-tip="UGC (user-generated content): forum, soru-cevap ve şikayet platformları gibi kullanıcı içerikleri.">UGC</span> & topluluk kaynakları</h3><span class="pk">marka merceği</span></div>
+        <div class="ph"><h3><span class="term" data-tip="UGC (user-generated content): forum, soru-cevap ve şikayet platformları gibi kullanıcı içerikleri.">UGC</span> & topluluk kaynakları</h3><span class="pk">marka perspektifi</span></div>
         <div class="tscroll"><table class="tbl slim">
           <thead><tr><th scope="col">Kaynak</th><th scope="col" class="c">Citation</th><th scope="col" class="c">Sıra</th></tr></thead>
           <tbody>
@@ -434,7 +523,7 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
             <tr><td style="border-top:2px solid var(--line)"><span class="chip you"><img class="fav sm" src="assets/logos/ozdilekteyim-com.png" alt="" loading="lazy">ozdilekteyim.com</span></td><td class="num c" style="border-top:2px solid var(--line)"><span class="zero">6</span></td><td class="num c" style="border-top:2px solid var(--line)">#39</td></tr>
           </tbody>
         </table></div>
-        <div class="pnote">Türkiye'de topluluk katmanının merkezi Reddit değil kizlarsoruyor.com olarak görülmektedir: tek başına ozdilekteyim.com'un yaklaşık 3 katı citation almakta ve 17 citation'dan 13'ü Özdilek'in anıldığı cevaplarda kullanılmaktadır. Marka algısına dair içerik büyük ölçüde bu platformlardan okunmaktadır; <b>sentiment 63/100</b> skoru bu bağlamda değerlendirilebilir.</div>
+        <div class="pnote">Türkiye'de topluluk katmanının merkezi Reddit değil kizlarsoruyor.com olarak görülmektedir: tek başına ozdilekteyim.com'un yaklaşık 3 katı citation almakta ve 17 citation'dan 13'ü Özdilek'in mention edildiği cevaplarda kullanılmaktadır. Marka algısına dair içerik büyük ölçüde bu platformlardan okunmaktadır; <b>sentiment 63/100</b> skoru bu bağlamda değerlendirilebilir.</div>
       </div>
     </div>
     <div class="quote reveal">
@@ -447,19 +536,19 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 06 DOMAINLER ================= -->
 <section id="domainler" class="alt tight">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">06</span><span>|</span><span class="t">Özdilek domain'leri</span></div>
+    <div class="crumb reveal"><span class="s">06</span><span>|</span><span>Özdilek domain'leri</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal">Özdilek domain'lerinin citation dağılımı</h2>
     <div class="split">
       <div class="txt reveal">
-        <p>Özdilek ekosisteminin marka merceğindeki toplam <b>23 citation</b>'ı dört ayrı domain arasında bölünmüş durumdadır. Kurumsal tekstil sitesi ozdilekevtekstili.com.tr (13), e-ticaret sitesi ozdilekteyim.com'un (6) üzerinde ölçülmektedir.</p>
-        <p>Citation'lar tek domain'de toplansaydı Özdilek ekosistemi marka merceğinde 6. sıraya karşılık gelmektedir; ozdilekteyim.com tek başına 39. sıradadır.</p>
+        <p>Özdilek ekosisteminin marka perspektifindeki toplam <b>23 citation</b>'ı dört ayrı domain arasında bölünmüş durumdadır. Kurumsal tekstil sitesi ozdilekevtekstili.com.tr (13), e-ticaret sitesi ozdilekteyim.com'un (6) üzerinde ölçülmektedir.</p>
+        <p>Citation'lar tek domain'de toplansaydı Özdilek ekosistemi marka perspektifinde 6. sıraya karşılık gelmektedir; ozdilekteyim.com tek başına 39. sıradadır.</p>
         <p>"Otel kalitesinde havlu üreten Türk markaları" sorusunda Özdilek'in kendi ekosistemindeki tek kaynağı <b>ozdilekholding.com.tr üzerindeki kurumsal katalog PDF'i</b>dir (bir citation da Trendyol'daki Özdilek bornoz rafına gitmektedir); "tek markadan çeyiz" sorusunda ise ozdilek.com.tr üzerindeki ürün katalogu PDF'i kaynak gösterilmektedir. HTML sayfa bulunamayan konularda modellerin PDF kataloglara yöneldiği görülmektedir.</p>
       </div>
       <div class="panel reveal">
-        <div class="ph"><h3>Ekosistemin 23 citation'ı</h3><span class="pk">marka merceği · domain bazında</span></div>
+        <div class="ph"><h3>Ekosistemin 23 citation'ı</h3><span class="pk">marka perspektifi · domain bazında</span></div>
         <div id="chart-eco"></div>
-        <div class="pnote">Değerler marka merceğindeki citation sayısıdır. Pazaryeri merceğinde tablo benzerdir: ozdilekteyim.com 4, ozdilekevtekstili.com.tr 3 citation.</div>
+        <div class="pnote">Değerler marka perspektifindeki citation sayısıdır. Pazaryeri perspektifinde tablo benzerdir: ozdilekteyim.com 4, ozdilekevtekstili.com.tr 3 citation.</div>
       </div>
     </div>
   </div>
@@ -468,12 +557,12 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 07 KATEGORI ================= -->
 <section id="kategori">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">07</span><span>|</span><span class="t">Kategori görünümü</span></div>
+    <div class="crumb reveal"><span class="s">07</span><span>|</span><span>Kategori görünümü</span></div>
     <div class="accent-line reveal"></div>
-    <h2 class="reveal">Marka merceğinde kategori görünümü</h2>
-    <p class="lede reveal">Havlu & bornoz, Özdilek'in en bilinen kategorisidir. Bu ailedeki 8 soruda (havlu, yerli havlu, bornoz, çocuk bornozu, dayanıklı havlu, peştemal & plaj, otel tekstili, tek markadan çeyiz) dağıtılan <span class="num-b">236</span> görünür citation'dan Özdilek ekosistemine düşen pay <span class="num-b">4</span>'tür & dördü de PDF kaynaklardır.</p>
+    <h2 class="reveal">Marka perspektifinde kategori görünümü</h2>
+    <p class="lede reveal">Havlu & bornoz, Özdilek'in en bilinen kategorisidir. Bu ailedeki 8 soruda (havlu, yerli havlu, bornoz, çocuk bornozu, dayanıklı havlu, peştemal & plaj, otel tekstili, tek markadan çeyiz) dağıtılan <span class="num-b">236</span> görünür citation'dan Özdilek ekosistemine düşen pay <span class="num-b">4</span>'tür; dördü de PDF kaynaklardır.</p>
     <div class="panel reveal">
-      <div class="ph"><h3>Soru bazında görünür citation & kaynaklar</h3><span class="pk">marka merceği · seçilmiş sorular</span></div>
+      <div class="ph"><h3>Soru bazında görünür citation & kaynaklar</h3><span class="pk">marka perspektifi · seçilmiş sorular</span></div>
       <div class="tscroll"><table class="tbl">
         <thead><tr><th scope="col">Soru</th><th scope="col" class="c">Citation</th><th scope="col" class="c">Özdilek</th><th scope="col">Öne çıkan kaynaklar</th></tr></thead>
         <tbody>
@@ -489,11 +578,11 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
           <tr><td>Yenidoğan uyku seti / çift kişilik yatak örtüsü</td><td class="num c">25+28</td><td class="c"><span class="pos">2+2</span></td><td><span class="chip"><img class="fav sm" src="assets/logos/karaca-com.png" alt="" loading="lazy">karaca <b class="n">4</b></span><span class="chip"><img class="fav sm" src="assets/logos/tac-com-tr.png" alt="" loading="lazy">tac <b class="n">4</b></span><span class="chip you"><img class="fav sm" src="assets/logos/ozdilekteyim-com.png" alt="" loading="lazy">ozdilekteyim.com <b class="n">2</b></span></td></tr>
         </tbody>
       </table></div>
-      <div class="pnote">* Otel sorusundaki 2 citation, ozdilekholding.com.tr üzerindeki kurumsal katalog PDF'ine gitmektedir. Tablo, havlu ailesi dışındaki marka sorularını da içermektedir; 236/4 hesabı yalnızca 8 soruluk aileye aittir. Yeşil değerler: Özdilekteyim'in citation aldığı ve URL düzeyinde izlenebilen kaynakların tamamı /magaza/ kategori sayfalarıdır.</div>
+      <div class="pnote">* Otel sorusundaki 2 citation, ozdilekholding.com.tr üzerindeki kurumsal katalog PDF'ine gitmektedir. Tablo, havlu ailesi dışındaki marka sorularını da içermektedir; 236/4 hesabı yalnızca 8 soruluk aileye aittir. Yeşil değerler: Özdilekteyim'in citation aldığı ve URL düzeyinde izlenebilen kaynakların tamamı /magaza/ kategori sayfalarıdır. Kaynak: Inbound Visibility Tool.</div>
     </div>
     <div class="note reveal">
       <div class="nt">Dikkat çeken nokta</div>
-      <p>Marka merceğinin en yüksek hacimli sorusu "Çeyiz için en iyi markalar" (<b>56 citation</b>) olmuştur. Çeyiz, Özdilek'in köklü kategorilerinden biri olmasına rağmen bu soruda Özdilek ekosisteminden herhangi bir sayfa kaynak olarak görülmemektedir.</p>
+      <p>Marka perspektifinin en yüksek hacimli sorusu "Çeyiz için en iyi markalar" (<b>56 citation</b>) olmuştur. Çeyiz, Özdilek'in köklü kategorilerinden biri olmasına rağmen bu soruda Özdilek ekosisteminden herhangi bir sayfa kaynak olarak görülmemektedir.</p>
     </div>
   </div>
 </section>
@@ -501,12 +590,12 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 08 MARKET ================= -->
 <section id="market" class="alt">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">08</span><span>|</span><span class="t">Online market</span></div>
+    <div class="crumb reveal"><span class="s">08</span><span>|</span><span>Online market</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal">Online market sorularında görünüm</h2>
     <p class="lede reveal">Özdilekteyim'i farklılaştıran hibrit model (ev tekstili + online market + mağazadan Gel-Al) AI cevaplarında henüz karşılık bulmamaktadır: 7 market sorusunda dağıtılan <span class="num-b">293</span> görünür citation içinde Özdilek ekosistemi yer almamaktadır.</p>
     <div class="panel reveal">
-      <div class="ph"><h3>Market kümesi: 7 soru & kaynakları</h3><span class="pk">pazaryeri merceği</span></div>
+      <div class="ph"><h3>Market cluster'ı: 7 soru & kaynakları</h3><span class="pk">pazaryeri perspektifi</span></div>
       <div class="tscroll"><table class="tbl">
         <thead><tr><th scope="col">Soru</th><th scope="col" class="c">Citation</th><th scope="col" class="c">Özdilek</th><th scope="col">Öne çıkan kaynaklar</th></tr></thead>
         <tbody>
@@ -519,17 +608,17 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
           <tr><td><b>Hem giyim/tekstil hem market & tek platform?</b></td><td class="num c">15</td><td class="c"><span class="zero">0</span></td><td><span class="chip"><img class="fav sm" src="assets/logos/n11-com.png" alt="" loading="lazy">n11 <b class="n">2</b></span><span class="chip"><img class="fav sm" src="assets/logos/deal-tr-com.png" alt="" loading="lazy">deal-tr <b class="n">2</b></span><span class="chip"><img class="fav sm" src="assets/logos/meshur-co.png" alt="" loading="lazy">meshur.co <b class="n">2</b></span></td></tr>
         </tbody>
       </table></div>
-      <div class="pnote">Son satırdaki soru, Özdilekteyim'in hibrit modelini birebir tarif etmektedir. Cevaplar 12 farklı siteden kaynak göstermekte ve liderlik eşiği yalnızca <b>2 citation</b> ile veri setinin en düşük eşikli soruları arasında yer almaktadır.</div>
+      <div class="pnote">Son satırdaki soru, Özdilekteyim'in hibrit modelini birebir tarif etmektedir. Cevaplar 12 farklı siteden kaynak göstermekte ve liderlik eşiği yalnızca <b>2 citation</b> ile veri setinin en düşük eşikli soruları arasında yer almaktadır. Kaynak: Inbound Visibility Tool.</div>
     </div>
     <div class="split" style="margin-top:24px">
       <div class="txt reveal">
         <p><b>Gel-Al gözlemi.</b> Gel-Al, Özdilekteyim'in hâlihazırda sunduğu bir hizmettir. Ancak model cevapları için belirleyici olan hizmetin varlığı değil, hizmeti anlatan taranabilir içeriğin varlığı olarak görülmektedir: Migros'un Gel-Al hizmetini anlatan üçüncü taraf bir teknoloji makalesi dahi bu soruda 4 citation almaktadır.</p>
-        <p><b>Uygulama mağazası etkisi.</b> Market sorularının önemli kaynak tiplerinden biri uygulama mağazası sayfalarıdır: play.google.com (24) + apps.apple.com (19) pazaryeri merceğinde toplam <span class="num-b">43 citation</span> almaktadır. Modeller "hangi online market" sorusunu cevaplarken CarrefourSA ve Getir gibi uygulamaların mağaza sayfalarını kaynak göstermektedir.</p>
+        <p><b>Uygulama mağazası etkisi.</b> Market sorularının önemli kaynak tiplerinden biri uygulama mağazası sayfalarıdır: play.google.com (24) + apps.apple.com (19) pazaryeri perspektifinde toplam <span class="num-b">43 citation</span> almaktadır. Modeller "hangi online market" sorusunu cevaplarken CarrefourSA ve Getir gibi uygulamaların mağaza sayfalarını kaynak göstermektedir.</p>
       </div>
       <div class="panel reveal">
-        <div class="ph"><h3>Pazaryeri merceğinde en çok okunan kaynaklar</h3><span class="pk">citation adedi</span></div>
-        <div id="chart-pzsrc"></div>
-        <div class="pnote">trendyol.com pazaryeri merceğinde <b>90 citation</b> ve %70,4 görünme oranı ile ilk sıradadır; ozdilekteyim.com 4 citation ile 53. sırada ölçülmektedir.</div>
+        <div class="ph"><h3>Kaynak gösterilen alışveriş siteleri</h3><span class="pk">pazaryeri perspektifi · citation</span></div>
+        <div class="scrolly" id="chart-shops"></div>
+        <div class="pnote">Yalnızca satış yapan siteler listelenmiştir; uygulama mağazaları, fiyat karşılaştırma ve şikayet platformları hariç tutulmuştur. trendyol.com <b>90 citation</b> ile ilk sıradadır; ozdilekteyim.com 4 citation almaktadır. Kaynak: Inbound Visibility Tool.</div>
       </div>
     </div>
   </div>
@@ -538,23 +627,23 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 09 MODEL ================= -->
 <section id="model">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">09</span><span>|</span><span class="t">Model karşılaştırması</span></div>
+    <div class="crumb reveal"><span class="s">09</span><span>|</span><span>Model karşılaştırması</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal">Model bazında görünürlük</h2>
-    <p class="lede reveal">Görünürlük iki model arasında belirgin biçimde farklılaşmaktadır. Panel genelinde Gemini <span class="num-b">%40,6</span> görünürlük ile +9,9 puan artış, ChatGPT <span class="num-b">%20,0</span> ile -8,8 puan düşüş göstermektedir. Gemini'nin genel olarak daha fazla marka andığı gözlenmektedir (örneğin Trendyol'u pazaryeri sorularında %90,6 oranında anmaktadır); bu nedenle fark yalnızca Özdilek'e özgü değildir.</p>
+    <p class="lede reveal">Görünürlük iki model arasında belirgin biçimde farklılaşmaktadır. Panel genelinde Gemini <span class="num-b">%40,6</span> görünürlük ile +9,9 puan artış, ChatGPT <span class="num-b">%20,0</span> ile -8,8 puan düşüş göstermektedir. Gemini'nin genel olarak daha fazla marka mention ettiği gözlenmektedir (örneğin Trendyol'u pazaryeri sorularında %90,6 oranında); bu nedenle fark yalnızca Özdilek'e özgü değildir.</p>
     <div class="two">
       <div class="panel reveal">
-        <div class="ph"><h3>Marka merceği</h3><span class="pk">model bazında mention %</span></div>
-        <table class="hm" id="hm-marka"></table>
+        <div class="ph"><h3>Marka perspektifi</h3><span class="pk">model bazında mention %</span></div>
+        <div class="scrolly"><table class="hm" id="hm-marka"></table></div>
       </div>
       <div class="panel reveal">
-        <div class="ph"><h3>Pazaryeri merceği</h3><span class="pk">model bazında mention %</span></div>
-        <table class="hm" id="hm-pazaryeri"></table>
+        <div class="ph"><h3>Pazaryeri perspektifi</h3><span class="pk">model bazında mention %</span></div>
+        <div class="scrolly"><table class="hm" id="hm-pazaryeri"></table></div>
       </div>
     </div>
     <div class="note mint reveal">
       <div class="nt">Gözlem</div>
-      <p>Marka merceğinde ChatGPT tarafında Karaca ile fark <b>7,1 puan</b> (%62,5'e karşı %55,4) ile Gemini tarafındaki 10,7 puandan daha dardır. Gözlemlenen desen, ChatGPT'nin cevap üretirken yapılandırılmış ve alıntılanabilir sayfalara daha duyarlı olduğuna işaret etmektedir.</p>
+      <p>Marka perspektifinde ChatGPT tarafında Karaca ile fark <b>7,1 puan</b> (%62,5'e karşı %55,4) ile Gemini tarafındaki 10,7 puandan daha dardır. Gözlemlenen desen, ChatGPT'nin cevap üretirken yapılandırılmış ve alıntılanabilir sayfalara daha duyarlı olduğuna işaret etmektedir.</p>
     </div>
     <div class="quote reveal">
       <blockquote>"Türkiye, havlu üretimi konusunda dünya çapında tanınan ve özellikle Denizli gibi şehirlerde köklü bir geçmişe sahip olan bir ülkedir. Yerli havlu markaları, kaliteli pamuk kullanımı…"</blockquote>
@@ -566,26 +655,26 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 10 SORU TIPI ================= -->
 <section id="soru-tipi" class="alt">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">10</span><span>|</span><span class="t">Soru tipleri</span></div>
+    <div class="crumb reveal"><span class="s">10</span><span>|</span><span>Soru tipleri</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal">Soru tipine göre görünürlük & düşük eşikli alanlar</h2>
     <div class="split rev">
       <div class="panel reveal">
-        <div class="ph"><h3>Soru tipi kümelerinde visibility</h3><span class="pk">panel · weak topic clusters</span></div>
+        <div class="ph"><h3>Soru tipi cluster'larında visibility</h3><span class="pk">weak topic clusters</span></div>
         <div id="chart-clusters"></div>
-        <div class="pnote">"En iyi X" (best of) sorularında görünürlük <b>%37,2</b> iken, karşılaştırma (versus) ve alternatif (alternatives) sorularında yarıdan fazla düşmektedir. "Amazon & Temu yerine yerli site" (41 citation) ve "Shein & Temu yerine yerli alternatif" (6 citation) sorularında Özdilek görülmemektedir.</div>
+        <div class="pnote">"En iyi X" (best of) sorularında görünürlük <b>%37,2</b> iken, karşılaştırma (versus) ve alternatif (alternatives) sorularında yarıdan fazla düşmektedir. "Amazon & Temu yerine yerli site" (41 citation) ve "Shein & Temu yerine yerli alternatif" (6 citation) sorularında Özdilek görülmemektedir. Kaynak: Inbound Visibility Tool.</div>
       </div>
       <div class="txt reveal">
-        <p>Görünürlük soru tipine göre farklılaşmaktadır. Kullanıcı "hangisi daha iyi?" veya "X yerine ne kullanılır?" diye sorduğunda Özdilek'in anılma olasılığı belirgin biçimde azalmaktadır.</p>
-        <p>Öte yandan bazı soru ve kaynak alanlarının rekabet eşiği oldukça düşüktür. Tablo <span class="term" data-tip="Gap score: rakibin citation aldığı, markanın almadığı cevap hacmini gösteren skor.">gap score</span> ile birlikte okunabilir: pazaryeri merceğinde en yüksek gap Trendyol (5.248) ve Hepsiburada (2.738) kaynaklarında ölçülmektedir.</p>
+        <p>Görünürlük soru tipine göre farklılaşmaktadır. Kullanıcı "hangisi daha iyi?" veya "X yerine ne kullanılır?" diye sorduğunda Özdilek'in mention edilme olasılığı belirgin biçimde azalmaktadır.</p>
+        <p>Öte yandan bazı soru ve kaynak alanlarının rekabet eşiği oldukça düşüktür. Tablo <span class="term" data-tip="Gap score: rakibin citation aldığı, markanın almadığı cevap hacmini gösteren skor.">gap score</span> ile birlikte okunabilir: pazaryeri perspektifinde en yüksek gap Trendyol (5.248) ve Hepsiburada (2.738) kaynaklarında ölçülmektedir.</p>
         <div class="tscroll"><table class="tbl slim">
           <thead><tr><th scope="col">Düşük eşikli alan</th><th scope="col">Gözlem</th></tr></thead>
           <tbody>
             <tr><td><b>Hibrit platform sorusu</b></td><td class="num">liderlik eşiği 2 citation</td></tr>
             <tr><td><b>Gel-Al sorusu</b></td><td class="num">kazanan bandı 4-8 citation</td></tr>
             <tr><td><b>Uygulama mağazası sayfaları</b></td><td class="num">43 citation'lık kaynak tipi</td></tr>
-            <tr><td><b>Listicle katmanı</b></td><td class="num">marka merceğinde 154 citation / 46 URL</td></tr>
-            <tr><td><b>Çeyiz sorusu</b></td><td class="num">56 citation · marka merceğinin en büyüğü</td></tr>
+            <tr><td><b>Listicle katmanı</b></td><td class="num">marka perspektifinde 154 citation / 46 URL</td></tr>
+            <tr><td><b>Çeyiz sorusu</b></td><td class="num">56 citation · marka perspektifinin en büyüğü</td></tr>
             <tr><td><b>Topluluk katmanı</b></td><td class="num">kizlarsoruyor 17 citation · #9</td></tr>
           </tbody>
         </table></div>
@@ -597,16 +686,16 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
 <!-- ================= 11 NOTLAR ================= -->
 <section id="notlar" class="tight">
   <div class="wrap">
-    <div class="crumb reveal"><span class="s">11</span><span>|</span><span class="t">Metodoloji notları</span></div>
+    <div class="crumb reveal"><span class="s">11</span><span>|</span><span>Metodoloji notları</span></div>
     <div class="accent-line reveal"></div>
     <h2 class="reveal" style="font-size:clamp(22px,2.2vw,30px)">Metodoloji notları & sınırlamalar</h2>
-    <div class="mcards">
-      <div class="mc reveal"><div class="mi">A</div><h4>Marka-nötr tasarım</h4><p>56 sorunun hiçbirinde marka adı geçmemektedir; "A mı B mi" tipi yönlendirilmiş sorular sette bulunmamaktadır. Mention tamamen modelin kendi tercihidir.</p></div>
-      <div class="mc reveal"><div class="mi">B</div><h4>İki mercek</h4><p>28 soru marka niyetli ("hangi marka iyi?"), 28 soru satın alma niyetli ("nereden alınır?") olarak tasarlanmış ve ayrı klasörlerde izlenmiştir.</p></div>
-      <div class="mc reveal"><div class="mi">C</div><h4>Görünür citation</h4><p>Soru düzeyi toplamlar, her kaynağın en çok citation aldığı ilk 5 sorudan derlenmektedir; kuyruk değerleri toplamlara yansımayabilir. Domain düzeyi toplamlar eksiksizdir. Pazaryeri merceğindeki 1 soru hiçbir kaynağın ilk 5 listesinde görünmemiştir.</p></div>
-      <div class="mc reveal"><div class="mi">D</div><h4>Tek hafta, iki model</h4><p>Bu ilk ölçüm son 7 günü ve ChatGPT + Gemini'yi kapsamaktadır. Trend verisi ve ek modeller (Claude, Perplexity, Grok) sonraki ölçümlerde eklenebilir.</p></div>
-      <div class="mc reveal"><div class="mi">E</div><h4>Mention & kalite</h4><p>AI görünürlüğü marka kalitesinin değil, modellerin okuduğu kaynak ekosisteminin bir ölçüsüdür. Güncel ve alıntılanabilir web varlığı görünürlüğün ana belirleyicisi olarak gözlenmektedir.</p></div>
-      <div class="mc reveal"><div class="mi">F</div><h4>Tarafsızlık</h4><p>Prompt seti izlenen markayı adlandırmadığı gibi, Özdilek'e ait sayfalara yapılan citation'lar da rakiplerle aynı kurallarla sayılmıştır.</p></div>
+    <div class="mnotes reveal">
+      <div><span class="mi">A</span><span><b>Marka-nötr tasarım.</b> Sorularda marka adı geçmez; mention tamamen modelin kendi tercihidir.</span></div>
+      <div><span class="mi">B</span><span><b>İki perspektif.</b> 28 soru marka niyetli, 28 soru satın alma niyetli olarak ayrı izlenmiştir.</span></div>
+      <div><span class="mi">C</span><span><b>Görünür citation.</b> Soru düzeyi toplamlar her kaynağın ilk 5 sorusundan derlenir; domain toplamları eksiksizdir. 1 pazaryeri sorusu hiçbir kaynağın ilk 5'inde görünmemiştir.</span></div>
+      <div><span class="mi">D</span><span><b>İki model.</b> İlk ölçüm ChatGPT + Gemini'yi kapsar; ek modeller sonraki ölçümlerde eklenebilir.</span></div>
+      <div><span class="mi">E</span><span><b>Mention & kalite.</b> AI görünürlüğü marka kalitesinin değil, modellerin okuduğu kaynak ekosisteminin ölçüsüdür.</span></div>
+      <div><span class="mi">F</span><span><b>Tarafsızlık.</b> Özdilek'e ait sayfalara yapılan citation'lar rakiplerle aynı kurallarla sayılmıştır.</span></div>
     </div>
   </div>
 </section>
@@ -616,12 +705,13 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
     <div>
       <h4>Özdilekteyim AI Görünürlük Raporu</h4>
       <p style="color:rgba(255,255,255,.75);max-width:480px">İlk ölçüm, Temmuz 2026. Çalışmanın çeyreklik periyotlarla tekrarlanması ve sonraki baskılarda trend karşılaştırması sunulması planlanmaktadır.</p>
-      <p class="fine">Veri: 56 marka-nötr prompt × ChatGPT + Gemini, son 7 gün penceresi (Temmuz 2026 başı) · 2.098 citation (domain düzeyi) · 618 tekil kaynak domain (686 kayıt; 68 domain iki mercekte ortak). Metrikler AI görünürlük izleme paneli ve citation dışa aktarımlarından derlenmiştir. Tüm değerler yüzde veya adet olarak verilmiştir.</p>
+      <p class="fine">Veri: Inbound Visibility Tool · 56 marka-nötr prompt × ChatGPT + Gemini, Temmuz 2026 ölçüm dönemi · 2.098 citation (domain düzeyi) · 618 tekil kaynak domain (686 kayıt; 68 domain iki perspektifte ortak). Tüm değerler yüzde veya adet olarak verilmiştir.</p>
+      <img class="wm" src="assets/brand/inbound-wordmark-white.png" alt="Inbound">
     </div>
     <div class="gl">
       <h4 style="font-size:16px">Sözlük</h4>
-      <b>Mention:</b> markanın AI cevabının metninde anılması.<br>
-      <b>Visibility:</b> markanın, soruların yüzde kaçının cevabında anıldığı.<br>
+      <b>Mention:</b> markanın AI cevabı metninde yer alması.<br>
+      <b>Visibility:</b> markanın, soruların yüzde kaçının cevabında yer aldığı.<br>
       <b>SOV:</b> tüm marka mention'ları içindeki pay.<br>
       <b>Source visibility:</b> modelin, cevabı yazarken o markanın sitelerini okuma oranı.<br>
       <b>Citation:</b> cevapta kaynak olarak gösterilen URL.<br>
@@ -630,22 +720,43 @@ footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
   </div>
 </footer>
 
+<!-- ================= SORU MODAL ================= -->
+<div class="qmodal" id="qmodal" role="dialog" aria-modal="true" aria-label="Soru seti">
+  <div class="backdrop" id="qback"></div>
+  <div class="qbox">
+    <div class="qhead">
+      <div class="row1">
+        <h3>Soru seti · 56 marka-nötr prompt</h3>
+        <a class="ext" href="sorular.html" target="_blank" rel="noopener">Yeni sekmede aç ↗</a>
+        <button class="x" id="qclose" aria-label="Kapat">✕</button>
+      </div>
+      <div class="qtabs" id="qtabs">
+        <button data-f="all" class="on">Tümü (56)</button>
+        <button data-f="m">Marka perspektifi (28)</button>
+        <button data-f="z">Pazaryeri perspektifi (28)</button>
+      </div>
+    </div>
+    <div class="qbody" id="qbody"></div>
+  </div>
+</div>
+
+<script src="data/questions.js"></script>
 <script>
 /* ---------- data ---------- */
 const LOGO=d=>`assets/logos/${d.split('.').join('-')}.png`;
-const MARKA=[["Karaca","karaca.com",74.1,0],["Özdilekteyim","ozdilekteyim.com",65.2,1],["Trendyol","trendyol.com",5.4,0],["Altınbaşak","altinbasak.com",4.5,0],["Koçtaş","koctas.com.tr",3.6,0],["Doqu Home","doquhome.com.tr",0.9,0],["Yatsan","yatsan.com",0.9,0],["Madame Coco","madamecoco.com",0,0],["Yataş Bedding","yatasbedding.com.tr",0,0],["English Home","englishhome.com",0,0],["HepsiBurada","hepsiburada.com",0,0],["Penelope","penelopebedroom.com",0,0]];
-const PAZAR=[["Trendyol","trendyol.com",69.4,0],["HepsiBurada","hepsiburada.com",57.7,0],["Koçtaş","koctas.com.tr",10.8,0],["Karaca","karaca.com",7.2,0],["Özdilekteyim","ozdilekteyim.com",5.4,1],["Yataş Bedding","yatasbedding.com.tr",1.8,0],["Altınbaşak","altinbasak.com",1.8,0],["Madame Coco","madamecoco.com",0,0],["English Home","englishhome.com",0,0],["Doqu Home","doquhome.com.tr",0,0],["Yatsan","yatsan.com",0,0],["Penelope","penelopebedroom.com",0,0]];
+const MARKA=[["Karaca","karaca.com",74.1,0],["Özdilekteyim","ozdilekteyim.com",65.2,1],["Trendyol","trendyol.com",5.4,0],["Altınbaşak","altinbasak.com",4.5,0],["Koçtaş","koctas.com.tr",3.6,0],["Doqu Home","doquhome.com.tr",0.9,0],["Yatsan","yatsan.com",0.9,0],["Madame Coco","madamecoco.com",0,0],["Yataş Bedding","yatasbedding.com.tr",0,0],["English Home","englishhome.com",0,0],["HepsiBurada","hepsiburada.com",0,0],["Penelope","penelopebedroom.com",0,0],["Wellmatt","wellmatt.com",0,0]];
+const PAZAR=[["Trendyol","trendyol.com",69.4,0],["HepsiBurada","hepsiburada.com",57.7,0],["Koçtaş","koctas.com.tr",10.8,0],["Karaca","karaca.com",7.2,0],["Özdilekteyim","ozdilekteyim.com",5.4,1],["Yataş Bedding","yatasbedding.com.tr",1.8,0],["Altınbaşak","altinbasak.com",1.8,0],["Madame Coco","madamecoco.com",0,0],["English Home","englishhome.com",0,0],["Doqu Home","doquhome.com.tr",0,0],["Yatsan","yatsan.com",0,0],["Penelope","penelopebedroom.com",0,0],["Wellmatt","wellmatt.com",0,0]];
 const DUMB=[["Karaca","karaca.com",74.1,25.0,0],["Özdilekteyim","ozdilekteyim.com",65.2,5.4,1],["Trendyol","trendyol.com",5.4,25.0,0],["Yataş Bedding","yatasbedding.com.tr",0,23.2,0],["Madame Coco","madamecoco.com",0,20.5,0],["HepsiBurada","hepsiburada.com",0,19.6,0],["Doqu Home","doquhome.com.tr",0.9,14.3,0],["Koçtaş","koctas.com.tr",3.6,8.0,0]];
 const ECO=[["ozdilekevtekstili.com.tr","ozdilekevtekstili.com.tr",13,0],["ozdilekteyim.com","ozdilekteyim.com",6,1],["ozdilek.com.tr (katalog PDF)","ozdilek.com.tr",2,0],["ozdilekholding.com.tr (katalog PDF)","ozdilekholding.com.tr",2,0]];
-const PZSRC=[["trendyol.com","trendyol.com",90,0],["hepsiburada.com","hepsiburada.com",66,0],["play.google.com","play.google.com",24,0],["n11.com","n11.com",19,0],["apps.apple.com","apps.apple.com",19,0],["migros.com.tr","migros.com.tr",17,0],["sikayetvar.com","sikayetvar.com",17,0],["ozdilekteyim.com","ozdilekteyim.com",4,1]];
+const SHOPS=[["trendyol.com",90],["hepsiburada.com",66],["n11.com",19],["migros.com.tr",17],["boyner.com.tr",14],["ciceksepeti.com",12],["sokmarket.com.tr",12],["beymen.com",11],["a101.com.tr",10],["evidea.com",10],["karaca.com",7],["englishhome.com",7],["avansas.com",7],["ikea.com.tr",6],["madamecoco.com",6],["teknosa.com",6],["yatasbedding.com.tr",6],["chakra.com.tr",5],["watsons.com.tr",5],["pazarama.com",5],["carrefoursa.com",5],["samsonite.com.tr",5],["vatanbilgisayar.com",5],["getir.com",4],["koctas.com.tr",4],["tac.com.tr",4],["ozdilekteyim.com",4,1]];
 const FLOW=[["Üçüncü taraf kurumsal siteler",623,"#4A4A4A"],["Rakip pazaryerleri & markalar",208,"#10332F"],["Fiyat karşılaştırma & agregatörler",41,"#F5A623"],["Forum / UGC",24,"#E9C46A"],["Özdilek'in diğer domain'leri",17,"#FFB399"],["Editoryal & diğer",10,"#BDBDBD"],["ozdilekteyim.com",6,"#FF7B52"]];
-const HM_MARKA=[["Karaca","karaca.com",62.5,85.7,0],["Özdilekteyim","ozdilekteyim.com",55.4,75.0,1],["Trendyol","trendyol.com",5.4,5.4,0],["Altınbaşak","altinbasak.com",0.0,8.9,0],["Koçtaş","koctas.com.tr",3.6,3.6,0]];
-const HM_PAZAR=[["Trendyol","trendyol.com",48.2,90.6,0],["HepsiBurada","hepsiburada.com",41.1,74.6,0],["Koçtaş","koctas.com.tr",10.7,10.9,0],["Karaca","karaca.com",1.8,12.7,0],["Özdilekteyim","ozdilekteyim.com",1.8,9.1,1]];
-const CLUSTERS=[["Best of · “en iyi X”",37.2,"30 prompt",0],["Versus · “hangisi daha iyi?”",17.2,"10 prompt",1],["Alternatives · “X yerine ne?”",9.8,"1 prompt",1],["Duallik · karşılaştırmalı",7.3,"",1]];
+const HM_MARKA=[["Karaca","karaca.com",62.5,85.7,0],["Özdilekteyim","ozdilekteyim.com",55.4,75.0,1],["Trendyol","trendyol.com",5.4,5.4,0],["Altınbaşak","altinbasak.com",0.0,8.9,0],["Koçtaş","koctas.com.tr",3.6,3.6,0],["Doqu Home","doquhome.com.tr",1.8,0.0,0],["Yatsan","yatsan.com",0.0,1.8,0],["Madame Coco","madamecoco.com",0.0,0.0,0],["Yataş Bedding","yatasbedding.com.tr",0.0,0.0,0],["English Home","englishhome.com",0.0,0.0,0],["HepsiBurada","hepsiburada.com",0.0,0.0,0],["Penelope","penelopebedroom.com",0.0,0.0,0],["Wellmatt","wellmatt.com",0.0,0.0,0]];
+const HM_PAZAR=[["Trendyol","trendyol.com",48.2,90.6,0],["HepsiBurada","hepsiburada.com",41.1,74.6,0],["Koçtaş","koctas.com.tr",10.7,10.9,0],["Karaca","karaca.com",1.8,12.7,0],["Özdilekteyim","ozdilekteyim.com",1.8,9.1,1],["Yataş Bedding","yatasbedding.com.tr",3.6,0.0,0],["Altınbaşak","altinbasak.com",0.0,3.6,0],["Madame Coco","madamecoco.com",0.0,0.0,0],["English Home","englishhome.com",0.0,0.0,0],["Doqu Home","doquhome.com.tr",0.0,0.0,0],["Yatsan","yatsan.com",0.0,0.0,0],["Penelope","penelopebedroom.com",0.0,0.0,0],["Wellmatt","wellmatt.com",0.0,0.0,0]];
+const CLUSTERS=[["Best of","“en iyi X” · 30 prompt",37.2,0],["Versus","“hangisi daha iyi?” · 10 prompt",17.2,1],["Alternatives","“X yerine ne?” · 1 prompt",9.8,1],["Duallik","karşılaştırmalı sorgular",7.3,1]];
 const fmt=v=>v.toFixed(1).replace('.',',');
 
 /* ---------- builders ---------- */
-function favImg(d){const i=document.createElement('img');i.className='fav';i.src=LOGO(d);i.alt='';i.loading='lazy';i.onerror=()=>{i.style.visibility='hidden'};return i}
+function favImg(d,sm){const i=document.createElement('img');i.className='fav'+(sm?' sm':'');i.src=LOGO(d);i.alt='';i.loading='lazy';i.onerror=()=>{i.style.visibility='hidden'};return i}
 function bars(elId,data,max,unit){
   const el=document.getElementById(elId);
   data.forEach(([n,dom,v,you])=>{
@@ -662,7 +773,7 @@ bars('chart-marka',MARKA,80);
 bars('chart-pazaryeri',PAZAR,80);
 bars('chart-eco',ECO,13,'n');
 document.querySelectorAll('#chart-eco .brow').forEach(r=>r.classList.add('wide'));
-bars('chart-pzsrc',PZSRC,95,'n');
+bars('chart-shops',SHOPS.map(([d,v,y])=>[d,d,v,y]),95,'n');
 
 /* dumbbell */
 (function(){
@@ -716,24 +827,56 @@ function heat(elId,data){
 heat('hm-marka',HM_MARKA);
 heat('hm-pazaryeri',HM_PAZAR);
 
-/* clusters */
+/* clusters (yeni tasarım) */
 (function(){
   const el=document.getElementById('chart-clusters');
-  CLUSTERS.forEach(([n,v,k,weak])=>{
-    const r=document.createElement('div');r.className='brow wide'+(weak?' gold':'');
-    const sp=document.createElement('span');r.appendChild(sp);
-    const bn=document.createElement('div');bn.className='bn';bn.textContent=n;r.appendChild(bn);
-    const bt=document.createElement('div');bt.className='bt';
-    const bf=document.createElement('div');bf.className='bf';bf.dataset.w=(v/42)*100;bt.appendChild(bf);r.appendChild(bt);
-    const bv=document.createElement('div');bv.className='bv';bv.textContent=fmt(v)+'%'+(k?' · '+k:'');r.appendChild(bv);
+  CLUSTERS.forEach(([n,k,v,weak])=>{
+    const r=document.createElement('div');r.className='cl-row'+(weak?' weak':'');
+    r.innerHTML=`<div class="cl-head"><span class="cn">${n} <span class="ck">· ${k}</span></span><span class="cv">${fmt(v)}%</span></div>
+      <div class="cl-bar"><i data-w="${(v/42)*100}"></i></div>`;
     el.appendChild(r);
   });
 })();
 
+/* ---------- soru modal ---------- */
+const CAT_LABEL={best:'best of',vs:'versus',alternatives:'alternatives',custom:'nereden alınır'};
+function qCard(o){
+  const lens=o.p==='m'?'<span class="pill m">Marka perspektifi</span>':'<span class="pill z">Pazaryeri perspektifi</span>';
+  const oz=o.n===0?'<span class="pill c">citation kaydı yok</span>':(o.o>0?`<span class="pill pos">Özdilek ${o.o}</span>`:'<span class="pill zero">Özdilek 0</span>');
+  const srcs=o.s.map(([d,c])=>`<span class="chip"><img class="fav sm" src="${LOGO(d)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${d.replace('www.','')} <b class="n">${c}</b></span>`).join('');
+  return `<div class="qc"><div class="qq">"${o.q}"</div>
+    <div class="qmeta">${lens}<span class="pill c">${CAT_LABEL[o.c]||o.c}</span>${o.n>0?`<span class="pill n">${o.n} citation</span>`:''}${oz}</div>
+    ${srcs?`<div class="qs">${srcs}</div>`:''}</div>`;
+}
+function renderQ(f){
+  const list=QUESTIONS.filter(o=>f==='all'||o.p===f);
+  document.getElementById('qbody').innerHTML=list.map(qCard).join('');
+}
+const qmodal=document.getElementById('qmodal');
+function openQ(f){
+  renderQ(f);
+  document.querySelectorAll('#qtabs button').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+  qmodal.classList.add('on');document.body.style.overflow='hidden';
+}
+function closeQ(){qmodal.classList.remove('on');document.body.style.overflow=''}
+document.querySelectorAll('.q-open,.q-open2').forEach(t=>t.addEventListener('click',e=>{e.stopPropagation();openQ(t.dataset.f||'all')}));
+document.getElementById('qclose').addEventListener('click',closeQ);
+document.getElementById('qback').addEventListener('click',closeQ);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeQ()});
+document.querySelectorAll('#qtabs button').forEach(b=>b.addEventListener('click',()=>openQ(b.dataset.f)));
+
+/* ---------- ToC ---------- */
+const toc=document.getElementById('toc'),tocbtn=document.getElementById('tocbtn');
+tocbtn.addEventListener('click',()=>{
+  const open=toc.classList.toggle('open');
+  tocbtn.setAttribute('aria-expanded',open);
+});
+document.querySelectorAll('#toclist a').forEach(a=>a.addEventListener('click',()=>{toc.classList.remove('open');tocbtn.setAttribute('aria-expanded','false')}));
+
 /* ---------- motion ---------- */
 const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('in');
-    e.target.querySelectorAll('.bf').forEach(b=>b.style.width=b.dataset.w+'%');
+    e.target.querySelectorAll('.bf,.cl-bar i').forEach(b=>b.style.width=b.dataset.w+'%');
     io.unobserve(e.target)}
 }),{threshold:.12});
 document.querySelectorAll('.reveal,.panel').forEach(el=>{el.classList.add('reveal');io.observe(el)});
@@ -748,7 +891,7 @@ function countUp(el){
 }
 document.querySelectorAll('.kpi .v[data-count]').forEach(countUp);
 
-/* tooltips: tap toggle (mobile) */
+/* tooltips: tap toggle */
 document.querySelectorAll('.term').forEach(t=>{
   t.setAttribute('tabindex','0');
   t.addEventListener('click',e=>{e.stopPropagation();

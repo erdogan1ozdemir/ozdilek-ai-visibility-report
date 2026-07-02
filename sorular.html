@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soru Seti · Özdilekteyim AI Görünürlük Raporu</title>
+<meta name="description" content="Inbound Visibility Tool ile izlenen 56 marka-nötr sorunun tam listesi; her soru için citation hacmi ve öne çıkan kaynaklar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2310332F'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%23FF7B52' stroke-width='12'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+:root{
+  --coral:#FF7B52;--coral-tint:#FFE3D8;--coral-deep:#E85F36;
+  --teal:#10332F;--teal-deep:#0B221E;--mint:#E8F5E9;
+  --ink:#10332F;--ink-2:#4A4A4A;--ink-3:#8A8A8A;
+  --line:#E0E0E0;--line-soft:#F0EDE8;
+  --red:#D32F2F;--red-wash:#FFCDD2;--green:#2E7D32;--green-wash:#C8E6C9;
+  --font-display:'Bricolage Grotesque','Calibri',system-ui,sans-serif;
+  --font-body:'Outfit','Calibri',system-ui,sans-serif;
+  --r-pill:999px;
+  --shadow-card:0 2px 8px rgba(16,51,47,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--ink);background:#FAF8F5;-webkit-font-smoothing:antialiased}
+::selection{background:var(--coral);color:#fff}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{color:#fff;padding:34px 0 30px;position:relative;overflow:hidden;
+  background:radial-gradient(700px 380px at 90% -20%,rgba(255,123,82,.3),transparent 60%),linear-gradient(140deg,var(--teal-deep),var(--teal) 60%,#174A41)}
+header .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header .top a{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;font-weight:600}
+header .top a:hover{color:#fff}
+header .top img{height:20px;width:auto}
+header h1{font-family:var(--font-display);font-weight:800;font-size:clamp(24px,4vw,34px);color:#fff;margin-top:16px}
+header p{color:rgba(255,255,255,.85);margin-top:8px;max-width:640px;font-size:14px}
+.tabs{display:flex;gap:8px;margin:22px 0 0;flex-wrap:wrap}
+.tabs button{all:unset;cursor:pointer;font-size:12.5px;font-weight:600;padding:7px 16px;border-radius:var(--r-pill);background:rgba(255,255,255,.14);color:#fff}
+.tabs button.on{background:#fff;color:var(--teal)}
+main{padding:26px 0 60px}
+.qc{background:#fff;border-radius:16px;box-shadow:var(--shadow-card);padding:18px 20px;margin-bottom:12px}
+.qc .qq{font-size:15px;font-weight:600;color:var(--ink);line-height:1.45}
+.qc .qmeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2.5px 10px;border-radius:var(--r-pill)}
+.pill.m{background:var(--mint);color:var(--green)}
+.pill.z{background:#E3F0FA;color:#1565C0}
+.pill.c{background:var(--line-soft);color:var(--ink-2)}
+.pill.n{background:var(--teal);color:#fff;font-family:var(--font-display)}
+.pill.zero{background:var(--red-wash);color:var(--red)}
+.pill.pos{background:var(--green-wash);color:var(--green)}
+.qs{margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;padding:3px 9px 3px 4px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2);margin:2px 3px 2px 0;white-space:nowrap}
+.chip .n{font-family:var(--font-display);font-weight:700}
+.fav{width:15px;height:15px;border-radius:4px;object-fit:contain;flex:none;background:#fff;box-shadow:0 0 0 1px rgba(16,51,47,.08);vertical-align:middle}
+.count{font-size:12.5px;color:var(--ink-3);margin:0 0 14px}
+footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <a href="index.html">← Rapora dön</a>
+      <img src="assets/brand/inbound-wordmark-white.png" alt="Inbound">
+    </div>
+    <h1>Soru seti · 56 marka-nötr prompt</h1>
+    <p>Inbound Visibility Tool ile izlenen soruların tam listesi. Her soru için görünür citation hacmi ve cevaplarda öne çıkan kaynaklar gösterilmektedir; soruların hiçbirinde marka adı geçmemektedir.</p>
+    <div class="tabs" id="tabs">
+      <button data-f="all" class="on">Tümü (56)</button>
+      <button data-f="m">Marka perspektifi (28)</button>
+      <button data-f="z">Pazaryeri perspektifi (28)</button>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="count" id="count"></div>
+    <div id="list"></div>
+  </div>
+</main>
+<footer>Özdilekteyim AI Görünürlük Raporu · Temmuz 2026 · Inbound Visibility Tool</footer>
+
+<script src="data/questions.js"></script>
+<script>
+const LOGO=d=>`assets/logos/${d.split('.').join('-')}.png`;
+const CAT_LABEL={best:'best of',vs:'versus',alternatives:'alternatives',custom:'nereden alınır'};
+function qCard(o){
+  const lens=o.p==='m'?'<span class="pill m">Marka perspektifi</span>':'<span class="pill z">Pazaryeri perspektifi</span>';
+  const oz=o.n===0?'<span class="pill c">citation kaydı yok</span>':(o.o>0?`<span class="pill pos">Özdilek ${o.o}</span>`:'<span class="pill zero">Özdilek 0</span>');
+  const srcs=o.s.map(([d,c])=>`<span class="chip"><img class="fav" src="${LOGO(d)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${d.replace('www.','')} <b class="n">${c}</b></span>`).join('');
+  return `<div class="qc"><div class="qq">"${o.q}"</div>
+    <div class="qmeta">${lens}<span class="pill c">${CAT_LABEL[o.c]||o.c}</span>${o.n>0?`<span class="pill n">${o.n} citation</span>`:''}${oz}</div>
+    ${srcs?`<div class="qs">${srcs}</div>`:''}</div>`;
+}
+function render(f){
+  const list=QUESTIONS.filter(o=>f==='all'||o.p===f);
+  document.getElementById('list').innerHTML=list.map(qCard).join('');
+  document.getElementById('count').textContent=list.length+' soru · görünür citation hacmine göre sıralı';
+  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+}
+document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>render(b.dataset.f)));
+render('all');
+</script>
+</body>
+</html>
