@@ -1,0 +1,109 @@
+{
+  "_source": "AI Visibility tool panel (ozdilekteyim.com projesi), Time Range: Last 7 Days, okuma tarihi: 2026-07-02. Değerler panel ekran görüntülerinden aktarılmıştır.",
+  "providers": ["ChatGPT", "Gemini"],
+  "kpi": {
+    "pazaryeri": {"visibility": 5.4, "sov": 3.5, "source_visibility": 3.6, "avg_position": 5.2},
+    "marka": {"visibility": 65.2, "sov": 42.2, "source_visibility": 5.4, "avg_position": 3.5}
+  },
+  "sentiment_ozdilekteyim": 63,
+  "rankings_pazaryeri": [
+    {"brand": "Trendyol", "brand_vis": 69.4, "source_vis": 32.4, "sov": 46.0, "position": 2.7},
+    {"brand": "HepsiBurada", "brand_vis": 57.7, "source_vis": 19.8, "sov": 37.4, "position": 2.9},
+    {"brand": "Koçtaş", "brand_vis": 10.8, "source_vis": 1.8, "sov": 7.0, "position": 5.4},
+    {"brand": "Karaca", "brand_vis": 7.2, "source_vis": 4.5, "sov": 4.7, "position": 4.0},
+    {"brand": "Özdilekteyim", "brand_vis": 5.4, "source_vis": 3.6, "sov": 3.5, "position": 5.2, "you": true},
+    {"brand": "Yataş Bedding", "brand_vis": 1.8, "source_vis": 4.5, "sov": 1.2, "position": 1.0},
+    {"brand": "Altınbaşak", "brand_vis": 1.8, "source_vis": 1.8, "sov": 1.2, "position": 6.5},
+    {"brand": "Madame Coco", "brand_vis": 0, "source_vis": 4.5, "sov": 0, "position": null},
+    {"brand": "English Home", "brand_vis": 0, "source_vis": 3.6, "sov": 0, "position": null},
+    {"brand": "Doqu Home", "brand_vis": 0, "source_vis": 3.6, "sov": 0, "position": null},
+    {"brand": "Yatsan", "brand_vis": 0, "source_vis": 0, "sov": 0, "position": null},
+    {"brand": "Penelope Bedroom", "brand_vis": 0, "source_vis": 0, "sov": 0, "position": null},
+    {"brand": "Wellmatt", "brand_vis": 0, "source_vis": 0, "sov": 0, "position": null}
+  ],
+  "rankings_marka": [
+    {"brand": "Karaca", "brand_vis": 74.1, "source_vis": 25.0, "sov": 48.0, "position": 3.0},
+    {"brand": "Özdilekteyim", "brand_vis": 65.2, "source_vis": 5.4, "sov": 42.2, "position": 3.5, "you": true, "sentiment": 63},
+    {"brand": "Trendyol", "brand_vis": 5.4, "source_vis": 25.0, "sov": 3.6, "position": 7.0},
+    {"brand": "Altınbaşak", "brand_vis": 4.5, "source_vis": 2.9, "sov": 2.9, "position": 6.4},
+    {"brand": "Koçtaş", "brand_vis": 3.6, "source_vis": 8.0, "sov": 2.3, "position": 8.0},
+    {"brand": "Doqu Home", "brand_vis": 0.9, "source_vis": 14.3, "sov": 0.6, "position": 5.0},
+    {"brand": "Yatsan", "brand_vis": 0.9, "source_vis": 0.9, "sov": 0.6, "position": 7.0},
+    {"brand": "Madame Coco", "brand_vis": 0, "source_vis": 20.5, "sov": 0, "position": null},
+    {"brand": "Yataş Bedding", "brand_vis": 0, "source_vis": 23.2, "sov": 0, "position": null},
+    {"brand": "English Home", "brand_vis": 0, "source_vis": 5.4, "sov": 0, "position": null},
+    {"brand": "HepsiBurada", "brand_vis": 0, "source_vis": 19.6, "sov": 0, "position": null},
+    {"brand": "Penelope Bedroom", "brand_vis": 0, "source_vis": 7.1, "sov": 0, "position": null},
+    {"brand": "Wellmatt", "brand_vis": 0, "source_vis": 0, "sov": 0, "position": null}
+  ],
+  "llm_heatmap_pazaryeri": [
+    {"brand": "Trendyol", "chatgpt": 48.2, "chatgpt_n": "27/56", "gemini": 90.6, "gemini_n": "50/55", "avg": 69.4},
+    {"brand": "HepsiBurada", "chatgpt": 41.1, "chatgpt_n": "23/56", "gemini": 74.6, "gemini_n": "41/55", "avg": 57.7},
+    {"brand": "Koçtaş", "chatgpt": 10.7, "chatgpt_n": "6/56", "gemini": 10.9, "gemini_n": "6/55", "avg": 10.8},
+    {"brand": "Karaca", "chatgpt": 1.8, "chatgpt_n": "1/56", "gemini": 12.7, "gemini_n": "7/55", "avg": 7.2},
+    {"brand": "Özdilekteyim", "chatgpt": 1.8, "chatgpt_n": "1/56", "gemini": 9.1, "gemini_n": "5/55", "avg": 5.4, "you": true},
+    {"brand": "Yataş Bedding", "chatgpt": 3.6, "gemini": 0.0, "avg": 1.8},
+    {"brand": "Altınbaşak", "chatgpt": 0.0, "gemini": 3.6, "avg": 1.8}
+  ],
+  "llm_heatmap_marka": [
+    {"brand": "Karaca", "chatgpt": 62.5, "chatgpt_n": "35/56", "gemini": 85.7, "gemini_n": "48/56", "avg": 74.1},
+    {"brand": "Özdilekteyim", "chatgpt": 55.4, "chatgpt_n": "31/56", "gemini": 75.0, "gemini_n": "42/56", "avg": 65.2, "you": true},
+    {"brand": "Trendyol", "chatgpt": 5.4, "gemini": 5.4, "avg": 5.4},
+    {"brand": "Altınbaşak", "chatgpt": 0.0, "gemini": 8.9, "avg": 4.5},
+    {"brand": "Koçtaş", "chatgpt": 3.6, "gemini": 3.6, "avg": 3.6},
+    {"brand": "Doqu Home", "chatgpt": 1.8, "gemini": 0.0, "avg": 0.9},
+    {"brand": "Yatsan", "chatgpt": 0.0, "gemini": 1.8, "avg": 0.9}
+  ],
+  "top_domains_panel": [
+    {"domain": "trendyol.com", "retrieved": 21.8, "citation": 6.1, "type": "competitor"},
+    {"domain": "hepsiburada.com", "retrieved": 17.1, "citation": 2.4, "type": "competitor"},
+    {"domain": "madamecoco.com", "retrieved": 11.5, "citation": 2.5, "type": "competitor"},
+    {"domain": "karaca.com", "retrieved": 12.8, "citation": 2.8, "type": "competitor"},
+    {"domain": "reddit.com", "retrieved": 13.6, "citation": 2.1, "type": "ugc"},
+    {"domain": "yatasbedding.com.tr", "retrieved": 10.2, "citation": 2.1, "type": "competitor"},
+    {"domain": "akakce.com", "retrieved": 7.0, "citation": 1.5, "type": "aggregator"}
+  ],
+  "domain_types_panel": {"corporate": 75, "aggregator": 45, "ugc": 5, "editorial": 4},
+  "advanced_metrics": {
+    "cross_llm_consensus": 79.8,
+    "cross_llm_note": "124 prompt değerlendirildi",
+    "weak_visibility_index": 18.1,
+    "new_domains": 446,
+    "total_domains": 1494,
+    "branded_visibility": 40.5,
+    "unbranded_visibility": 23.7,
+    "provider_ranking": [{"provider": "Gemini", "visibility": 40.6, "delta": 9.9}, {"provider": "ChatGPT", "visibility": 20.0, "delta": -8.8}],
+    "weak_topic_clusters": [
+      {"cluster": "Alternatives", "prompts": 1, "visibility": 9.8},
+      {"cluster": "Duallik", "prompts": 0, "visibility": 7.3},
+      {"cluster": "Versus", "prompts": 10, "visibility": 17.2},
+      {"cluster": "Best of", "prompts": 30, "visibility": 37.2}
+    ]
+  },
+  "swot_panel": {
+    "strengths": [
+      {"t": "Ortalama Pozisyon Avantajı", "sev": "High", "d": "Ortalama pozisyon 4.5 ile rekabetçi bir seviyede; bu da arama sonuçlarında görünürlük sağlıyor."},
+      {"t": "Anahtar Kelime Çeşitliliği", "sev": "Medium", "d": "Çeşitli anahtar kelimelerde varlık gösteriliyor; farklı sorgularda görünürlük sağlıyor."},
+      {"t": "Marka Bahsedilmeleri", "sev": "Medium", "d": "59 farklı marka bahsedilmesi; markanın bilinirliğini artırıyor."}
+    ],
+    "weaknesses": [
+      {"t": "Düşük Görünürlük Skoru", "sev": "High", "d": "Görünürlük skoru yalnızca %5.2; bu da daha geniş bir kitleye ulaşma konusunda sınırlılık gösteriyor."},
+      {"t": "Yüksek Rekabet", "sev": "High", "d": "Trendyol ve HepsiBurada gibi büyük rakipler karşısında zorlanma potansiyeli."},
+      {"t": "Sınırlı Anahtar Kelime Kullanımı", "sev": "Medium", "d": "Anahtar kelimelerin çoğunluğu markaya özel; daha genel anahtar kelimelerde eksiklik var."}
+    ],
+    "opportunities": [
+      {"t": "Yeni Anahtar Kelimeler", "sev": "Medium", "d": "Genel alışveriş ve moda ile ilgili yeni anahtar kelimelerin hedeflenmesi görünürlüğü artırabilir."},
+      {"t": "SEO Optimizasyonu", "sev": "High", "d": "SEO stratejilerinin geliştirilmesi, görünürlük skorunu artırabilir."},
+      {"t": "İçerik Pazarlaması", "sev": "Medium", "d": "Daha fazla içerik üretimi ve blog yazıları ile organik trafik artırılabilir."}
+    ],
+    "threats": [
+      {"t": "Yoğun Rekabet", "sev": "High", "d": "Karaca ve Madame Coco gibi köklü markalar pazar payını artırma riski."},
+      {"t": "Değişen Arama Motoru Algoritmaları", "sev": "Medium", "d": "Algoritma değişiklikleri mevcut SEO stratejilerinin etkisini azaltabilir."},
+      {"t": "Dijital Reklam Maliyetleri", "sev": "Medium", "d": "Artan dijital reklam maliyetleri, bütçeyi zorlayabilir ve görünürlüğü kısıtlayabilir."}
+    ]
+  },
+  "recent_chats_quotes": [
+    {"provider": "Gemini", "prompt": "En iyi yerli havlu markası hangisi?", "quote": "Türkiye, havlu üretimi konusunda dünya çapında tanınan ve özellikle Denizli gibi şehirlerde köklü bir geçmişe sahip olan bir ülkedir. Yerli havlu markaları, kaliteli pamuk kullanımı..."},
+    {"provider": "ChatGPT", "prompt": "Gönül rahatlığıyla tavsiye edebileceğin ev tekstili markaları hangileri?", "quote": "Türkiye'de ev tekstili alanında kaliteli ve güvenilir ürünler sunan birçok marka bulunmaktadır. İşte gönül rahatlığıyla tercih edebileceğiniz bazı ev tekstili markaları: 1. Karaca..."}
+  ]
+}

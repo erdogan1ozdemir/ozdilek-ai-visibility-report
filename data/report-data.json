@@ -1,0 +1,3092 @@
+{
+ "marka": {
+  "file": "marka-gorunurluk-analizi.csv",
+  "domains": 250,
+  "total_citations": 929,
+  "citations_by_type": {
+   "competitor": 208,
+   "corporate": 640,
+   "ugc": 24,
+   "aggregator": 41,
+   "you": 6,
+   "editorial": 8,
+   "other": 1,
+   "reference": 1
+  },
+  "top15": [
+   {
+    "domain": "trendyol.com",
+    "type": "competitor",
+    "citations": 40,
+    "appearance": 60.7,
+    "gap": 225
+   },
+   {
+    "domain": "hepsiburada.com",
+    "type": "competitor",
+    "citations": 30,
+    "appearance": 53.6,
+    "gap": 399
+   },
+   {
+    "domain": "karaca.com",
+    "type": "competitor",
+    "citations": 29,
+    "appearance": 60.7,
+    "gap": 161
+   },
+   {
+    "domain": "yatasbedding.com.tr",
+    "type": "competitor",
+    "citations": 28,
+    "appearance": 57.1,
+    "gap": 189
+   },
+   {
+    "domain": "madamecoco.com",
+    "type": "competitor",
+    "citations": 27,
+    "appearance": 50.0,
+    "gap": 120
+   },
+   {
+    "domain": "eniyilerden.com",
+    "type": "corporate",
+    "citations": 23,
+    "appearance": 28.6,
+    "gap": 39
+   },
+   {
+    "domain": "neoldu.com.tr",
+    "type": "corporate",
+    "citations": 20,
+    "appearance": 25.0,
+    "gap": 13
+   },
+   {
+    "domain": "chakra.com.tr",
+    "type": "corporate",
+    "citations": 18,
+    "appearance": 35.7,
+    "gap": 0
+   },
+   {
+    "domain": "kizlarsoruyor.com",
+    "type": "ugc",
+    "citations": 17,
+    "appearance": 32.1,
+    "gap": 53
+   },
+   {
+    "domain": "karaca-home.com",
+    "type": "corporate",
+    "citations": 17,
+    "appearance": 39.3,
+    "gap": 14
+   },
+   {
+    "domain": "doquhome.com.tr",
+    "type": "competitor",
+    "citations": 16,
+    "appearance": 39.3,
+    "gap": 139
+   },
+   {
+    "domain": "haremlique.com",
+    "type": "corporate",
+    "citations": 15,
+    "appearance": 32.1,
+    "gap": 26
+   },
+   {
+    "domain": "eniyimiz.tr",
+    "type": "corporate",
+    "citations": 14,
+    "appearance": 21.4,
+    "gap": 0
+   },
+   {
+    "domain": "schafer.com.tr",
+    "type": "corporate",
+    "citations": 13,
+    "appearance": 28.6,
+    "gap": 77
+   },
+   {
+    "domain": "eniyimarka.com.tr",
+    "type": "corporate",
+    "citations": 13,
+    "appearance": 21.4,
+    "gap": 85
+   }
+  ],
+  "you": [
+   {
+    "domain": "ozdilekteyim.com",
+    "rank": "39",
+    "citations": 6,
+    "appearance": 10.7,
+    "top_prompts": "Yenidoğan uyku seti için hangi markalar öne çıkıyor? (2) | Çift kişilik yatak örtüsü için hangi markaları önerirsin? (2) | Kaliteli pike takımı hangi markadan alınır? (2)"
+   }
+  ],
+  "ozdilek_ecosystem": [
+   {
+    "domain": "ozdilekevtekstili.com.tr",
+    "rank": "16",
+    "type": "corporate",
+    "citations": 13
+   },
+   {
+    "domain": "ozdilekteyim.com",
+    "rank": "39",
+    "type": "you",
+    "citations": 6
+   },
+   {
+    "domain": "ozdilek.com.tr",
+    "rank": "132",
+    "type": "corporate",
+    "citations": 2
+   },
+   {
+    "domain": "ozdilekholding.com.tr",
+    "rank": "133",
+    "type": "corporate",
+    "citations": 2
+   }
+  ]
+ },
+ "pazaryeri": {
+  "file": "pazaryeri-gorunurluk-analizi.csv",
+  "domains": 436,
+  "total_citations": 1169,
+  "citations_by_type": {
+   "competitor": 193,
+   "corporate": 776,
+   "aggregator": 79,
+   "reference": 20,
+   "editorial": 60,
+   "ugc": 33,
+   "you": 4,
+   "other": 4
+  },
+  "top15": [
+   {
+    "domain": "trendyol.com",
+    "type": "competitor",
+    "citations": 90,
+    "appearance": 70.4,
+    "gap": 5248
+   },
+   {
+    "domain": "hepsiburada.com",
+    "type": "competitor",
+    "citations": 66,
+    "appearance": 63.0,
+    "gap": 2738
+   },
+   {
+    "domain": "play.google.com",
+    "type": "corporate",
+    "citations": 24,
+    "appearance": 29.6,
+    "gap": 570
+   },
+   {
+    "domain": "ikas.com",
+    "type": "corporate",
+    "citations": 19,
+    "appearance": 40.7,
+    "gap": 802
+   },
+   {
+    "domain": "n11.com",
+    "type": "aggregator",
+    "citations": 19,
+    "appearance": 37.0,
+    "gap": 658
+   },
+   {
+    "domain": "apps.apple.com",
+    "type": "corporate",
+    "citations": 19,
+    "appearance": 25.9,
+    "gap": 428
+   },
+   {
+    "domain": "migros.com.tr",
+    "type": "corporate",
+    "citations": 17,
+    "appearance": 18.5,
+    "gap": 142
+   },
+   {
+    "domain": "sikayetvar.com",
+    "type": "aggregator",
+    "citations": 17,
+    "appearance": 25.9,
+    "gap": 428
+   },
+   {
+    "domain": "boyner.com.tr",
+    "type": "corporate",
+    "citations": 14,
+    "appearance": 22.2,
+    "gap": 293
+   },
+   {
+    "domain": "akakce.com",
+    "type": "aggregator",
+    "citations": 13,
+    "appearance": 25.9,
+    "gap": 491
+   },
+   {
+    "domain": "tr.wikipedia.org",
+    "type": "reference",
+    "citations": 12,
+    "appearance": 22.2,
+    "gap": 293
+   },
+   {
+    "domain": "dopinggo.com",
+    "type": "corporate",
+    "citations": 12,
+    "appearance": 25.9,
+    "gap": 302
+   },
+   {
+    "domain": "ciceksepeti.com",
+    "type": "aggregator",
+    "citations": 12,
+    "appearance": 25.9,
+    "gap": 415
+   },
+   {
+    "domain": "sokmarket.com.tr",
+    "type": "corporate",
+    "citations": 12,
+    "appearance": 18.5,
+    "gap": 47
+   },
+   {
+    "domain": "beymen.com",
+    "type": "corporate",
+    "citations": 11,
+    "appearance": 29.6,
+    "gap": 181
+   }
+  ],
+  "you": [
+   {
+    "domain": "ozdilekteyim.com",
+    "rank": "53",
+    "citations": 4,
+    "appearance": 11.1,
+    "top_prompts": "Havlu ve bornoz setini online nereden almalıyım? (2) | Kaliteli valiz veya kabin boy valizi online nereden alabilirim? (1) | Nevresim takımı almak için en iyi online siteler hangileri? (1)"
+   }
+  ],
+  "ozdilek_ecosystem": [
+   {
+    "domain": "ozdilekteyim.com",
+    "rank": "53",
+    "type": "you",
+    "citations": 4
+   },
+   {
+    "domain": "ozdilekevtekstili.com.tr",
+    "rank": "84",
+    "type": "corporate",
+    "citations": 3
+   }
+  ]
+ },
+ "marka_urls": {
+  "file": "marka-gorunurluk-analizi-url-citation.csv",
+  "urls": 500,
+  "url_type_counts": {
+   "other": 223,
+   "homepage": 52,
+   "listicle": 46,
+   "article": 83,
+   "category": 53,
+   "product": 37,
+   "howto": 5,
+   "discussion": 1
+  },
+  "url_type_citations": {
+   "other": 356,
+   "homepage": 102,
+   "listicle": 154,
+   "article": 152,
+   "category": 87,
+   "product": 46,
+   "howto": 7,
+   "discussion": 1
+  },
+  "top_listicles": [
+   {
+    "url": "https://eniyimarka.com.tr/en-iyi-ceyiz-markalari-39008",
+    "title": "En İyi Çeyiz Markaları",
+    "citations": 12
+   },
+   {
+    "url": "https://eniyimiz.tr/en-iyi-havlu",
+    "title": "En İyi Havlu Markaları ve Tavsiyeleri 2026",
+    "citations": 10
+   },
+   {
+    "url": "https://eniyilerden.com/en-iyi-nevresim-takimi",
+    "title": "En İyi Nevresim Takımı Markası – 2026 Güncel Liste",
+    "citations": 8
+   },
+   {
+    "url": "https://yandex.com.tr/yaozet/ecom/en-iyi-ev-tekstili-markalari-incelemesi-id1-5OoiLPEq",
+    "title": "\"En İyi Ev Tekstili Markaları İncelemesi\" makalesinin özeti — YaÖzet",
+    "citations": 8
+   },
+   {
+    "url": "https://kizlarsoruyor.com/alisveris-hediyeler/q2196686-ev-tekstilinde-en-iyi-marka-hangisi-sizce",
+    "title": "kizlarsoruyor.com",
+    "citations": 7
+   },
+   {
+    "url": "https://icashop.com.tr/blog/icerik/en-iyi-havlu-markalari",
+    "title": "icashop.com.tr",
+    "citations": 7
+   },
+   {
+    "url": "https://neoldu.com.tr/en-iyi-banyo-paspasi-43964h.htm",
+    "title": "neoldu.com.tr",
+    "citations": 6
+   },
+   {
+    "url": "https://neoldu.com.tr/en-iyi-battaniye-44026h.htm",
+    "title": "En İyi Battaniye Tavsiyesi ve Markaları",
+    "citations": 6
+   },
+   {
+    "url": "https://bridolog.com/ev-ihtiyaclari/b1377--ceyizlik-en-iyi-kaliteli-nevresim-takimi-markasi-onerileri",
+    "title": "Çeyizlik En İyi, Kaliteli Nevresim Takımı Markası Önerileri | Bridolog",
+    "citations": 5
+   },
+   {
+    "url": "https://eniyilerden.com/en-iyi-bornoz",
+    "title": "En İyi Bornoz – Markaları Tavsiye (2026) - eniyilerden",
+    "citations": 5
+   },
+   {
+    "url": "https://blog.koctas.com.tr/en-iyi-ceyiz-markalari",
+    "title": "koctas.com.tr",
+    "citations": 5
+   },
+   {
+    "url": "https://eniyilerden.com/en-iyi-battaniye",
+    "title": "eniyilerden.com",
+    "citations": 5
+   }
+  ],
+  "you_urls": [
+   {
+    "url": "https://ozdilekteyim.com/magaza/yatak-ortusu",
+    "citations": 2,
+    "prompts": "Çift kişilik yatak örtüsü için hangi markaları önerirsin? (2)"
+   },
+   {
+    "url": "https://ozdilekteyim.com/magaza/pike-pike-takimi",
+    "citations": 2,
+    "prompts": "Kaliteli pike takımı hangi markadan alınır? (2)"
+   },
+   {
+    "url": "https://ozdilekteyim.com/magaza/uyku-seti",
+    "citations": 1,
+    "prompts": "Yenidoğan uyku seti için hangi markalar öne çıkıyor? (1)"
+   }
+  ]
+ },
+ "pazaryeri_urls": {
+  "file": "pazaryeri-gorunurluk-analizi-url-citations.csv",
+  "urls": 500,
+  "url_type_counts": {
+   "listicle": 28,
+   "other": 176,
+   "homepage": 157,
+   "article": 115,
+   "howto": 5,
+   "category": 10,
+   "product": 7,
+   "comparison": 1,
+   "discussion": 1
+  },
+  "url_type_citations": {
+   "listicle": 70,
+   "other": 268,
+   "homepage": 294,
+   "article": 191,
+   "howto": 8,
+   "category": 13,
+   "product": 11,
+   "comparison": 1,
+   "discussion": 1
+  },
+  "top_listicles": [
+   {
+    "url": "https://ikas.com/tr/blog/turkiyedeki-en-iyi-e-ticaret-pazaryerleri",
+    "title": "ikas.com",
+    "citations": 17
+   },
+   {
+    "url": "https://neoldu.com.tr/en-iyi-e-ticaret-siteleri-45178h.htm",
+    "title": "neoldu.com.tr",
+    "citations": 8
+   },
+   {
+    "url": "https://deal-tr.com/tr/blog/best-online-shopping-sites-in-turkey",
+    "title": "deal-tr.com",
+    "citations": 5
+   },
+   {
+    "url": "https://ininal.com/blog/en-iyi-10-eve-siparis-uygulamasi",
+    "title": "ininal.com",
+    "citations": 5
+   },
+   {
+    "url": "https://creosoft.com.tr/en-iyi-e-ticaret-siteleri",
+    "title": "En İyi E-ticaret Siteleri | CREOSOFT YAZILIM",
+    "citations": 3
+   },
+   {
+    "url": "https://webtekno.com/en-iyi-alisveris-siteleri-h78806.html",
+    "title": "webtekno.com",
+    "citations": 2
+   },
+   {
+    "url": "https://superisfikirleri.com/turkiyenin-en-iyi-ve-populer-alisveris-siteleri",
+    "title": "Türkiye’nin En İyi ve Popüler 17 Alışveriş Siteleri 2024 - Süper İş Fikirleri",
+    "citations": 2
+   },
+   {
+    "url": "https://hamzaerol.com.tr/turkiyenin-en-iyi-10-eve-siparis-uygulamasi-ve-sitesi",
+    "title": "hamzaerol.com.tr",
+    "citations": 2
+   },
+   {
+    "url": "https://yandex.com.tr/yaozet/ecom/turkiye-nin-en-iyi-online-market-uygulamalari-id1-S8nD6nw1",
+    "title": "\"Türkiye'nin En İyi Online Market Uygulamaları\" makalesinin özeti — YaÖzet",
+    "citations": 2
+   },
+   {
+    "url": "https://similarweb.com/top-websites/turkey/e-commerce-and-shopping",
+    "title": "similarweb.com",
+    "citations": 2
+   },
+   {
+    "url": "https://lengow.com/get-to-know-more/top-turkish-marketplaces",
+    "title": "lengow.com",
+    "citations": 2
+   },
+   {
+    "url": "https://e-ticaretsitesi.com/en-iyi-alisveris-siteleri",
+    "title": "En İyi Alışveriş Siteleri - E-Ticaret Sitesi",
+    "citations": 2
+   }
+  ],
+  "you_urls": [
+   {
+    "url": "https://ozdilekteyim.com/magaza/aile-seti-kategori",
+    "citations": 2,
+    "prompts": "Havlu ve bornoz setini online nereden almalıyım? (2)"
+   }
+  ]
+ },
+ "prompt_winners_marka": {
+  "Kaliteli pike takımı hangi markadan alınır?": [
+   [
+    "trendyol.com",
+    5,
+    "competitor"
+   ],
+   [
+    "hepsiburada.com",
+    3,
+    "competitor"
+   ],
+   [
+    "tac.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "chakra.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "schafer.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "puffy.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ozdilekteyim.com",
+    2,
+    "you"
+   ],
+   [
+    "gulguler.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "En iyi battaniye markası hangisi?": [
+   [
+    "trendyol.com",
+    5,
+    "competitor"
+   ],
+   [
+    "eniyilerden.com",
+    4,
+    "corporate"
+   ],
+   [
+    "neoldu.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "tac.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "yigitalisveris.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "pierrecardinhome.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "bucayun.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "n11.com",
+    1,
+    "aggregator"
+   ]
+  ],
+  "Çocuk bornozunda güvenli ve kaliteli marka hangisi?": [
+   [
+    "trendyol.com",
+    4,
+    "competitor"
+   ],
+   [
+    "neoldu.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "chakra.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "irya.com",
+    2,
+    "corporate"
+   ],
+   [
+    "anneysen.com",
+    2,
+    "corporate"
+   ],
+   [
+    "decathlon.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "lcw.com",
+    1,
+    "corporate"
+   ],
+   [
+    "littlegusto.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Havlu, bornoz ve nevresimi tek markadan çeyiz olarak almak istesem hangi markalar uygun?": [
+   [
+    "trendyol.com",
+    3,
+    "competitor"
+   ],
+   [
+    "doquhome.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "hipicon.com",
+    2,
+    "corporate"
+   ],
+   [
+    "ceyizdiyari.com",
+    2,
+    "corporate"
+   ],
+   [
+    "ceyizmerkezi.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "goldenhome.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ozdilek.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "koctas.com.tr",
+    1,
+    "competitor"
+   ]
+  ],
+  "Leke tutmayan masa örtüsü için hangi markalar öne çıkıyor?": [
+   [
+    "hepsiburada.com",
+    4,
+    "competitor"
+   ],
+   [
+    "koctas.com.tr",
+    4,
+    "competitor"
+   ],
+   [
+    "morlido.com",
+    4,
+    "corporate"
+   ],
+   [
+    "trendyol.com",
+    3,
+    "competitor"
+   ],
+   [
+    "tanteroza.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "nazikhome.com",
+    3,
+    "corporate"
+   ],
+   [
+    "rivaistanbul.com",
+    2,
+    "corporate"
+   ],
+   [
+    "ipekdunyasi.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Çeyiz için en iyi markalar hangileri?": [
+   [
+    "hepsiburada.com",
+    5,
+    "competitor"
+   ],
+   [
+    "sikayetvar.com",
+    5,
+    "aggregator"
+   ],
+   [
+    "akakce.com",
+    4,
+    "aggregator"
+   ],
+   [
+    "eniyilerden.com",
+    3,
+    "corporate"
+   ],
+   [
+    "dogugazetesi.com",
+    3,
+    "corporate"
+   ],
+   [
+    "onedio.com",
+    3,
+    "corporate"
+   ],
+   [
+    "kizlarsoruyor.com",
+    2,
+    "ugc"
+   ],
+   [
+    "schafer.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Banyo halısı ve paspas takımında hangi markalar kaliteli?": [
+   [
+    "vivahome.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "hepsiburada.com",
+    3,
+    "competitor"
+   ],
+   [
+    "irya.com",
+    3,
+    "corporate"
+   ],
+   [
+    "madamecoco.com",
+    2,
+    "competitor"
+   ],
+   [
+    "neoldu.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "karaca-home.com",
+    2,
+    "corporate"
+   ],
+   [
+    "elart.com",
+    2,
+    "corporate"
+   ],
+   [
+    "mudo.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Peştemal ve plaj havlusunda hangi markalar öne çıkıyor?": [
+   [
+    "boyner.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "hepsiburada.com",
+    2,
+    "competitor"
+   ],
+   [
+    "karaca.com",
+    2,
+    "competitor"
+   ],
+   [
+    "madamecoco.com",
+    2,
+    "competitor"
+   ],
+   [
+    "sarar.com",
+    2,
+    "corporate"
+   ],
+   [
+    "icashop.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "englishhome.com",
+    2,
+    "competitor"
+   ],
+   [
+    "mintekshome.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Yenidoğan uyku seti için hangi markalar öne çıkıyor?": [
+   [
+    "karaca.com",
+    4,
+    "competitor"
+   ],
+   [
+    "hipicon.com",
+    2,
+    "corporate"
+   ],
+   [
+    "cimri.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "ozdilekteyim.com",
+    2,
+    "you"
+   ],
+   [
+    "lcw.com",
+    2,
+    "corporate"
+   ],
+   [
+    "anneysen.com",
+    2,
+    "corporate"
+   ],
+   [
+    "funnababy.com",
+    2,
+    "corporate"
+   ],
+   [
+    "yigitalisveris.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Uzun ömürlü ve dayanıklı havlu için hangi markalar öneriliyor?": [
+   [
+    "chakra.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "karaca.com",
+    3,
+    "competitor"
+   ],
+   [
+    "hamam.com",
+    3,
+    "corporate"
+   ],
+   [
+    "eniyimiz.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "icashop.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "koctas.com.tr",
+    1,
+    "competitor"
+   ],
+   [
+    "altinbasak.com",
+    1,
+    "competitor"
+   ],
+   [
+    "ikea.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "En iyi yerli nevresim takımı markaları hangileri?": [
+   [
+    "eniyilerden.com",
+    4,
+    "corporate"
+   ],
+   [
+    "bridolog.com",
+    3,
+    "corporate"
+   ],
+   [
+    "karaca.com",
+    2,
+    "competitor"
+   ],
+   [
+    "yatasbedding.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "yigitalisveris.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "dekorgetir.com",
+    2,
+    "corporate"
+   ],
+   [
+    "ktrcevtekstili.com",
+    2,
+    "corporate"
+   ],
+   [
+    "guzeloldu.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Ev tekstili alırken hangi markayı tercih etmeliyim?": [
+   [
+    "yandex.com.tr",
+    4,
+    "aggregator"
+   ],
+   [
+    "madamecoco.com",
+    3,
+    "competitor"
+   ],
+   [
+    "karaca.com",
+    2,
+    "competitor"
+   ],
+   [
+    "yatasbedding.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "chakra.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "eniyimarka.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "viceversahome.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ozdilekevtekstili.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "En iyi nevresim takımı markası hangisi?": [
+   [
+    "eniyilerden.com",
+    4,
+    "corporate"
+   ],
+   [
+    "yatasbedding.com.tr",
+    3,
+    "competitor"
+   ],
+   [
+    "haremlique.com",
+    2,
+    "corporate"
+   ],
+   [
+    "eniyimarka.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "yigitalisveris.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "dekorgetir.com",
+    2,
+    "corporate"
+   ],
+   [
+    "sarar.com",
+    2,
+    "corporate"
+   ],
+   [
+    "bridolog.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Türkiye'nin en iyi ev tekstili markaları hangileri?": [
+   [
+    "eniyimarka.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "ozdilekevtekstili.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "yatasbedding.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "kizlarsoruyor.com",
+    2,
+    "ugc"
+   ],
+   [
+    "karaca-home.com",
+    2,
+    "corporate"
+   ],
+   [
+    "haremlique.com",
+    2,
+    "corporate"
+   ],
+   [
+    "yandex.com.tr",
+    2,
+    "aggregator"
+   ],
+   [
+    "dekorgetir.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Gönül rahatlığıyla tavsiye edebileceğin ev tekstili markaları hangileri?": [
+   [
+    "yatasbedding.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "karaca-home.com",
+    2,
+    "corporate"
+   ],
+   [
+    "haremlique.com",
+    2,
+    "corporate"
+   ],
+   [
+    "schafer.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "eniyimarka.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ozdilekevtekstili.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "puffy.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "viceversahome.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "En iyi havlu markası hangisi?": [
+   [
+    "eniyimiz.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "madamecoco.com",
+    3,
+    "competitor"
+   ],
+   [
+    "kizlarsoruyor.com",
+    3,
+    "ugc"
+   ],
+   [
+    "icashop.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "irya.com",
+    2,
+    "corporate"
+   ],
+   [
+    "dekorgetir.com",
+    2,
+    "corporate"
+   ],
+   [
+    "soley.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "anilsan.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "En iyi bornoz markası nedir?": [
+   [
+    "eniyilerden.com",
+    4,
+    "corporate"
+   ],
+   [
+    "neoldu.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "madamecoco.com",
+    2,
+    "competitor"
+   ],
+   [
+    "doquhome.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "yandex.com.tr",
+    2,
+    "aggregator"
+   ],
+   [
+    "tac.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "yigitalisveris.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "soley.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "En iyi kaymaz banyo paspası markası hangisi?": [
+   [
+    "neoldu.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "koctas.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "iyioneri.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "jysk.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ogretmenlerhali.com",
+    2,
+    "corporate"
+   ],
+   [
+    "vivahome.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "En iyi yerli havlu markası hangisi?": [
+   [
+    "eniyimiz.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "irya.com",
+    3,
+    "corporate"
+   ],
+   [
+    "chakra.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "kizlarsoruyor.com",
+    2,
+    "ugc"
+   ],
+   [
+    "dekorgetir.com",
+    2,
+    "corporate"
+   ],
+   [
+    "soley.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "bridolog.com",
+    2,
+    "corporate"
+   ],
+   [
+    "turkpidya.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Fiyat/performans açısından en iyi ev tekstili markaları hangileri?": [
+   [
+    "kizlarsoruyor.com",
+    2,
+    "ugc"
+   ],
+   [
+    "schafer.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "puffy.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ikea.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "marketingturkiye.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "cimri.com",
+    1,
+    "aggregator"
+   ],
+   [
+    "mandastekstil.com",
+    1,
+    "corporate"
+   ],
+   [
+    "viceversahome.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "En kaliteli yerli ev tekstili markaları hangileri?": [
+   [
+    "sikayetvar.com",
+    5,
+    "aggregator"
+   ],
+   [
+    "ozdilekevtekstili.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "sarar.com",
+    3,
+    "corporate"
+   ],
+   [
+    "altinbasak.com",
+    3,
+    "competitor"
+   ],
+   [
+    "ilk-on.com",
+    3,
+    "corporate"
+   ],
+   [
+    "karaca-home.com",
+    2,
+    "corporate"
+   ],
+   [
+    "haremlique.com",
+    2,
+    "corporate"
+   ],
+   [
+    "englishhome.com",
+    2,
+    "competitor"
+   ]
+  ],
+  "Çift kişilik yatak örtüsü için hangi markaları önerirsin?": [
+   [
+    "tac.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "boyner.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "karaca-home.com",
+    2,
+    "corporate"
+   ],
+   [
+    "doquhome.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "pierrecardinhome.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ozdilekteyim.com",
+    2,
+    "you"
+   ],
+   [
+    "isbiryatak.com",
+    2,
+    "corporate"
+   ],
+   [
+    "levanzo.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Bebek için nevresim takımında hangi markalar güvenli?": [
+   [
+    "doquhome.com.tr",
+    3,
+    "competitor"
+   ],
+   [
+    "littlegusto.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "kitikate.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "casadorababy.com",
+    2,
+    "corporate"
+   ],
+   [
+    "casadora-baby.myshopify.com",
+    2,
+    "corporate"
+   ],
+   [
+    "kanzhome.com",
+    2,
+    "corporate"
+   ],
+   [
+    "monohome.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "zezigkumas.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "En iyi yorgan markası hangisi?": [
+   [
+    "eniyimiz.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "penelopebedroom.com",
+    2,
+    "competitor"
+   ],
+   [
+    "iyioneri.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "divanev.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "evetekstil.com",
+    2,
+    "corporate"
+   ],
+   [
+    "doquhome.com.tr",
+    1,
+    "competitor"
+   ],
+   [
+    "linens.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "dekordiyon.com",
+    1,
+    "corporate"
+   ]
+  ],
+  "Yeni eve taşınırken hangi ev tekstili markalarını önerirsin?": [
+   [
+    "haremlique.com",
+    2,
+    "corporate"
+   ],
+   [
+    "schafer.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "yandex.com.tr",
+    2,
+    "aggregator"
+   ],
+   [
+    "gallerycrystal.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "marketingturkiye.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "evidea.com",
+    2,
+    "corporate"
+   ],
+   [
+    "puffy.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "enzahome.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Ev tekstilinde yerli markalar mı yoksa ithal/yabancı markalar mı daha kaliteli?": [
+   [
+    "penelopebedroom.com",
+    2,
+    "competitor"
+   ],
+   [
+    "gallerycrystal.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "capital.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "uib.org.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "vakko.com",
+    2,
+    "corporate"
+   ],
+   [
+    "wishboutique.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "nord-ist.com",
+    1,
+    "corporate"
+   ],
+   [
+    "ktrcevtekstili.com",
+    1,
+    "corporate"
+   ]
+  ],
+  "Yerli çeyiz markaları arasında hangisini önerirsin?": [
+   [
+    "marketingturkiye.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "ceyizify.com",
+    2,
+    "corporate"
+   ],
+   [
+    "blog.koctas.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "cimri.com",
+    1,
+    "aggregator"
+   ],
+   [
+    "ozeller.com",
+    1,
+    "corporate"
+   ],
+   [
+    "kutahyaporselen.com",
+    1,
+    "corporate"
+   ],
+   [
+    "magazinpark.com",
+    1,
+    "editorial"
+   ],
+   [
+    "nehir.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Otel kalitesinde havlu ve bornoz üreten Türk markaları hangileri?": [
+   [
+    "egehavlu.com",
+    3,
+    "corporate"
+   ],
+   [
+    "havlunatekstil.com",
+    3,
+    "corporate"
+   ],
+   [
+    "pupilla.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "baskanhavlu.com",
+    2,
+    "corporate"
+   ],
+   [
+    "bime.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "metexhavlu.com",
+    2,
+    "corporate"
+   ],
+   [
+    "mymurdum.com",
+    2,
+    "corporate"
+   ],
+   [
+    "ozdilekholding.com.tr",
+    2,
+    "corporate"
+   ]
+  ]
+ },
+ "prompt_winners_pazaryeri": {
+  "Kaliteli paslanmaz çelik termosu online nereden alabilirim?": [
+   [
+    "hepsiburada.com",
+    15,
+    "competitor"
+   ],
+   [
+    "trendyol.com",
+    13,
+    "competitor"
+   ],
+   [
+    "akakce.com",
+    5,
+    "aggregator"
+   ],
+   [
+    "contigo.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "babymall.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "24bottles.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "sikayetvar.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "ciceksepeti.com",
+    2,
+    "aggregator"
+   ]
+  ],
+  "Havlu ve bornoz setini online nereden almalıyım?": [
+   [
+    "trendyol.com",
+    11,
+    "competitor"
+   ],
+   [
+    "hepsiburada.com",
+    9,
+    "competitor"
+   ],
+   [
+    "englishhome.com",
+    2,
+    "competitor"
+   ],
+   [
+    "karaca.com",
+    2,
+    "competitor"
+   ],
+   [
+    "madamecoco.com",
+    2,
+    "competitor"
+   ],
+   [
+    "cimri.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "tac.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ozdilekteyim.com",
+    2,
+    "you"
+   ]
+  ],
+  "Kamp malzemelerini (sandalye, masa, termos) online nereden alabilirim?": [
+   [
+    "trendyol.com",
+    8,
+    "competitor"
+   ],
+   [
+    "n11.com",
+    3,
+    "aggregator"
+   ],
+   [
+    "bauhaus.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "andoutdoor.com",
+    3,
+    "corporate"
+   ],
+   [
+    "koctas.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "campreyon.com",
+    2,
+    "corporate"
+   ],
+   [
+    "argeuscamp.com",
+    2,
+    "corporate"
+   ],
+   [
+    "atlaskamp.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Ev dekorasyon ürünlerini (mum, vazo, çerçeve) online nereden alabilirim?": [
+   [
+    "trendyol.com",
+    8,
+    "competitor"
+   ],
+   [
+    "hepsiburada.com",
+    6,
+    "competitor"
+   ],
+   [
+    "ikea.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "evidea.com",
+    3,
+    "corporate"
+   ],
+   [
+    "englishhome.com",
+    3,
+    "competitor"
+   ],
+   [
+    "koctas.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "porland.com",
+    2,
+    "corporate"
+   ],
+   [
+    "beymen.com",
+    1,
+    "corporate"
+   ]
+  ],
+  "Parfüm ve kozmetiği orijinal olarak online nereden alabilirim?": [
+   [
+    "sikayetvar.com",
+    9,
+    "aggregator"
+   ],
+   [
+    "trendyol.com",
+    8,
+    "competitor"
+   ],
+   [
+    "hepsiburada.com",
+    7,
+    "competitor"
+   ],
+   [
+    "boyner.com.tr",
+    6,
+    "corporate"
+   ],
+   [
+    "watsons.com.tr",
+    5,
+    "corporate"
+   ],
+   [
+    "technopat.net",
+    4,
+    "ugc"
+   ],
+   [
+    "kizlarsoruyor.com",
+    4,
+    "ugc"
+   ],
+   [
+    "dilaykozmetik.com",
+    3,
+    "editorial"
+   ]
+  ],
+  "Okul ve kırtasiye alışverişini online nereden yapabilirim?": [
+   [
+    "hepsiburada.com",
+    6,
+    "competitor"
+   ],
+   [
+    "avansas.com",
+    5,
+    "corporate"
+   ],
+   [
+    "ciceksepeti.com",
+    3,
+    "aggregator"
+   ],
+   [
+    "dr.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "kayakirtasiye.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "idefix.com",
+    3,
+    "aggregator"
+   ],
+   [
+    "eraykirtasiye.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "hedefkirtasiyem.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Türkiye'de online market alışverişi için hangi siteleri önerirsin?": [
+   [
+    "play.google.com",
+    8,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    6,
+    "corporate"
+   ],
+   [
+    "migros.com.tr",
+    6,
+    "corporate"
+   ],
+   [
+    "tr.wikipedia.org",
+    5,
+    "reference"
+   ],
+   [
+    "sokmarket.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "en.wikipedia.org",
+    3,
+    "reference"
+   ],
+   [
+    "hamzaerol.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "n11.com",
+    2,
+    "aggregator"
+   ]
+  ],
+  "İnternetten market alışverişi yapılan en güvenilir siteler hangileri?": [
+   [
+    "play.google.com",
+    5,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    4,
+    "corporate"
+   ],
+   [
+    "ikas.com",
+    2,
+    "corporate"
+   ],
+   [
+    "tr.wikipedia.org",
+    2,
+    "reference"
+   ],
+   [
+    "sinpas.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "webtekno.com",
+    2,
+    "editorial"
+   ],
+   [
+    "ininal.com",
+    2,
+    "corporate"
+   ],
+   [
+    "migros.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Aynı gün veya hızlı teslimat yapan online market uygulamaları hangileri?": [
+   [
+    "migros.com.tr",
+    6,
+    "corporate"
+   ],
+   [
+    "play.google.com",
+    4,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    4,
+    "corporate"
+   ],
+   [
+    "yandex.com.tr",
+    3,
+    "aggregator"
+   ],
+   [
+    "sinpas.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ininal.com",
+    2,
+    "corporate"
+   ],
+   [
+    "hurriyet.com.tr",
+    2,
+    "editorial"
+   ],
+   [
+    "carrefoursa.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Amazon, AliExpress ve Temu yerine kullanabileceğim yerli alışveriş siteleri neler?": [
+   [
+    "magnadijital.com.tr",
+    5,
+    "corporate"
+   ],
+   [
+    "ikas.com",
+    3,
+    "corporate"
+   ],
+   [
+    "dopinggo.com",
+    3,
+    "corporate"
+   ],
+   [
+    "play.google.com",
+    2,
+    "corporate"
+   ],
+   [
+    "tr.wikipedia.org",
+    2,
+    "reference"
+   ],
+   [
+    "faprika.com",
+    2,
+    "corporate"
+   ],
+   [
+    "en.wikipedia.org",
+    2,
+    "reference"
+   ],
+   [
+    "techreview.com.tr",
+    2,
+    "editorial"
+   ]
+  ],
+  "Online sipariş verip mağazadan gel-al (tıkla-teslim al) yapabileceğim marketler hangileri?": [
+   [
+    "a101.com.tr",
+    8,
+    "corporate"
+   ],
+   [
+    "happycenter.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "techinside.com",
+    4,
+    "corporate"
+   ],
+   [
+    "webrazzi.com",
+    3,
+    "editorial"
+   ],
+   [
+    "youtube.com",
+    3,
+    "ugc"
+   ],
+   [
+    "play.google.com",
+    2,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    2,
+    "corporate"
+   ],
+   [
+    "migros.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Kaliteli ürünleri uygun fiyata satan yerli e-ticaret siteleri hangileri?": [
+   [
+    "ikas.com",
+    2,
+    "corporate"
+   ],
+   [
+    "n11.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "akakce.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "dopinggo.com",
+    2,
+    "corporate"
+   ],
+   [
+    "jetstok.com",
+    2,
+    "corporate"
+   ],
+   [
+    "teknosa.com",
+    2,
+    "corporate"
+   ],
+   [
+    "sonsepet.com",
+    2,
+    "corporate"
+   ],
+   [
+    "bendevar.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Bir ürünü markanın resmi sitesinden mi yoksa pazaryerinden mi almak daha mantıklı?": [
+   [
+    "ikas.com",
+    2,
+    "corporate"
+   ],
+   [
+    "isbank.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "yengec.co",
+    2,
+    "corporate"
+   ],
+   [
+    "egaranti.com",
+    2,
+    "corporate"
+   ],
+   [
+    "ideasoft.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "platinmarket.com",
+    2,
+    "corporate"
+   ],
+   [
+    "donanimhaber.com",
+    1,
+    "ugc"
+   ],
+   [
+    "cmrsoft.com",
+    1,
+    "corporate"
+   ]
+  ],
+  "Müşteri memnuniyeti en yüksek ve en çok beğenilen online alışveriş siteleri hangileri?": [
+   [
+    "neoldu.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "ikas.com",
+    2,
+    "corporate"
+   ],
+   [
+    "sikayetvar.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "dopinggo.com",
+    2,
+    "corporate"
+   ],
+   [
+    "magnadijital.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "hurriyet.com.tr",
+    2,
+    "editorial"
+   ],
+   [
+    "superisfikirleri.com",
+    2,
+    "corporate"
+   ],
+   [
+    "techreview.com.tr",
+    1,
+    "editorial"
+   ]
+  ],
+  "İndirim ve kampanya açısından en avantajlı online alışveriş siteleri hangileri?": [
+   [
+    "kuponla.com",
+    4,
+    "corporate"
+   ],
+   [
+    "vatanbilgisayar.com",
+    4,
+    "corporate"
+   ],
+   [
+    "indirimkodu.donanimhaber.com",
+    4,
+    "ugc"
+   ],
+   [
+    "n11.com",
+    3,
+    "aggregator"
+   ],
+   [
+    "boyner.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "picodi.com",
+    3,
+    "corporate"
+   ],
+   [
+    "maximum.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "isbank.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Aynı siteden hem giyim/ev tekstili hem market alışverişi yapabileceğim online platform var mı?": [
+   [
+    "n11.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "deal-tr.com",
+    2,
+    "corporate"
+   ],
+   [
+    "meshur.co",
+    2,
+    "corporate"
+   ],
+   [
+    "dopinggo.com",
+    1,
+    "corporate"
+   ],
+   [
+    "faprika.com",
+    1,
+    "corporate"
+   ],
+   [
+    "jetstok.com",
+    1,
+    "corporate"
+   ],
+   [
+    "en.wikipedia.org",
+    1,
+    "reference"
+   ],
+   [
+    "pazarama.com",
+    1,
+    "aggregator"
+   ]
+  ],
+  "Aylık market ihtiyacımı toplu ve uygun fiyata online nereden karşılarım?": [
+   [
+    "toptantr.com",
+    5,
+    "editorial"
+   ],
+   [
+    "sokmarket.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "bizimtoptan.com.tr",
+    3,
+    "editorial"
+   ],
+   [
+    "migros.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "akakce.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "metro-tr.com",
+    2,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    1,
+    "corporate"
+   ],
+   [
+    "a101.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Orijinal marka çanta ve aksesuarı online nereden alınır?": [
+   [
+    "boyner.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "beymen.com",
+    2,
+    "corporate"
+   ],
+   [
+    "cuerro.com",
+    2,
+    "corporate"
+   ],
+   [
+    "hbscanta.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "hotic.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "myall.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "silverpolo.com",
+    2,
+    "corporate"
+   ],
+   [
+    "teriden.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Yerli ve milli e-ticaret sitelerini desteklemek istiyorum, hangilerini önerirsin?": [
+   [
+    "magnadijital.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "dopinggo.com",
+    2,
+    "corporate"
+   ],
+   [
+    "faprika.com",
+    2,
+    "corporate"
+   ],
+   [
+    "techreview.com.tr",
+    2,
+    "editorial"
+   ],
+   [
+    "creosoft.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "lengow.com",
+    2,
+    "corporate"
+   ],
+   [
+    "hurriyet.com.tr",
+    1,
+    "editorial"
+   ],
+   [
+    "destek.kmk.net.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Sevdiklerime ev tekstili veya kişisel bakım hediyesi almak için hangi siteler iyi?": [
+   [
+    "ciceksepeti.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "beymen.com",
+    2,
+    "corporate"
+   ],
+   [
+    "flyingtiger.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "evidea.com",
+    1,
+    "corporate"
+   ],
+   [
+    "englishhome.com",
+    1,
+    "competitor"
+   ],
+   [
+    "madamecoco.com",
+    1,
+    "competitor"
+   ],
+   [
+    "chakra.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "haremlique.com",
+    1,
+    "corporate"
+   ]
+  ],
+  "Kaliteli valiz veya kabin boy valizi online nereden alabilirim?": [
+   [
+    "samsonite.com.tr",
+    5,
+    "corporate"
+   ],
+   [
+    "ciceksepeti.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "eastpak.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "flo.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "hizlivaliz.com",
+    2,
+    "corporate"
+   ],
+   [
+    "instreet.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "pierrecardin.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "valizcim.net",
+    2,
+    "corporate"
+   ]
+  ],
+  "Nevresim takımı almak için en iyi online siteler hangileri?": [
+   [
+    "yatasbedding.com.tr",
+    5,
+    "competitor"
+   ],
+   [
+    "gallerycrystal.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "evidea.com",
+    2,
+    "corporate"
+   ],
+   [
+    "tac.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "doquhome.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "puffy.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "haremlique.com",
+    2,
+    "corporate"
+   ],
+   [
+    "evienhome.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Türkiye'de online alışveriş için en güvenilir siteler hangileri?": [
+   [
+    "neoldu.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "faprika.com",
+    2,
+    "corporate"
+   ],
+   [
+    "jetstok.com",
+    2,
+    "corporate"
+   ],
+   [
+    "techreview.com.tr",
+    2,
+    "editorial"
+   ],
+   [
+    "deal-tr.com",
+    2,
+    "corporate"
+   ],
+   [
+    "guvenilirfirma.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ozgurkocaeli.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "webtekno.com",
+    1,
+    "editorial"
+   ]
+  ],
+  "Ev tekstili ve ev ihtiyaçlarımı tek siteden online nereden alabilirim?": [
+   [
+    "doquhome.com.tr",
+    2,
+    "competitor"
+   ],
+   [
+    "puffy.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "jetstok.com",
+    1,
+    "corporate"
+   ],
+   [
+    "karaca.com",
+    1,
+    "competitor"
+   ],
+   [
+    "chakra.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "mudo.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "vivense.com",
+    1,
+    "corporate"
+   ],
+   [
+    "jumbo.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Çeyiz alışverişimi tek siteden yapmak istesem nereyi önerirsin?": [
+   [
+    "ceyizci.com",
+    3,
+    "corporate"
+   ],
+   [
+    "madamecoco.com",
+    2,
+    "competitor"
+   ],
+   [
+    "ceyizdiyari.com",
+    2,
+    "corporate"
+   ],
+   [
+    "gelincealisveris.com",
+    2,
+    "corporate"
+   ],
+   [
+    "saribulut.com",
+    2,
+    "corporate"
+   ],
+   [
+    "englishhome.com",
+    1,
+    "competitor"
+   ],
+   [
+    "karaca.com",
+    1,
+    "competitor"
+   ],
+   [
+    "ikea.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Yaş pasta ve özel gün ürünlerini online sipariş edebileceğim siteler hangileri?": [
+   [
+    "livapastacilik.com",
+    4,
+    "corporate"
+   ],
+   [
+    "bonnenuit.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "cevrepastaneleri.com",
+    2,
+    "corporate"
+   ],
+   [
+    "hediyepasta.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "merrydolci.com",
+    2,
+    "corporate"
+   ],
+   [
+    "nuga.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "oklava.net",
+    2,
+    "corporate"
+   ],
+   [
+    "pastaal.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Shein ve Temu yerine güvenli ve yerli alternatif alışveriş siteleri hangileri?": [
+   [
+    "guvenilirfirma.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "meshur.co",
+    1,
+    "corporate"
+   ],
+   [
+    "kucukbuyuk.com",
+    1,
+    "corporate"
+   ],
+   [
+    "carpe.com.tr",
+    1,
+    "corporate"
+   ],
+   [
+    "oradadegilburada.com",
+    1,
+    "corporate"
+   ],
+   [
+    "grupanda.org",
+    1,
+    "corporate"
+   ]
+  ]
+ },
+ "market_prompt_analysis": {
+  "Türkiye'de online market alışverişi için hangi siteleri önerirsin?": [
+   [
+    "play.google.com",
+    8,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    6,
+    "corporate"
+   ],
+   [
+    "migros.com.tr",
+    6,
+    "corporate"
+   ],
+   [
+    "tr.wikipedia.org",
+    5,
+    "reference"
+   ],
+   [
+    "sokmarket.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "en.wikipedia.org",
+    3,
+    "reference"
+   ],
+   [
+    "hamzaerol.com.tr",
+    3,
+    "corporate"
+   ],
+   [
+    "n11.com",
+    2,
+    "aggregator"
+   ]
+  ],
+  "İnternetten market alışverişi yapılan en güvenilir siteler hangileri?": [
+   [
+    "play.google.com",
+    5,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    4,
+    "corporate"
+   ],
+   [
+    "ikas.com",
+    2,
+    "corporate"
+   ],
+   [
+    "tr.wikipedia.org",
+    2,
+    "reference"
+   ],
+   [
+    "sinpas.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "webtekno.com",
+    2,
+    "editorial"
+   ],
+   [
+    "ininal.com",
+    2,
+    "corporate"
+   ],
+   [
+    "migros.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Aynı gün veya hızlı teslimat yapan online market uygulamaları hangileri?": [
+   [
+    "migros.com.tr",
+    6,
+    "corporate"
+   ],
+   [
+    "play.google.com",
+    4,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    4,
+    "corporate"
+   ],
+   [
+    "yandex.com.tr",
+    3,
+    "aggregator"
+   ],
+   [
+    "sinpas.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "ininal.com",
+    2,
+    "corporate"
+   ],
+   [
+    "hurriyet.com.tr",
+    2,
+    "editorial"
+   ],
+   [
+    "carrefoursa.com",
+    2,
+    "corporate"
+   ]
+  ],
+  "Online sipariş verip mağazadan gel-al (tıkla-teslim al) yapabileceğim marketler hangileri?": [
+   [
+    "a101.com.tr",
+    8,
+    "corporate"
+   ],
+   [
+    "happycenter.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "techinside.com",
+    4,
+    "corporate"
+   ],
+   [
+    "webrazzi.com",
+    3,
+    "editorial"
+   ],
+   [
+    "youtube.com",
+    3,
+    "ugc"
+   ],
+   [
+    "play.google.com",
+    2,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    2,
+    "corporate"
+   ],
+   [
+    "migros.com.tr",
+    2,
+    "corporate"
+   ]
+  ],
+  "Aynı siteden hem giyim/ev tekstili hem market alışverişi yapabileceğim online platform var mı?": [
+   [
+    "n11.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "deal-tr.com",
+    2,
+    "corporate"
+   ],
+   [
+    "meshur.co",
+    2,
+    "corporate"
+   ],
+   [
+    "dopinggo.com",
+    1,
+    "corporate"
+   ],
+   [
+    "faprika.com",
+    1,
+    "corporate"
+   ],
+   [
+    "jetstok.com",
+    1,
+    "corporate"
+   ],
+   [
+    "en.wikipedia.org",
+    1,
+    "reference"
+   ],
+   [
+    "pazarama.com",
+    1,
+    "aggregator"
+   ]
+  ],
+  "Aylık market ihtiyacımı toplu ve uygun fiyata online nereden karşılarım?": [
+   [
+    "toptantr.com",
+    5,
+    "editorial"
+   ],
+   [
+    "sokmarket.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "bizimtoptan.com.tr",
+    3,
+    "editorial"
+   ],
+   [
+    "migros.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "akakce.com",
+    2,
+    "aggregator"
+   ],
+   [
+    "metro-tr.com",
+    2,
+    "corporate"
+   ],
+   [
+    "apps.apple.com",
+    1,
+    "corporate"
+   ],
+   [
+    "a101.com.tr",
+    1,
+    "corporate"
+   ]
+  ],
+  "Yaş pasta ve özel gün ürünlerini online sipariş edebileceğim siteler hangileri?": [
+   [
+    "livapastacilik.com",
+    4,
+    "corporate"
+   ],
+   [
+    "bonnenuit.com.tr",
+    4,
+    "corporate"
+   ],
+   [
+    "cevrepastaneleri.com",
+    2,
+    "corporate"
+   ],
+   [
+    "hediyepasta.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "merrydolci.com",
+    2,
+    "corporate"
+   ],
+   [
+    "nuga.com.tr",
+    2,
+    "corporate"
+   ],
+   [
+    "oklava.net",
+    2,
+    "corporate"
+   ],
+   [
+    "pastaal.com.tr",
+    2,
+    "corporate"
+   ]
+  ]
+ }
+}
