@@ -286,22 +286,26 @@ p b{color:var(--ink)}
 .qtabs{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
 .qtabs button{all:unset;cursor:pointer;font-size:12px;font-weight:600;padding:6px 14px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2)}
 .qtabs button.on{background:var(--teal);color:#fff}
-.qbody{overflow-y:auto;padding:14px 24px 22px;scrollbar-width:thin;scrollbar-color:var(--coral) var(--line-soft)}
-.qbody::-webkit-scrollbar{width:6px}
+.qbody{overflow:auto;padding:0;scrollbar-width:thin;scrollbar-color:var(--coral) var(--line-soft)}
+.qbody::-webkit-scrollbar{width:7px;height:7px}
 .qbody::-webkit-scrollbar-thumb{background:var(--coral);border-radius:99px}
-.qc{padding:15px 2px;border-bottom:1px solid var(--line-soft)}
-.qc:last-child{border-bottom:none}
-.qc .qq{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.45}
-.qc .qmeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px;align-items:center}
-.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2.5px 10px;border-radius:var(--r-pill)}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2.5px 9px;border-radius:var(--r-pill);white-space:nowrap;display:inline-block}
 .pill.m{background:var(--mint);color:var(--green)}
 .pill.z{background:#E3F0FA;color:#1565C0}
 .pill.c{background:var(--line-soft);color:var(--ink-2)}
 .pill.n{background:var(--teal);color:#fff;font-family:var(--font-display)}
-.pill.zero{background:var(--red-wash);color:var(--red)}
-.pill.pos{background:var(--green-wash);color:var(--green)}
-.qc .qs{margin-top:8px}
-@media(max-width:640px){.qmodal{padding:0}.qbox{max-height:100vh;border-radius:0;width:100%}}
+.pill.zero{background:var(--red-wash);color:var(--red);font-family:var(--font-display)}
+.pill.pos{background:var(--green-wash);color:var(--green);font-family:var(--font-display)}
+.qtbl{width:100%;border-collapse:collapse;font-size:13px;min-width:780px}
+.qtbl thead th{position:sticky;top:0;background:#fff;z-index:2;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:left;padding:12px;border-bottom:1.5px solid var(--line)}
+.qtbl th.c,.qtbl td.c{text-align:center}
+.qtbl td{padding:11px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-2)}
+.qtbl tbody tr:hover{background:#FAF8F5}
+.qtbl .idx{font-family:var(--font-display);font-weight:700;color:var(--ink-3);font-size:12px;text-align:center}
+.qtbl .q{font-weight:600;color:var(--ink);line-height:1.4;min-width:230px}
+.qtbl .src{min-width:210px}
+.qtbl .src .chip{margin:1px 3px 1px 0}
+@media(max-width:640px){.qmodal{padding:0}.qbox{max-height:100vh;border-radius:0;width:100%}.qtbl .src{white-space:nowrap}.qtbl .q{min-width:200px}}
 
 /* footer */
 footer{background:var(--teal);color:rgba(255,255,255,.82);padding:60px 0 42px;font-size:14px;position:relative;overflow:hidden}
@@ -842,18 +846,19 @@ heat('hm-pazaryeri',HM_PAZAR);
 })();
 
 /* ---------- soru modal ---------- */
-const CAT_LABEL={best:'best of',vs:'versus',alternatives:'alternatives',custom:'nereden alınır'};
-function qCard(o){
-  const lens=o.p==='m'?'<span class="pill m">Marka perspektifi</span>':'<span class="pill z">Pazaryeri perspektifi</span>';
-  const oz=o.n===0?'<span class="pill c">citation kaydı yok</span>':(o.o>0?`<span class="pill pos">Özdilek ${o.o}</span>`:'<span class="pill zero">Özdilek 0</span>');
-  const srcs=o.s.map(([d,c])=>`<span class="chip"><img class="fav sm" src="${LOGO(d)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${d.replace('www.','')} <b class="n">${c}</b></span>`).join('');
-  return `<div class="qc"><div class="qq">"${o.q}"</div>
-    <div class="qmeta">${lens}<span class="pill c">${CAT_LABEL[o.c]||o.c}</span>${o.n>0?`<span class="pill n">${o.n} citation</span>`:''}${oz}</div>
-    ${srcs?`<div class="qs">${srcs}</div>`:''}</div>`;
+const CAT_LABEL={best:'Best of',vs:'Versus',alternatives:'Alternatives',custom:'Nereden alınır'};
+function qRows(list){
+  return list.map((o,i)=>{
+    const lens=o.p==='m'?'<span class="pill m">Marka</span>':'<span class="pill z">Pazaryeri</span>';
+    const cit=o.n>0?`<span class="pill n">${o.n}</span>`:'<span class="pill c">-</span>';
+    const oz=o.n===0?'<span class="pill c">-</span>':(o.o>0?`<span class="pill pos">${o.o}</span>`:'<span class="pill zero">0</span>');
+    const src=o.s.length?o.s.slice(0,4).map(([d,c])=>`<span class="chip"><img class="fav sm" src="${LOGO(d)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${d.replace('www.','')} <b class="n">${c}</b></span>`).join('')+(o.s.length>4?`<span class="chip" style="background:transparent">+${o.s.length-4}</span>`:''):'<span style="color:var(--ink-3)">-</span>';
+    return `<tr><td class="idx">${i+1}</td><td class="q">"${o.q}"</td><td>${lens}</td><td><span class="pill c">${CAT_LABEL[o.c]||o.c}</span></td><td class="c">${cit}</td><td class="c">${oz}</td><td class="src">${src}</td></tr>`;
+  }).join('');
 }
 function renderQ(f){
   const list=QUESTIONS.filter(o=>f==='all'||o.p===f);
-  document.getElementById('qbody').innerHTML=list.map(qCard).join('');
+  document.getElementById('qbody').innerHTML=`<table class="qtbl"><thead><tr><th class="c">#</th><th>Soru</th><th>Perspektif</th><th>Tip</th><th class="c">Citation</th><th class="c">Özdilek</th><th>Öne çıkan kaynaklar</th></tr></thead><tbody>${qRows(list)}</tbody></table>`;
 }
 const qmodal=document.getElementById('qmodal');
 function openQ(f){
