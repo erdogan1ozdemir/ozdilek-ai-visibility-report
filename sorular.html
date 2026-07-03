@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soru Seti · Özdilekteyim AI Görünürlük Raporu</title>
-<meta name="description" content="Inbound Visibility Tool ile izlenen 56 marka-nötr sorunun tam listesi; her soru için citation hacmi ve öne çıkan kaynaklar.">
+<title>Soru Seti & Cevaplar · Özdilekteyim AI Görünürlük Raporu</title>
+<meta name="description" content="Inbound Visibility Tool ile izlenen 56 marka-nötr sorunun tam listesi; her soru için model cevapları, Özdilek mention durumu ve öne çıkan kaynaklar.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2310332F'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%23FF7B52' stroke-width='12'/%3E%3C/svg%3E">
 <style>
 @font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
@@ -25,22 +25,22 @@
   --shadow-card:0 2px 8px rgba(16,51,47,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--ink);background:#FAF8F5;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--ink);background:#FAF8F5;-webkit-font-smoothing:antialiased;overflow-x:clip}
 ::selection{background:var(--coral);color:#fff}
 .wrap{max-width:880px;margin:0 auto;padding:0 20px}
-header{color:#fff;padding:34px 0 30px;position:relative;overflow:hidden;
+header{color:#fff;padding:32px 0 28px;position:relative;overflow:hidden;
   background:radial-gradient(700px 380px at 90% -20%,rgba(255,123,82,.3),transparent 60%),linear-gradient(140deg,var(--teal-deep),var(--teal) 60%,#174A41)}
 header .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 header .top a{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;font-weight:600}
 header .top a:hover{color:#fff}
 header .top img{height:20px;width:auto}
-header h1{font-family:var(--font-display);font-weight:800;font-size:clamp(24px,4vw,34px);color:#fff;margin-top:16px}
-header p{color:rgba(255,255,255,.85);margin-top:8px;max-width:640px;font-size:14px}
-.tabs{display:flex;gap:8px;margin:22px 0 0;flex-wrap:wrap}
+header h1{font-family:var(--font-display);font-weight:800;font-size:clamp(23px,4vw,32px);color:#fff;margin-top:14px}
+header p{color:rgba(255,255,255,.85);margin-top:8px;max-width:680px;font-size:13.5px}
+.tabs{display:flex;gap:8px;margin:20px 0 0;flex-wrap:wrap}
 .tabs button{all:unset;cursor:pointer;font-size:12.5px;font-weight:600;padding:7px 16px;border-radius:var(--r-pill);background:rgba(255,255,255,.14);color:#fff}
 .tabs button.on{background:#fff;color:var(--teal)}
-main{padding:26px 0 60px}
-.wrap.tblwrap{max-width:1160px}
+main{padding:24px 0 60px}
+.wrap.tblwrap{max-width:1200px}
 .pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2.5px 9px;border-radius:var(--r-pill);white-space:nowrap;display:inline-block}
 .pill.m{background:var(--mint);color:var(--green)}
 .pill.z{background:#E3F0FA;color:#1565C0}
@@ -48,20 +48,32 @@ main{padding:26px 0 60px}
 .pill.n{background:var(--teal);color:#fff;font-family:var(--font-display)}
 .pill.zero{background:var(--red-wash);color:var(--red);font-family:var(--font-display)}
 .pill.pos{background:var(--green-wash);color:var(--green);font-family:var(--font-display)}
+.pill.gpt{background:#E9F2EE;color:#0D6A5C}
+.pill.gem{background:#EBE9F7;color:#5147A8}
 .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;padding:3px 9px 3px 4px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2);margin:1px 3px 1px 0;white-space:nowrap}
 .chip .n{font-family:var(--font-display);font-weight:700}
 .fav{width:15px;height:15px;border-radius:4px;object-fit:contain;flex:none;background:#fff;box-shadow:0 0 0 1px rgba(16,51,47,.08);vertical-align:middle}
 .count{font-size:12.5px;color:var(--ink-3);margin:0 0 14px}
 .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:#fff;border-radius:16px;box-shadow:var(--shadow-card)}
-.qtbl{width:100%;border-collapse:collapse;font-size:13px;min-width:820px}
-.qtbl thead th{position:sticky;top:0;background:#fff;z-index:2;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:left;padding:13px 14px;border-bottom:1.5px solid var(--line)}
+.qtbl{width:100%;border-collapse:collapse;font-size:13px;min-width:860px}
+.qtbl thead th{position:sticky;top:0;background:#fff;z-index:2;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:left;padding:13px 12px;border-bottom:1.5px solid var(--line)}
 .qtbl th.c,.qtbl td.c{text-align:center}
-.qtbl td{padding:12px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-2)}
-.qtbl tbody tr:hover{background:#FAF8F5}
-.qtbl tbody tr:last-child td{border-bottom:none}
+.qtbl td{padding:12px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-2)}
+.qtbl tbody tr.qrow{cursor:pointer}
+.qtbl tbody tr.qrow:hover{background:#FAF8F5}
 .qtbl .idx{font-family:var(--font-display);font-weight:700;color:var(--ink-3);font-size:12px;text-align:center}
-.qtbl .q{font-weight:600;color:var(--ink);line-height:1.4;min-width:240px}
-.qtbl .src{min-width:220px}
+.qtbl .q{font-weight:600;color:var(--ink);line-height:1.4;min-width:230px}
+.qtbl .q .car{display:inline-block;transition:transform .18s ease;color:var(--coral);margin-right:6px;font-size:11px}
+.qtbl tr.qrow.open .car{transform:rotate(90deg)}
+.qtbl .src{min-width:200px}
+.qtbl tr.arow{display:none}
+.qtbl tr.arow.show{display:table-row}
+.qtbl tr.arow>td{background:#FBFAF7;padding:14px 16px 18px}
+.ans{background:#fff;border:1px solid var(--line-soft);border-radius:12px;padding:13px 16px;margin-bottom:10px;font-size:13px;line-height:1.65;color:var(--ink-2)}
+.ans .ah{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.ans b{color:var(--ink)}
+.ans .more{color:var(--coral-deep);cursor:pointer;font-weight:600;font-size:12px}
+.ans mark{background:var(--coral-tint);color:var(--coral-deep);font-weight:700;padding:0 3px;border-radius:4px}
 @media(max-width:640px){.qtbl .src{white-space:nowrap;min-width:0}.qtbl .q{min-width:210px}}
 footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
 </style>
@@ -73,8 +85,8 @@ footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
       <a href="index.html">← Rapora dön</a>
       <img src="assets/brand/inbound-wordmark-white.png" alt="Inbound">
     </div>
-    <h1>Soru seti · 56 marka-nötr prompt</h1>
-    <p>Inbound Visibility Tool ile izlenen soruların tam listesi. Her soru için görünür citation hacmi ve cevaplarda öne çıkan kaynaklar gösterilmektedir; soruların hiçbirinde marka adı geçmemektedir.</p>
+    <h1>Soru seti & cevaplar · 56 marka-nötr prompt</h1>
+    <p>Inbound Visibility Tool ile izlenen soruların tam listesi. Satıra tıklayarak her sorunun <b>model cevaplarını</b> açabilirsiniz; Özdilek mention'ları işaretlenmiştir. Soruların hiçbirinde marka adı geçmemektedir.</p>
     <div class="tabs" id="tabs">
       <button data-f="all" class="on">Tümü (56)</button>
       <button data-f="m">Marka perspektifi (28)</button>
@@ -91,23 +103,62 @@ footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
 <footer>Özdilekteyim AI Görünürlük Raporu · Temmuz 2026 · Inbound Visibility Tool</footer>
 
 <script src="data/questions.js"></script>
+<script src="data/answers.js"></script>
 <script>
 const LOGO=d=>`assets/logos/${d.split('.').join('-')}.png`;
 const CAT_LABEL={best:'Best of',vs:'Versus',alternatives:'Alternatives',custom:'Nereden alınır'};
+const AMAP={};
+ANSWERS.forEach(a=>{AMAP[a.k+'|'+a.q]=a.runs});
+function findRuns(o){
+  let r=AMAP[o.p+'|'+o.q];
+  if(!r){for(const key in AMAP){const[kk,qq]=key.split('|');if(kk===o.p&&qq.slice(0,40)===o.q.slice(0,40)){r=AMAP[key];break}}}
+  return r||[];
+}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function mdLite(s){
+  let t=esc(s);
+  t=t.replace(/\[([^\]]{1,80})\]\((https?:[^)]+)\)/g,'$1');            /* linkleri metne indir */
+  t=t.replace(/\*\*([^*\n]{1,80})\*\*/g,'<b>$1</b>');                  /* bold */
+  t=t.replace(/(Özdilek\w*)/gi,'<mark>$1</mark>');                     /* mention vurgusu */
+  t=t.replace(/\n{2,}/g,'<br><br>').replace(/\n/g,'<br>');
+  return t;
+}
+function ansBlock(run,idx){
+  const tag=run.p==='chatgpt'?'<span class="pill gpt">ChatGPT</span>':'<span class="pill gem">Gemini</span>';
+  const has=/özdilek/i.test(run.a);
+  const oz=has?'<span class="pill pos">Özdilek mention ✓</span>':'<span class="pill c">Özdilek yok</span>';
+  const short=run.a.length>900;
+  const id=`a${idx}_${Math.random().toString(36).slice(2,7)}`;
+  const body=mdLite(short?run.a.slice(0,900):run.a);
+  const rest=short?mdLite(run.a.slice(900)):'';
+  return `<div class="ans"><div class="ah">${tag}${oz}</div><div>${body}${short?`<span id="${id}" hidden>${rest}</span> <span class="more" onclick="this.previousElementSibling.hidden=false;this.remove()">… devamını göster</span>`:''}</div></div>`;
+}
 function qRows(list){
   return list.map((o,i)=>{
     const lens=o.p==='m'?'<span class="pill m">Marka</span>':'<span class="pill z">Pazaryeri</span>';
     const cit=o.n>0?`<span class="pill n">${o.n}</span>`:'<span class="pill c">-</span>';
-    const oz=o.n===0?'<span class="pill c">-</span>':(o.o>0?`<span class="pill pos">${o.o}</span>`:'<span class="pill zero">0</span>');
+    const mv=o.mr?(o.mv>0?`<span class="pill pos">${o.mv}/${o.mr}</span>`:`<span class="pill zero">0/${o.mr}</span>`):'<span class="pill c">-</span>';
     const src=o.s.length?o.s.slice(0,4).map(([d,c])=>`<span class="chip"><img class="fav" src="${LOGO(d)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${d.replace('www.','')} <b class="n">${c}</b></span>`).join('')+(o.s.length>4?`<span class="chip" style="background:transparent">+${o.s.length-4}</span>`:''):'<span style="color:var(--ink-3)">-</span>';
-    return `<tr><td class="idx">${i+1}</td><td class="q">"${o.q}"</td><td>${lens}</td><td><span class="pill c">${CAT_LABEL[o.c]||o.c}</span></td><td class="c">${cit}</td><td class="c">${oz}</td><td class="src">${src}</td></tr>`;
+    return `<tr class="qrow" data-i="${i}"><td class="idx">${i+1}</td><td class="q"><span class="car">▶</span>"${o.q}"</td><td>${lens}</td><td><span class="pill c">${CAT_LABEL[o.c]||o.c}</span></td><td class="c">${mv}</td><td class="c">${cit}</td><td class="src">${src}</td></tr>
+    <tr class="arow" data-i="${i}"><td colspan="7"></td></tr>`;
   }).join('');
 }
+let CUR=[];
 function render(f){
-  const list=QUESTIONS.filter(o=>f==='all'||o.p===f);
-  document.getElementById('tbl').innerHTML=`<thead><tr><th class="c">#</th><th>Soru</th><th>Perspektif</th><th>Tip</th><th class="c">Citation</th><th class="c">Özdilek</th><th>Öne çıkan kaynaklar</th></tr></thead><tbody>${qRows(list)}</tbody>`;
-  document.getElementById('count').textContent=list.length+' soru · görünür citation hacmine göre sıralı';
+  CUR=QUESTIONS.filter(o=>f==='all'||o.p===f);
+  document.getElementById('tbl').innerHTML=`<thead><tr><th class="c">#</th><th>Soru · tıklayın, cevaplar açılır</th><th>Perspektif</th><th>Tip</th><th class="c">Özdilek mention</th><th class="c">Citation</th><th>Öne çıkan kaynaklar</th></tr></thead><tbody>${qRows(CUR)}</tbody>`;
+  document.getElementById('count').textContent=CUR.length+' soru · görünür citation hacmine göre sıralı · satıra tıklayarak model cevaplarını açabilirsiniz';
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+  document.querySelectorAll('tr.qrow').forEach(tr=>tr.addEventListener('click',()=>{
+    const i=tr.dataset.i, arow=document.querySelector(`tr.arow[data-i="${i}"]`);
+    const open=arow.classList.toggle('show');
+    tr.classList.toggle('open',open);
+    if(open&&!arow.dataset.done){
+      const runs=findRuns(CUR[i]);
+      arow.firstElementChild.innerHTML=runs.length?runs.map(ansBlock).join(''):'<span style="color:var(--ink-3);font-size:13px">Bu soru için cevap kaydı bulunmuyor.</span>';
+      arow.dataset.done=1;
+    }
+  }));
 }
 document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>render(b.dataset.f)));
 render('all');
