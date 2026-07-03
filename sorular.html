@@ -50,6 +50,7 @@ main{padding:24px 0 60px}
 .pill.pos{background:var(--green-wash);color:var(--green);font-family:var(--font-display)}
 .pill.gpt{background:#E9F2EE;color:#0D6A5C}
 .pill.gem{background:#EBE9F7;color:#5147A8}
+.pill.aio{background:#FDF0E3;color:#B45309}
 .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;padding:3px 9px 3px 4px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2);margin:1px 3px 1px 0;white-space:nowrap}
 .chip .n{font-family:var(--font-display);font-weight:700}
 .fav{width:15px;height:15px;border-radius:4px;object-fit:contain;flex:none;background:#fff;box-shadow:0 0 0 1px rgba(16,51,47,.08);vertical-align:middle}
@@ -86,7 +87,7 @@ footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
       <img src="assets/brand/inbound-wordmark-white.png" alt="Inbound">
     </div>
     <h1>Soru seti & cevaplar · 56 marka-nötr prompt</h1>
-    <p>Inbound Visibility Tool ile izlenen soruların tam listesi. Satıra tıklayarak her sorunun <b>model cevaplarını</b> açabilirsiniz; Özdilek mention'ları işaretlenmiştir. Soruların hiçbirinde marka adı geçmemektedir.</p>
+    <p>Inbound Visibility Tool ile izlenen soruların tam listesi. Satıra tıklayarak her sorunun <b>model cevaplarını</b> (ChatGPT, Gemini ve Google AI Overview örnekleri) açabilirsiniz; Özdilek mention'ları işaretlenmiştir. Soruların hiçbirinde marka adı geçmemektedir.</p>
     <div class="tabs" id="tabs">
       <button data-f="all" class="on">Tümü (56)</button>
       <button data-f="m">Marka perspektifi (28)</button>
@@ -124,7 +125,7 @@ function mdLite(s){
   return t;
 }
 function ansBlock(run,idx){
-  const tag=run.p==='chatgpt'?'<span class="pill gpt">ChatGPT</span>':'<span class="pill gem">Gemini</span>';
+  const tag=run.p==='chatgpt'?'<span class="pill gpt">ChatGPT</span>':(run.p==='gemini'?'<span class="pill gem">Gemini</span>':'<span class="pill aio">AI Overview</span>');
   const has=/özdilek/i.test(run.a);
   const oz=has?'<span class="pill pos">Özdilek mention ✓</span>':'<span class="pill c">Özdilek yok</span>';
   const short=run.a.length>900;
