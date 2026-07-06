@@ -70,7 +70,7 @@ b,strong{font-weight:600}
 .hwrap{max-width:1240px;margin:0 auto;padding:0 22px}
 .hero-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 0;flex-wrap:wrap}
 .hero-top .lt{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
-.hero-top .rt{display:flex;align-items:center;gap:14px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75)}
+.hero-top .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:100%;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75)}
 .hero-top .rt img{height:20px;width:auto;display:block}
 .hero h1{color:#fff;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.1;max-width:780px;margin-top:8px}
 .hero h1 .hl{color:var(--coral-soft)}
@@ -349,13 +349,13 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <span class="tag">36 kez listenin 1. sırasında</span>
       </div>
       <div class="kpi good">
-        <div class="v">64<small>/100</small></div>
+        <div class="v">65<small>/100</small></div>
         <div class="k">Sentiment score · Inbound Visibility Tool</div>
         <span class="tag">62 pozitif · 66 nötr · 0 negatif</span>
       </div>
     </div>
     <div class="hero-meta">
-      <span>395 cevap metni · 2-3 Temmuz</span><span>3 model · ChatGPT + Gemini + AI Overview</span><span>53 marka + 69 site tespit edildi</span><span>3.566 citation</span><span class="q-open" data-f="all">Soru setini görüntüle</span>
+      <span>395 cevap metni · 2-3 Temmuz</span><span>3 model · ChatGPT + Gemini + AI Overview</span><span>53 marka + 69 site tespit edildi</span><span>3.565 citation</span><span class="q-open" data-f="all">Soru setini görüntüle</span>
     </div>
   </div>
 </header>
@@ -394,7 +394,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <ul class="insight-list">
         <li class="reveal"><b>İki perspektif arasında belirgin fark ölçülmüştür.</b> <span class="term" data-tip="Visibility (mention rate): markanın, cevapların yüzde kaçında yer aldığı.">Visibility</span> marka sorularında <span class="num-b">%59,7</span> (53 marka içinde 2. sıra), satın alma sorularında <span class="num-b">%5,5</span> (69 site içinde 28. sıra) olarak ölçülmüştür. Modeller Özdilek'i marka olarak tanımakta, alışveriş adresi olarak nadiren önermektedir.</li>
         <li class="reveal"><b>Mention edildiğinde konum güçlüdür.</b> Marka sorularında Özdilek ortalama <span class="num-b">3,0</span>. sırada önerilmekte ve <span class="num-b">36 cevapta listenin ilk sırasında</span> yer almaktadır. Bornoz, yerli havlu ve yerli nevresim sorularında 7 koşunun 7'sinde mention edilmektedir.</li>
-        <li class="reveal"><b>Sentiment belirgin biçimde pozitiftir.</b> 128 Özdilek mention'ında negatif ifade <span class="num-b">hiç</span> ölçülmemiştir; Inbound Visibility Tool sentiment score ortalaması <span class="num-b">64/100</span>'dür ve en yüksek skor <span class="num-b">AI Overview'dadır (77)</span>. Kural bazlı pencere analizi mention'ların %89'unda olumlu ifade tespit etmektedir ("köklü", "güvenilir", "yüksek emicilik"). Tema kırılımında fiyat (13/128) ve mağaza ağı (8/128), anlatının en zayıf halkalarıdır.</li>
+        <li class="reveal"><b>Sentiment belirgin biçimde pozitiftir.</b> 128 Özdilek mention'ında negatif ifade <span class="num-b">hiç</span> ölçülmemiştir; Inbound Visibility Tool sentiment score ortalaması <span class="num-b">65/100</span>'dür ve en yüksek skor <span class="num-b">AI Overview'dadır (75)</span>. Kural bazlı pencere analizi mention'ların %89'unda olumlu ifade tespit etmektedir ("köklü", "güvenilir", "yüksek emicilik"). Tema kırılımında fiyat (13/128) ve mağaza ağı (8/128), anlatının en zayıf halkalarıdır.</li>
         <li class="reveal"><b>Karaca ile fark mention'da değil, kaynak tarafında görülmektedir.</b> Mention farkı 12,2 puan iken (%71,9'a karşı %59,7), <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> farkı yaklaşık 4,6 kattır (%25,0'a karşı %5,4). Marka sorularındaki 1.612 <span class="term" data-tip="Citation: AI cevabında kaynak olarak gösterilen URL.">citation</span>'dan yalnızca 13'ü (%0,8) ozdilekteyim.com'a aittir.</li>
         <li class="reveal"><b>Online market cluster'ında görünürlük ölçülememiştir.</b> 7 market sorusunun cevaplarında Özdilek ekosistemi ne mention edilmekte ne de kaynak gösterilmektedir; hibrit modeli birebir tarif eden "hem tekstil hem market" sorusunda dahi tablo değişmemektedir.</li>
         <li class="reveal"><b>Modeller kapanmış platformları önermeye devam etmektedir.</b> Pazaryeri cevaplarında <span class="num-b">Morhipo %19,6</span> ve <span class="num-b">GittiGidiyor %7,5</span> görünürlüğe sahiptir; iki platform da yıllar önce kapanmıştır. Model bilgisinin güncelliği, görünürlüğün önemli bir değişkenidir.</li>
@@ -415,7 +415,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <div class="tile reveal"><div class="v">3</div><div class="k">model<br>ChatGPT + Gemini + AI Overview</div></div>
         <div class="tile reveal"><div class="v">122</div><div class="k">tespit edilen marka & site<br>53 + 69</div></div>
         <div class="tile reveal"><div class="v">128</div><div class="k">Özdilek mention'ı<br>sentiment analizine girdi</div></div>
-        <div class="tile reveal"><div class="v">3.566</div><div class="k">citation<br>kaynak analizi</div></div>
+        <div class="tile reveal"><div class="v">3.565</div><div class="k">citation<br>kaynak analizi</div></div>
       </div>
     </section>
 
@@ -431,8 +431,8 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 5 15 19 18 12 22 12"/></svg>Share of Voice</div><div class="mv">%8,5<small> marka perspektifi</small></div><div class="md">Cevaplarda geçen tüm marka mention'ları içinde markanın aldığı pay. Marka perspektifindeki 1.375 mention'ın %8,5'i Özdilek'e aittir.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>Avg Position</div><div class="mv">3,0<small> marka perspektifi</small></div><div class="md">Marka mention edildiğinde cevap listesindeki ortalama sırası. 1'e yaklaştıkça marka, modelin ilk önerisi olmaya yaklaşır.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Source Visibility</div><div class="mv">%5,4<small> panel</small></div><div class="md">Modelin cevabı yazarken markanın kendi sitelerini kaynak olarak okuma oranı. Panel verisidir; izlenen 13 marka için hesaplanır.</div></div>
-        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>Citation</div><div class="mv">3.566<small> toplam</small></div><div class="md">Cevapta kaynak olarak gösterilen URL. Bu ölçümde 3.566 citation dağıtılmıştır; 13'ü ozdilekteyim.com'a gitmektedir.</div></div>
-        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Sentiment Score</div><div class="mv">64<small> / 100</small></div><div class="md">Mention'ın geçtiği bağlamın tonu: pozitif, nötr veya negatif sınıfı ve 0-100 arası skor. 50, nötr eşiktir.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>Citation</div><div class="mv">3.565<small> toplam</small></div><div class="md">Cevapta kaynak olarak gösterilen URL. Bu ölçümde 3.565 citation dağıtılmıştır; 13'ü ozdilekteyim.com'a gitmektedir.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>Sentiment Score</div><div class="mv">65<small> / 100</small></div><div class="md">Mention'ın geçtiği bağlamın tonu: pozitif, nötr veya negatif sınıfı ve 0-100 arası skor. 50, nötr eşiktir.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="5" height="10" rx="1"/><rect x="15" y="4" width="5" height="16" rx="1"/></svg>Gap Score</div><div class="mv">5.248<small> en yüksek: Trendyol</small></div><div class="md">Rakibin kaynak gösterilip markanın gösterilmediği cevap hacmi. Büyük gap, o kaynak alanının rakip tarafından tek başına dolduruluyor olması demektir.</div></div>
       </div>
     </section>
@@ -495,7 +495,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="crumb"><span class="s">07</span><span>|</span><span>Sentiment analizi</span></div>
       <div class="accent-line"></div>
       <h2>Özdilek mention'larında sentiment</h2>
-      <p class="lede">Özdilek'in geçtiği <b>128 cevap</b> için Inbound Visibility Tool sentiment score ortalaması <b>64/100</b>'dür (ChatGPT 56, Gemini 68, AI Overview 77); negatif sınıflanan cevap yoktur. Ek olarak 2 Temmuz örneklemindeki 79 mention penceresi kural bazlı incelenmiştir. Skorun tema ve soru kırılımı aşağıdadır: anlatının nerede güçlü, nerede yüzeysel kaldığı bu kırılımdan okunmaktadır.</p>
+      <p class="lede">Özdilek'in geçtiği <b>128 cevap</b> için Inbound Visibility Tool sentiment score ortalaması <b>65/100</b>'dür (ChatGPT 56, Gemini 68, AI Overview 75); negatif sınıflanan cevap yoktur. Ek olarak 2 Temmuz örneklemindeki 79 mention penceresi kural bazlı incelenmiştir. Skorun tema ve soru kırılımı aşağıdadır: anlatının nerede güçlü, nerede yüzeysel kaldığı bu kırılımdan okunmaktadır.</p>
       <div class="two">
         <div class="panel reveal">
           <div class="ph"><h3>Sentiment dağılımı</h3><span class="pk">79 mention</span></div>
@@ -507,7 +507,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
               <p style="font-size:13px;margin-top:10px">Olumsuz veya uyarı niteliğinde tek bir ifade ölçülmemiştir. Nötr sınıf, değer yargısı içermeyen ürün listelemeleridir.</p>
             </div>
           </div>
-          <div class="pnote">Donut, kural bazlı pencere analizidir (2 Temmuz örneklemi, 79 mention). Inbound Visibility Tool'un kendi sınıflandırması 128 mention için 62 pozitif / 66 nötr / 0 negatif üretmekte ve skoru en yüksek model <b>AI Overview (77/100)</b> olmaktadır; aracın nötr sınıfı daha geniş tanımlıdır.</div>
+          <div class="pnote">Donut, kural bazlı pencere analizidir (2 Temmuz örneklemi, 79 mention). Inbound Visibility Tool'un kendi sınıflandırması 128 mention için 62 pozitif / 66 nötr / 0 negatif üretmekte ve skoru en yüksek model <b>AI Overview (75/100)</b> olmaktadır; aracın nötr sınıfı daha geniş tanımlıdır.</div>
         </div>
         <div class="panel reveal">
           <div class="ph"><h3>Cevaplarda öne çıkan temalar</h3><span class="pk">mention pencerelerinden</span></div>
@@ -561,18 +561,18 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
           <svg viewBox="0 0 560 250" role="img" aria-label="Model bazında sentiment score çizgisi" style="width:100%;height:auto">
             <line x1="60" x2="520" y1="196" y2="196" stroke="#E0E0E0" stroke-dasharray="4 4"/>
             <text x="62" y="188" font-size="10" fill="#8A8A8A" font-family="Outfit,system-ui">50 · nötr eşiği</text>
-            <polyline points="120,172 290,124 460,88" fill="none" stroke="#FF7B52" stroke-width="3" stroke-linecap="round"/>
+            <polyline points="120,172 290,124 460,96" fill="none" stroke="#FF7B52" stroke-width="3" stroke-linecap="round"/>
             <circle cx="120" cy="172" r="6" fill="#10332F" stroke="#fff" stroke-width="2"/>
             <circle cx="290" cy="124" r="6" fill="#10332F" stroke="#fff" stroke-width="2"/>
-            <circle cx="460" cy="88" r="7" fill="#FF7B52" stroke="#fff" stroke-width="2"/>
+            <circle cx="460" cy="96" r="7" fill="#FF7B52" stroke="#fff" stroke-width="2"/>
             <text x="120" y="154" text-anchor="middle" font-size="15" font-weight="800" fill="#10332F" font-family="Bricolage Grotesque,system-ui">56</text>
             <text x="290" y="106" text-anchor="middle" font-size="15" font-weight="800" fill="#10332F" font-family="Bricolage Grotesque,system-ui">68</text>
-            <text x="460" y="68" text-anchor="middle" font-size="15" font-weight="800" fill="#E85F36" font-family="Bricolage Grotesque,system-ui">77</text>
+            <text x="460" y="76" text-anchor="middle" font-size="15" font-weight="800" fill="#E85F36" font-family="Bricolage Grotesque,system-ui">75</text>
             <text x="120" y="222" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4A4A4A" font-family="Outfit,system-ui">ChatGPT</text>
             <text x="290" y="222" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4A4A4A" font-family="Outfit,system-ui">Gemini</text>
             <text x="460" y="222" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4A4A4A" font-family="Outfit,system-ui">AI Overview</text>
           </svg>
-          <div class="pnote">Skor modele göre yükselmektedir: ChatGPT 56, Gemini 68, AI Overview 77. ChatGPT'nin görece düşük skoru markaları kuru liste hâlinde sayma eğiliminden; AI Overview'ın yüksek skoru, göründüğü cevaplarda Özdilek'i olumlu bağlamla aktarmasından kaynaklanmaktadır. Pazaryeri perspektifindeki mention'ların çoğu "Trendyol'da Taç, Özdilek, Cotton Box bulunur" kalıbındadır: marka kendi kanalıyla değil, rakip platformun rafında geçmektedir.</div>
+          <div class="pnote">Skor modele göre yükselmektedir: ChatGPT 56, Gemini 68, AI Overview 75 (yalnızca marka sorularında 77). ChatGPT'nin görece düşük skoru markaları kuru liste hâlinde sayma eğiliminden; AI Overview'ın yüksek skoru, göründüğü cevaplarda Özdilek'i olumlu bağlamla aktarmasından kaynaklanmaktadır. Pazaryeri perspektifindeki mention'ların çoğu "Trendyol'da Taç, Özdilek, Cotton Box bulunur" kalıbındadır: marka kendi kanalıyla değil, rakip platformun rafında geçmektedir.</div>
         </div>
       </div>
     </section>
@@ -612,17 +612,17 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
           <div class="pnote">Marka perspektifinde <b>46 listicle URL'si</b> toplam <b>154 citation</b> almıştır. "En iyi X" tipi soruların cevapları büyük oranda bu listelerden derlenmektedir.</div>
         </div>
         <div class="panel reveal">
-          <div class="ph"><h3><span class="term" data-tip="UGC (user-generated content): forum, soru-cevap ve şikayet platformları gibi kullanıcı içerikleri.">UGC</span> & topluluk kaynakları</h3><span class="pk">marka perspektifi</span></div>
+          <div class="ph"><h3><span class="term" data-tip="UGC (user-generated content): forum, soru-cevap ve şikayet platformları gibi kullanıcı içerikleri.">UGC</span> & topluluk kaynakları</h3><span class="pk">marka perspektifi · 2-3 Temmuz</span></div>
           <div class="tscroll"><table class="tbl slim">
             <thead><tr><th scope="col">Kaynak</th><th scope="col" class="c">Citation</th><th scope="col" class="c">Sıra</th></tr></thead>
             <tbody>
-              <tr><td><span class="chip"><img class="fav sm" src="assets/logos/kizlarsoruyor-com.png" alt="" loading="lazy">kizlarsoruyor.com</span></td><td class="num c">17</td><td class="num c">#9</td></tr>
-              <tr><td><span class="chip"><img class="fav sm" src="assets/logos/sikayetvar-com.png" alt="" loading="lazy">sikayetvar.com</span></td><td class="num c">10</td><td class="num c">#23</td></tr>
-              <tr><td><span class="chip"><img class="fav sm" src="assets/logos/reddit-com.png" alt="" loading="lazy">reddit.com</span></td><td class="num c">1</td><td class="num c">#191</td></tr>
-              <tr><td style="border-top:2px solid var(--line)"><span class="chip you"><img class="fav sm" src="assets/logos/ozdilekteyim-com.png" alt="" loading="lazy">ozdilekteyim.com</span></td><td class="num c" style="border-top:2px solid var(--line)"><span class="zero">6</span></td><td class="num c" style="border-top:2px solid var(--line)">#39</td></tr>
+              <tr><td><span class="chip"><img class="fav sm" src="assets/logos/kizlarsoruyor-com.png" alt="" loading="lazy">kizlarsoruyor.com</span></td><td class="num c">25</td><td class="num c">#12</td></tr>
+              <tr><td><span class="chip"><img class="fav sm" src="assets/logos/sikayetvar-com.png" alt="" loading="lazy">sikayetvar.com</span></td><td class="num c">10</td><td class="num c">#38</td></tr>
+              <tr><td><span class="chip"><img class="fav sm" src="assets/logos/reddit-com.png" alt="" loading="lazy">reddit.com</span></td><td class="num c">3</td><td class="num c">#84</td></tr>
+              <tr><td style="border-top:2px solid var(--line)"><span class="chip you"><img class="fav sm" src="assets/logos/ozdilekteyim-com.png" alt="" loading="lazy">ozdilekteyim.com</span></td><td class="num c" style="border-top:2px solid var(--line)"><span class="zero">13</span></td><td class="num c" style="border-top:2px solid var(--line)">#28</td></tr>
             </tbody>
           </table></div>
-          <div class="pnote">Türkiye'de topluluk katmanının merkezi Reddit değil kizlarsoruyor.com olarak görülmektedir: 17 citation'dan 13'ü Özdilek'in mention edildiği cevaplarda kullanılmaktadır. Marka algısına dair içerik büyük ölçüde bu platformlardan okunmaktadır.</div>
+          <div class="pnote">Türkiye'de topluluk katmanının merkezi Reddit değil kizlarsoruyor.com olarak görülmektedir: 25 citation'ın 21'i Özdilek'in mention edildiği cevaplarda kullanılmaktadır. Marka algısına dair içerik büyük ölçüde bu platformlardan okunmaktadır.</div>
         </div>
       </div>
     </section>
@@ -690,7 +690,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
             <tr><td><b>Hem giyim/tekstil hem market & tek platform?</b></td><td class="num c">15</td><td class="c"><span class="zero">0</span></td><td><span class="chip"><img class="fav sm" src="assets/logos/n11-com.png" alt="" loading="lazy">n11 <b class="n">2</b></span><span class="chip"><img class="fav sm" src="assets/logos/deal-tr-com.png" alt="" loading="lazy">deal-tr <b class="n">2</b></span><span class="chip"><img class="fav sm" src="assets/logos/meshur-co.png" alt="" loading="lazy">meshur.co <b class="n">2</b></span></td></tr>
           </tbody>
         </table></div>
-        <div class="pnote">Son satırdaki soru Özdilekteyim'in hibrit modelini birebir tarif etmektedir. Gel-Al sorusunda tablo 3 Temmuz'da kısmen değişmiştir: <b>AI Overview bu soruda Özdilekteyim'i önermiştir</b> (üç model içinde tek). Mention tarafında market cluster'ındaki tek Özdilek görünürlüğü budur. Market sorularının önemli kaynak tiplerinden biri uygulama mağazası sayfalarıdır: play.google.com (24) + apps.apple.com (19) toplam <b>43 citation</b>.</div>
+        <div class="pnote">Son satırdaki soru Özdilekteyim'in hibrit modelini birebir tarif etmektedir. Gel-Al sorusunda tablo 3 Temmuz'da kısmen değişmiştir: <b>AI Overview bu soruda Özdilekteyim'i önermiştir</b> (üç model içinde tek). Mention tarafında market cluster'ındaki tek Özdilek görünürlüğü budur. Market sorularının önemli kaynak tiplerinden biri uygulama mağazası sayfalarıdır: play.google.com (34) + apps.apple.com (26) toplam <b>60 citation</b> (2-3 Temmuz).</div>
       </div>
     </section>
 
@@ -785,10 +785,10 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
             <tbody>
               <tr><td><b>Hibrit platform sorusu</b></td><td class="num">Özdilek mention 1/7 · düşük rekabet</td></tr>
               <tr><td><b>Gel-Al sorusu</b></td><td class="num">AI Overview Özdilekteyim'i öneriyor · 1/7</td></tr>
-              <tr><td><b>Uygulama mağazası sayfaları</b></td><td class="num">43 citation'lık kaynak tipi</td></tr>
+              <tr><td><b>Uygulama mağazası sayfaları</b></td><td class="num">60 citation'lık kaynak tipi</td></tr>
               <tr><td><b>Listicle katmanı</b></td><td class="num">marka perspektifinde 154 citation / 46 URL</td></tr>
               <tr><td><b>Çeyiz sorusu</b></td><td class="num">93 citation · marka perspektifinin en büyüğü · Özdilek 1/7</td></tr>
-              <tr><td><b>Topluluk katmanı</b></td><td class="num">kizlarsoruyor 17 citation · #9</td></tr>
+              <tr><td><b>Topluluk katmanı</b></td><td class="num">kizlarsoruyor 25 citation · #12</td></tr>
             </tbody>
           </table></div>
         </div>
@@ -805,7 +805,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <div><span class="mi">B</span><span><b>Örneklem.</b> 56 soru × (ChatGPT 3 + Gemini 3 + AI Overview 1 koşu) = 395 cevap (2-3 Temmuz 2026, Inbound Visibility Tool veritabanı). LLM cevapları olasılıksaldır; değerler örneklem ortalamasıdır.</span></div>
         <div><span class="mi">C</span><span><b>İki veri katmanı.</b> Mention metrikleri cevap metinlerinden SQL ile, citation metrikleri Inbound Visibility Tool veritabanından hesaplanmıştır; aracın brand_mentioned bayrağıyla birebir örtüşmektedir (128/128).</span></div>
         <div><span class="mi">D</span><span><b>Entity kapsamı.</b> Panel 13 izlenen marka raporlar; cevap metni analizi 122 marka & site tespit etmiştir. En az 2 cevapta geçenler sıralamalara dahildir. AI Overview yüzdeleri 28'lik tam paydaya göredir; 11 soruda AIO hiç görünmemiştir.</span></div>
-        <div><span class="mi">E</span><span><b>Sentiment.</b> Mention çevresindeki ±200 karakterde geçen değerlendirme ifadeleriyle sınıflandırılmıştır; panelin bileşik skoru (64/100) farklı kriter seti kullanır.</span></div>
+        <div><span class="mi">E</span><span><b>Sentiment.</b> Mention çevresindeki ±200 karakterde geçen değerlendirme ifadeleriyle sınıflandırılmıştır; panelin bileşik skoru (65/100) farklı kriter seti kullanır.</span></div>
         <div><span class="mi">F</span><span><b>Mention & kalite.</b> AI görünürlüğü marka kalitesinin değil, modellerin okuduğu kaynak ekosisteminin ölçüsüdür. Üç model kapsanmıştır; Claude, Perplexity ve Grok sonraki ölçümlerde eklenebilir.</span></div>
       </div>
     </section>
@@ -827,7 +827,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
     <div>
       <h4>Özdilekteyim AI Görünürlük Raporu</h4>
       <p style="color:rgba(255,255,255,.75);max-width:480px">İlk ölçüm, Temmuz 2026. Çalışmanın çeyreklik periyotlarla tekrarlanması ve sonraki baskılarda trend karşılaştırması sunulması planlanmaktadır.</p>
-      <p class="fine">Veri: Inbound Visibility Tool veritabanı · 56 marka-nötr prompt × ChatGPT + Gemini + Google AI Overview · 395 cevap metni · 3.566 citation (2-3 Temmuz 2026). Tüm değerler yüzde veya adet olarak verilmiştir.</p>
+      <p class="fine">Veri: Inbound Visibility Tool veritabanı · 56 marka-nötr prompt × ChatGPT + Gemini + Google AI Overview · 395 cevap metni · 3.565 citation (2-3 Temmuz 2026). Tüm değerler yüzde veya adet olarak verilmiştir.</p>
       <img class="wm" src="assets/brand/inbound-wordmark-white.png" alt="Inbound">
     </div>
     <div class="gl">
