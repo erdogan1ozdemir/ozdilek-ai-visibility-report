@@ -157,27 +157,26 @@ p b{color:var(--ink)}
 .insight-list li::before{content:"➔";position:absolute;left:0;top:15px;color:var(--coral);font-weight:600}
 .insight-list b{color:var(--ink);font-weight:600}
 
-/* öne çıkan bulgular karoseli */
-.fcar{margin-top:20px}
-.fcar-viewport{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:5px 2px 12px}
-.fcar-viewport::-webkit-scrollbar{display:none}
-.fcar-track{display:flex;gap:18px;align-items:stretch}
-.fc-card{flex:0 0 calc(50% - 9px);scroll-snap-align:start;background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow-card);border-top:3px solid var(--coral);padding:20px 22px 20px;display:flex;flex-direction:column;transition:box-shadow var(--dur) var(--ease)}
-.fc-card:hover{box-shadow:var(--shadow-hover)}
-.fc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
-.fc-num{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);font-weight:700}
-.fc-title{font-size:17.5px;font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:9px}
-.fc-desc{font-size:14px;line-height:1.62;color:var(--ink-2);margin:0}
-.fc-desc b,.fc-desc .num-b{color:var(--ink)}
-.fc-desc .term{white-space:nowrap}
-.fcar-ctrl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:6px}
-.fcar-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background var(--dur) var(--ease),color var(--dur) var(--ease),border-color var(--dur) var(--ease)}
-.fcar-btn:hover:not(:disabled){background:var(--teal);color:#fff;border-color:var(--teal)}
-.fcar-btn:disabled{opacity:.3;cursor:default}
-.fcar-dots{display:flex;gap:7px;align-items:center}
-.fcar-dots button{width:8px;height:8px;border-radius:50%;border:none;background:var(--line);cursor:pointer;padding:0;transition:width var(--dur) var(--ease),background var(--dur) var(--ease)}
-.fcar-dots button.on{background:var(--coral);width:22px;border-radius:99px}
-@media(max-width:760px){.fc-card{flex:0 0 100%}}
+/* öne çıkan bulgular - kompakt not ızgarası */
+.fnotes{columns:2;column-gap:16px;margin-top:20px}
+.fnote{break-inside:avoid;background:var(--surface);border-radius:var(--r-md);box-shadow:var(--shadow-card);border-left:3px solid var(--coral);padding:13px 16px 14px;margin:0 0 16px}
+.fnote:hover{box-shadow:var(--shadow-hover)}
+.fnote .fc-num{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;margin-bottom:5px}
+.fnote h3{font-size:14.5px;font-weight:700;line-height:1.28;color:var(--ink);margin-bottom:6px}
+.fnote p{font-size:12.5px;line-height:1.55;color:var(--ink-2);margin:0}
+.fnote p b,.fnote p .num-b{color:var(--ink)}
+.fnote .term{white-space:nowrap}
+@media(max-width:760px){.fnotes{columns:1}}
+/* model görünürlük - gruplu yatay bar */
+#model-lines{display:flex;flex-direction:column;gap:14px;margin-top:4px}
+.mbname{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px}
+.mbrow.you .mbname{color:var(--coral-deep);font-weight:700}
+.mbar{display:grid;grid-template-columns:74px 1fr 48px;align-items:center;gap:9px;padding:2px 0}
+.mbar .ml{font-size:11px;color:var(--ink-3);text-align:right}
+.mbar .mtrack{height:15px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.mbar .mfill{height:100%;border-radius:4px}
+.mbar .mv{font-family:var(--font-display);font-weight:700;font-size:12px;color:var(--ink)}
+@media(max-width:520px){.mbar{grid-template-columns:60px 1fr 44px;gap:7px}.mbar .ml{font-size:10px}}
 
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:20px}
 .tile{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:14px 12px;text-align:center}
@@ -413,56 +412,47 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="accent-line"></div>
       <h2>Öne çıkan bulgular</h2>
       <p class="lede">2-3 Temmuz tarihlerinde üç modelden dönen 395 cevabın tam metin analizi yapılmıştır: cevaplarda <b>53 ev tekstili markası</b> ve <b>69 alışveriş sitesi</b> tespit edilmiştir. Google AI Overview verisi ilk kez bu ölçüme dahildir.</p>
-            <div class="fcar reveal" id="fcar">
-        <div class="fcar-viewport" id="fcarVp">
-          <div class="fcar-track">
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 01</span></div>
-          <h3 class="fc-title">İki perspektif arasında belirgin fark</h3>
-          <p class="fc-desc"><span class="term" data-tip="Visibility (mention rate): markanın, cevapların yüzde kaçında yer aldığı.">Visibility</span> marka sorularında <span class="num-b">%59,7</span> (53 marka içinde 2. sıra), satın alma sorularında <span class="num-b">%5,5</span> (69 site içinde 28. sıra) olarak ölçülmüştür. Modeller Özdilek'i marka olarak tanımakta, alışveriş adresi olarak nadiren önermektedir.</p>
+      <div class="fnotes reveal">
+        <article class="fnote">
+          <span class="fc-num">Bulgu 01</span>
+          <h3>İki perspektif arasında belirgin fark</h3>
+          <p><span class="term" data-tip="Visibility (mention rate): markanın, cevapların yüzde kaçında yer aldığı.">Visibility</span> marka sorularında <span class="num-b">%59,7</span> (53 marka içinde 2. sıra), satın alma sorularında <span class="num-b">%5,5</span> (69 site içinde 28. sıra) olarak ölçülmüştür. Modeller Özdilek'i marka olarak tanımakta, alışveriş adresi olarak nadiren önermektedir.</p>
         </article>
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 02</span></div>
-          <h3 class="fc-title">Mention edildiğinde güçlü konum</h3>
-          <p class="fc-desc">Marka sorularında Özdilek ortalama <span class="num-b">3,0</span>. sırada önerilmekte ve <span class="num-b">36 cevapta listenin ilk sırasında</span> yer almaktadır. Bornoz, yerli havlu ve yerli nevresim sorularında 7 koşunun 7'sinde mention edilmektedir.</p>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 02</span>
+          <h3>Mention edildiğinde güçlü konum</h3>
+          <p>Marka sorularında Özdilek ortalama <span class="num-b">3,0</span>. sırada önerilmekte ve <span class="num-b">36 cevapta listenin ilk sırasında</span> yer almaktadır. Bornoz, yerli havlu ve yerli nevresim sorularında 7 koşunun 7'sinde mention edilmektedir.</p>
         </article>
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 03</span></div>
-          <h3 class="fc-title">Pozitif sentiment, sıfır negatif</h3>
-          <p class="fc-desc">128 Özdilek mention'ında negatif ifade <span class="num-b">hiç</span> ölçülmemiştir; Inbound Visibility Tool sentiment score ortalaması <span class="num-b">65/100</span>'dür ve en yüksek skor <span class="num-b">AI Overview'dadır (75)</span>. Kural bazlı pencere analizi mention'ların %89'unda olumlu ifade tespit etmektedir ("köklü", "güvenilir", "yüksek emicilik"). Tema kırılımında fiyat (13/128) ve mağaza ağı (8/128), anlatıda en az işlenen başlıklardır.</p>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 03</span>
+          <h3>Pozitif sentiment, sıfır negatif</h3>
+          <p>128 Özdilek mention'ında negatif ifade <span class="num-b">hiç</span> ölçülmemiştir; Inbound Visibility Tool sentiment score ortalaması <span class="num-b">65/100</span>'dür ve en yüksek skor <span class="num-b">AI Overview'dadır (75)</span>. Kural bazlı pencere analizi mention'ların %89'unda olumlu ifade tespit etmektedir ("köklü", "güvenilir", "yüksek emicilik"). Tema kırılımında fiyat (13/128) ve mağaza ağı (8/128), anlatıda en az işlenen başlıklardır.</p>
         </article>
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 04</span></div>
-          <h3 class="fc-title">Fark kaynak tarafında</h3>
-          <p class="fc-desc">Mention farkı 12,2 puan iken (%71,9'a karşı %59,7), <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> farkı yaklaşık 4,6 kattır (%25,0'a karşı %5,4). Marka sorularındaki 1.612 <span class="term" data-tip="Citation: AI cevabında kaynak olarak gösterilen URL.">citation</span>'dan yalnızca 13'ü (%0,8) ozdilekteyim.com'a aittir.</p>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 04</span>
+          <h3>Fark kaynak tarafında</h3>
+          <p>Mention farkı 12,2 puan iken (%71,9'a karşı %59,7), <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> farkı yaklaşık 4,6 kattır (%25,0'a karşı %5,4). Marka sorularındaki 1.612 <span class="term" data-tip="Citation: AI cevabında kaynak olarak gösterilen URL.">citation</span>'dan yalnızca 13'ü (%0,8) ozdilekteyim.com'a aittir.</p>
         </article>
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 05</span></div>
-          <h3 class="fc-title">Market cluster'ında görünürlük ölçülemedi</h3>
-          <p class="fc-desc">7 market sorusunun cevaplarında Özdilek ekosistemi ne mention edilmekte ne de kaynak gösterilmektedir; hibrit modeli birebir tarif eden "hem tekstil hem market" sorusunda dahi tablo değişmemektedir.</p>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 05</span>
+          <h3>Market cluster'ında görünürlük ölçülemedi</h3>
+          <p>7 market sorusunun cevaplarında Özdilek ekosistemi ne mention edilmekte ne de kaynak gösterilmektedir; hibrit modeli birebir tarif eden "hem tekstil hem market" sorusunda dahi tablo değişmemektedir.</p>
         </article>
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 06</span></div>
-          <h3 class="fc-title">Kapanmış platformlar hâlâ önerilmekte</h3>
-          <p class="fc-desc">Pazaryeri cevaplarında <span class="num-b">Morhipo %19,6</span> ve <span class="num-b">GittiGidiyor %7,5</span> görünürlüğe sahiptir; iki platform da yıllar önce kapanmıştır. Model bilgisinin güncelliği, görünürlüğün önemli bir değişkenidir.</p>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 06</span>
+          <h3>Kapanmış platformlar hâlâ önerilmekte</h3>
+          <p>Pazaryeri cevaplarında <span class="num-b">Morhipo %19,6</span> ve <span class="num-b">GittiGidiyor %7,5</span> görünürlüğe sahiptir; iki platform da yıllar önce kapanmıştır. Model bilgisinin güncelliği, görünürlüğün önemli bir değişkenidir.</p>
         </article>
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 07</span></div>
-          <h3 class="fc-title">Model başına değişen görünürlük</h3>
-          <p class="fc-desc">Özdilek'in marka görünürlüğü Gemini'de <span class="num-b">%73,8</span>, ChatGPT'de <span class="num-b">%52,4</span>, AI Overview'da <span class="num-b">%39,3</span>'tür. Gemini cevap başına ortalama 8,5 marka/site sayarken ChatGPT 5,6 saymaktadır.</p>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 07</span>
+          <h3>Model başına değişen görünürlük</h3>
+          <p>Özdilek'in marka görünürlüğü Gemini'de <span class="num-b">%73,8</span>, ChatGPT'de <span class="num-b">%52,4</span>, AI Overview'da <span class="num-b">%39,3</span>'tür. Gemini cevap başına ortalama 8,5 marka/site sayarken ChatGPT 5,6 saymaktadır.</p>
         </article>
-        <article class="fc-card">
-          <div class="fc-top"><span class="fc-num">Bulgu 08</span></div>
-          <h3 class="fc-title">AI Overview'da farklı tablo</h3>
-          <p class="fc-desc">AI Overview 56 sorunun <span class="num-b">11'inde hiç görünmemektedir</span>; göründüğü marka sorularında Özdilek görünürlüğü %52,4'e çıkmaktadır. Dikkat çekici biçimde, Gel-Al sorusunda Özdilekteyim'i öneren <span class="num-b">tek model AI Overview'dur</span> ve marka sorularında ozdilekteyim.com'u 3 kez kaynak göstermiştir.</p>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 08</span>
+          <h3>AI Overview'da farklı tablo</h3>
+          <p>AI Overview 56 sorunun <span class="num-b">11'inde hiç görünmemektedir</span>; göründüğü marka sorularında Özdilek görünürlüğü %52,4'e çıkmaktadır. Dikkat çekici biçimde, Gel-Al sorusunda Özdilekteyim'i öneren <span class="num-b">tek model AI Overview'dur</span> ve marka sorularında ozdilekteyim.com'u 3 kez kaynak göstermiştir.</p>
         </article>
-          </div>
-        </div>
-        <div class="fcar-ctrl">
-          <button class="fcar-btn" id="fcarPrev" aria-label="Önceki bulgular">&#8249;</button>
-          <div class="fcar-dots" id="fcarDots"></div>
-          <button class="fcar-btn" id="fcarNext" aria-label="Sonraki bulgular">&#8250;</button>
-        </div>
       </div>
     </section>
 
@@ -777,7 +767,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <div class="ph"><h3>Görünürlük modele göre nasıl değişiyor?</h3><span class="pk">ilk 5 marka · mention %</span></div>
         <div id="model-lines"></div>
         <div class="legend" id="model-lines-leg"></div>
-        <div class="pnote">Gemini hattı tüm markalarda en üstte seyretmektedir. Özdilek'in çizgisi ise üç model arasındaki en belirgin düşüşü göstermektedir: Gemini'de %73,8 ile Karaca'nın hemen altındayken AI Overview'da %39,3 ile Madame Coco (%60,7) ve English Home'un (%57,1) gerisine inmektedir.</div>
+        <div class="pnote">Gemini tüm markalarda en yüksek görünürlüğü vermektedir. Özdilek ise üç model arasında en belirgin düşüşü göstermektedir: Gemini'de %73,8 ile Karaca'nın hemen altındayken AI Overview'da %39,3 ile Madame Coco (%60,7) ve English Home'un (%57,1) gerisine inmektedir.</div>
       </div>
       <div class="note mint reveal">
         <div class="nt">Gözlem</div>
@@ -1043,27 +1033,26 @@ function heat(elId,rows){
 heat('hm-marka',RD.rank_m);
 heat('hm-pazaryeri',RD.rank_z);
 
-/* ---- model line chart ---- */
+/* ---- model görünürlük: gruplu yatay bar ---- */
 (function(){
   const el=document.getElementById('model-lines');if(!el)return;
-  const brands=[['Karaca','#10332F'],['Özdilek(teyim)','#FF7B52'],['English Home','#7FA89F'],['Madame Coco','#F5A623'],['Taç','#8A8A8A']];
-  const X=[110,320,530],plotTop=18,plotBot=252;
-  const y=v=>plotBot-(v/95)*(plotBot-plotTop);
-  let g='';
-  [0,25,50,75].forEach(v=>{g+=`<line x1="60" x2="600" y1="${y(v)}" y2="${y(v)}" stroke="#F0EDE8"/><text x="52" y="${y(v)+4}" text-anchor="end" font-size="10" fill="#8A8A8A" font-family="Outfit,system-ui">${v}</text>`});
-  ['ChatGPT','Gemini','AI Overview'].forEach((n,i)=>{g+=`<text x="${X[i]}" y="${plotBot+26}" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4A4A4A" font-family="Outfit,system-ui">${n}</text>`});
-  const leg=document.getElementById('model-lines-leg');
-  brands.forEach(([b,c])=>{
+  const brands=['Karaca','Özdilek(teyim)','English Home','Madame Coco','Taç'];
+  const models=[['ChatGPT','cg','#10332F'],['Gemini','gm','#F5A623'],['AI Overview','ao','#FF7B52']];
+  const MAX=90;
+  let out='';
+  brands.forEach(b=>{
     const r=RD.rank_m.find(x=>x.b===b);if(!r)return;
-    const vals=[r.cg,r.gm,r.ao],you=b.startsWith('Özdilek');
-    g+=`<polyline points="${vals.map((v,i)=>X[i]+','+y(v)).join(' ')}" fill="none" stroke="${c}" stroke-width="${you?3.5:2}" stroke-linecap="round"${you?'':' opacity=".7"'}/>`;
-    vals.forEach((v,i)=>{
-      g+=`<circle cx="${X[i]}" cy="${y(v)}" r="${you?5:3.5}" fill="${c}" stroke="#fff" stroke-width="1.5"><title>${b}: ${fmt(v)}%</title></circle>`;
-      if(you)g+=`<text x="${X[i]}" y="${y(v)-11}" text-anchor="middle" font-size="11" font-weight="700" fill="#E85F36" font-family="Bricolage Grotesque,system-ui">${fmt(v)}</text>`;
+    const you=b.startsWith('Özdilek');
+    out+=`<div class="mbrow${you?' you':''}"><div class="mbname">${b}</div>`;
+    models.forEach(([mn,key,c])=>{
+      const v=r[key];
+      out+=`<div class="mbar"><span class="ml">${mn}</span><div class="mtrack"><div class="mfill" style="width:${(v/MAX*100).toFixed(1)}%;background:${c}"></div></div><span class="mv">%${fmt(v)}</span></div>`;
     });
-    const s=document.createElement('span');s.innerHTML=`<i style="background:${c}"></i>${b}`;if(you)s.style.fontWeight='700';leg.appendChild(s);
+    out+=`</div>`;
   });
-  el.innerHTML=`<svg viewBox="0 0 640 292" role="img" aria-label="Model bazında görünürlük çizgi grafiği" style="width:100%;height:auto">${g}</svg>`;
+  el.innerHTML=out;
+  const leg=document.getElementById('model-lines-leg');
+  leg.innerHTML=models.map(([mn,,c])=>`<span><i style="background:${c}"></i>${mn}</span>`).join('');
 })();
 
 /* ---- AIO barları ---- */
@@ -1200,33 +1189,6 @@ document.querySelectorAll('.term').forEach(t=>{
 });
 document.addEventListener('click',()=>document.querySelectorAll('.term.open').forEach(o=>o.classList.remove('open')));
 
-/* öne çıkan bulgular karoseli */
-(function(){
-  const vp=document.getElementById('fcarVp');
-  if(!vp)return;
-  const prev=document.getElementById('fcarPrev'),next=document.getElementById('fcarNext'),dots=document.getElementById('fcarDots');
-  const pages=()=>Math.max(1,Math.round(vp.scrollWidth/vp.clientWidth));
-  const cur=()=>Math.round(vp.scrollLeft/vp.clientWidth);
-  function update(){
-    const p=cur(),n=pages();
-    [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===p));
-    prev.disabled=p<=0; next.disabled=p>=n-1;
-  }
-  function build(){
-    dots.innerHTML='';
-    for(let i=0;i<pages();i++){
-      const b=document.createElement('button');b.setAttribute('aria-label',(i+1)+'. sayfa');
-      b.addEventListener('click',()=>vp.scrollTo({left:i*vp.clientWidth,behavior:'smooth'}));
-      dots.appendChild(b);
-    }
-    update();
-  }
-  prev.addEventListener('click',()=>vp.scrollBy({left:-vp.clientWidth,behavior:'smooth'}));
-  next.addEventListener('click',()=>vp.scrollBy({left:vp.clientWidth,behavior:'smooth'}));
-  vp.addEventListener('scroll',update,{passive:true});
-  let rt; addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(build,150)});
-  build();
-})();
 /* progress */
 const bar=document.getElementById('bar');
 function onScroll(){const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'}
