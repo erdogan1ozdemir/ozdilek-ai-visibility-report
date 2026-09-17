@@ -68,9 +68,11 @@ b,strong{font-weight:600}
 .hero .ring{position:absolute;right:-150px;top:-150px;width:460px;height:460px;border:50px solid rgba(255,123,82,.13);border-radius:50%;pointer-events:none}
 .hero .glowline{position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,123,82,.55),transparent)}
 .hwrap{max-width:1240px;margin:0 auto;padding:0 22px}
-.hero-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 0;flex-wrap:wrap}
+.hero-top{display:flex;justify-content:flex-start;align-items:center;gap:10px 18px;padding:20px 0;flex-wrap:wrap}
+.hero-top .lt{padding-left:18px;border-left:1px solid rgba(255,255,255,.25)}
+@media(max-width:520px){.hero-top .lt{padding-left:0;border-left:none;flex-basis:100%}}
 .hero-top .lt{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
-.hero-top .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:100%;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75)}
+.hero-top .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap;width:auto;min-width:0;max-width:100%;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75)}
 .hero-top .rt img{height:20px;width:auto;display:block}
 .hero h1{color:#fff;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.1;max-width:780px;margin-top:8px}
 .hero h1 .hl{color:var(--coral-soft)}
@@ -338,6 +340,25 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.rt .bf{transition:none}}
+/* Madde listeleri */
+ul.bl{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px;max-width:820px}
+ul.bl li{position:relative;padding-left:17px;line-height:1.55;color:var(--ink-2)}
+ul.bl li::before{content:"";position:absolute;left:2px;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--coral)}
+ul.bl b,ul.bl .num-b{color:var(--ink)}
+.lede-ul{font-size:15px}
+.split .txt ul.bl{max-width:none;font-size:14.5px}
+.fnote ul.bl{gap:4px;margin-top:2px;font-size:12.5px}
+.fnote ul.bl li{padding-left:14px}
+.fnote ul.bl li::before{width:5px;height:5px;left:1px}
+.pnote ul.bl{gap:4px;margin-top:6px;max-width:none}
+.pnote ul.bl li{padding-left:14px}
+.pnote ul.bl li::before{width:5px;height:5px;left:1px;top:.62em}
+.note ul.bl{max-width:none;font-size:14px}
+.note ul.bl li{color:var(--ink)}
+.hero ul.bl{max-width:760px;margin-top:12px;font-size:clamp(14.5px,1.4vw,16.5px);font-weight:300;gap:7px}
+.hero ul.bl li{color:rgba(255,255,255,.92)}
+.hero ul.bl li::before{background:var(--coral-soft);top:.65em}
+.hero ul.bl b{font-weight:600;color:#fff}
 /* Temmuz-Eylül karşılaştırma */
 .cmp td.d{white-space:nowrap}
 .cmp td.m{font-weight:600;color:var(--ink)}
@@ -360,11 +381,12 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
   <div class="ring"></div><div class="glowline"></div>
   <div class="hwrap">
     <div class="hero-top">
-      <span class="lt">Özdilekteyim · AI Görünürlük Raporu</span>
       <span class="rt">Eylül 2026 <img src="assets/brand/inbound-wordmark-white.png" alt="Inbound"></span>
+      <span class="lt">Özdilekteyim · AI Görünürlük Raporu</span>
     </div>
     <h1>Özdilekteyim <span class="hl">AI görünürlük</span> raporu</h1>
-    <p class="lead">ChatGPT, Gemini ve Google AI Overview'a <span class="q-open" data-f="all">56 marka-nötr soru</span> yöneltilmiş, 21 Ağustos - 12 Eylül 2026 arasındaki dört haftalık koşuda dönen <b>592 cevabın tam metni</b> analiz edilmiştir: hangi markalar <span class="term" data-tip="Mention: markanın AI cevabı metninde yer alması.">mention</span> ediliyor, hangi sırada öneriliyor ve hangi kaynaklar okunuyor. Temmuz ölçümüne göre marka sorularındaki görünürlük belirgin biçimde artmış, Karaca ile aradaki fark neredeyse kapanmıştır; satın alma sorularında görünürlük yükselmekle birlikte sınırlı kalmaktadır.</p>
+    <p class="lead">ChatGPT, Gemini ve Google AI Overview'a <span class="q-open" data-f="all">56 marka-nötr soru</span> yöneltilmiş; 21 Ağustos - 12 Eylül 2026 arasındaki dört haftalık koşuda dönen <b>592 cevabın tam metni</b> analiz edilmiştir.</p>
+    <ul class="bl"><li><b>Kapsam:</b> hangi markaların <span class="term" data-tip="Mention: markanın AI cevabı metninde yer alması.">mention</span> edildiği, hangi sırada önerildiği ve hangi kaynakların okunduğu</li><li><b>Marka soruları:</b> görünürlük Temmuz ölçümüne göre belirgin biçimde artmıştır (%59,3 → %74,8)</li><li><b>Karaca ile fark:</b> neredeyse kapanmıştır (11,9 puandan 0,7 puana)</li><li><b>Satın alma soruları:</b> görünürlük yükselmiş (%4,9 → %8,8), ancak sınırlı kalmaktadır</li></ul>
     <div class="kpis">
       <div class="kpi good">
         <div class="v" data-count="74.8">0<small>%</small></div>
@@ -429,42 +451,42 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <article class="fnote">
           <span class="fc-num">Bulgu 01</span>
           <h3>Marka sorularında belirgin artış</h3>
-          <p>Marka sorularında <span class="term" data-tip="Visibility (mention rate): markanın, cevapların yüzde kaçında yer aldığı.">visibility</span> Temmuz'daki <span class="num-b">%59,3</span>'ten <span class="num-b">%74,8</span>'e yükselmiştir (53 marka içinde 2. sıra). Satın alma sorularında %4,9'dan <span class="num-b">%8,8</span>'e çıkmış, sıralama 31.'likten 23.'lüğe yükselmiştir (73 site içinde).</p>
+          <ul class="bl"><li>Marka sorularında <span class="term" data-tip="Visibility (mention rate): markanın, cevapların yüzde kaçında yer aldığı.">visibility</span>: <span class="num-b">%59,3 → %74,8</span> (53 marka içinde 2. sıra)</li><li>Satın alma sorularında: <span class="num-b">%4,9 → %8,8</span></li><li>Pazaryeri sıralaması: 31.'likten <b>23.</b>'lüğe (73 site içinde)</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 02</span>
           <h3>Karaca ile fark neredeyse kapandı</h3>
-          <p>Temmuz'da 11,9 puan olan fark <span class="num-b">0,7 puana</span> inmiştir (%75,5'e karşı %74,8). Gemini'de iki marka eşittir (%82,1); AI Overview'da Özdilek öndedir (%80,0'a karşı %77,0), ChatGPT'de Karaca öndedir (%63,5'e karşı %56,8).</p>
+          <ul class="bl"><li>Genel fark: 11,9 puandan <span class="num-b">0,7 puana</span> (%75,5'e karşı %74,8)</li><li>Gemini: iki marka eşit (%82,1)</li><li>AI Overview: Özdilek önde (%80,0'a karşı %77,0)</li><li>ChatGPT: Karaca önde (%63,5'e karşı %56,8)</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 03</span>
           <h3>AI Overview'da ilk sıra</h3>
-          <p>AI Overview'daki marka görünürlüğü %48,8'den <span class="num-b">%80,0</span>'a çıkmış; Özdilek bu yüzeyde 53 marka içinde ilk sıraya yükselmiştir. AI Overview 201 koşunun yalnızca 3'ünde boş dönmüştür (Temmuz: 168 koşuda 23).</p>
+          <ul class="bl"><li>Marka görünürlüğü: <span class="num-b">%48,8 → %80,0</span></li><li>Özdilek bu yüzeyde 53 marka içinde ilk sıradadır</li><li>Boş dönen koşu: 201 koşuda 3 (Temmuz: 168 koşuda 23)</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 04</span>
           <h3>Mention edildiğinde üst sıralarda</h3>
-          <p>ChatGPT ve Gemini'de Özdilek'in mention edildiği cevapların <span class="num-b">%53</span>'ünde ilk iki sırada yer aldığı ölçülmüştür (Temmuz %41). 28 marka sorusunun 27'sinde en az bir cevapta geçmekte; bornoz, havlu, yerli havlu, nevresim ve yorgan sorularında tüm koşularda mention edilmektedir.</p>
+          <ul class="bl"><li>ChatGPT ve Gemini'de mention edilen cevapların <span class="num-b">%53</span>'ünde ilk iki sırada (Temmuz %41)</li><li>28 marka sorusunun 27'sinde en az bir cevapta geçmektedir</li><li>Tüm koşularda mention edilen sorular: bornoz, havlu, yerli havlu, nevresim, yorgan</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 05</span>
           <h3>Kaynak tarafında artış, fark sürüyor</h3>
-          <p>ozdilekteyim.com'un marka sorularındaki <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> değeri %5,8'den <span class="num-b">%8,0</span>'a çıkmıştır; Karaca'da bu oran %38,1'dir. Marka sorularındaki 2.732 <span class="term" data-tip="Citation: AI cevabında kaynak olarak gösterilen URL.">citation</span>'ın 27'si (%1,0) ozdilekteyim.com'a aittir.</p>
+          <ul class="bl"><li>ozdilekteyim.com <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span>: <span class="num-b">%5,8 → %8,0</span></li><li>Karaca'da aynı oran: %38,1</li><li>Marka sorularındaki 2.732 citation'ın 27'si (%1,0) ozdilekteyim.com'a aittir</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 06</span>
           <h3>Satın alma sorularında kazanımlar</h3>
-          <p>"Havlu ve bornoz setini online nereden almalıyım?" sorusunda Özdilek 12 cevabın <span class="num-b">10</span>'unda, nevresim sitesi sorusunda 11 cevabın 9'unda mention edilmektedir. Hibrit platform sorusunda Özdilekteyim 11 cevabın 3'ünde önerilmekte; buna karşılık 7 market sorusunun 5'inde mention bulunmamaktadır.</p>
+          <ul class="bl"><li>"Havlu ve bornoz setini online nereden almalıyım?": 12 cevabın <span class="num-b">10</span>'unda mention</li><li>Nevresim sitesi sorusu: 11 cevabın 9'unda mention</li><li>Hibrit platform sorusu: 11 cevabın 3'ünde öneri</li><li>7 market sorusunun 5'inde mention bulunmamaktadır</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 07</span>
           <h3>Sentiment pozitif, tek negatif sınıflama</h3>
-          <p>241 Özdilek mention'ının <span class="num-b">128'i pozitif, 112'si nötr, 1'i negatif</span> sınıflanmıştır; sentiment score 64'ten <span class="num-b">66</span>'ya yükselmiştir. Negatif sınıflanan tek cevabın bağlamı "yılların eskitemediği iki büyük yerli dev" ifadesini içermektedir.</p>
+          <ul class="bl"><li>241 mention: <span class="num-b">128 pozitif · 112 nötr · 1 negatif</span></li><li>Sentiment score: 64 → <span class="num-b">66</span></li><li>Negatif sınıflanan tek cevabın bağlamı "yılların eskitemediği iki büyük yerli dev" ifadesini içermektedir</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 08</span>
           <h3>Kapanmış platformlar hâlâ önerilmekte</h3>
-          <p>Pazaryeri cevaplarında <span class="num-b">Morhipo %13,1</span> ve <span class="num-b">GittiGidiyor %7,5</span> görünürlüğe sahiptir; iki platform da yıllar önce kapanmıştır. Bu platformlar ChatGPT ve Gemini cevaplarında yer alırken AI Overview cevaplarında görülmemektedir.</p>
+          <ul class="bl"><li>Pazaryeri cevaplarında <span class="num-b">Morhipo %13,1</span> ve <span class="num-b">GittiGidiyor %7,5</span> görünürlüğe sahiptir</li><li>İki platform da yıllar önce kapanmıştır</li><li>ChatGPT ve Gemini cevaplarında yer alırken AI Overview cevaplarında görülmemektedir</li></ul>
         </article>
       </div>
     </section>
@@ -495,13 +517,13 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
             <tr><td>Sentiment score</td><td class="num c">64</td><td class="num c">66</td><td class="c d"><span class="pos">+2</span></td></tr>
           </tbody>
         </table></div>
-        <div class="pnote">Avg. position genel ortalamasındaki hafif yükseliş model ağırlığıyla ilişkilendirilebilir: ChatGPT koşuları eksik olduğundan sıra değeri bulunan mention'ların payı Gemini'ye kaymıştır (ChatGPT 42, Gemini 91; Temmuz 72 ve 102). Model bazında ChatGPT'de Özdilek'in ortalama sırası 3,4'ten 2,5'e iyileşmiş, cevap başına ortalama 8,4 marka listeleyen Gemini'de 3,6'dan 4,2'ye yükselmiştir.</div>
+        <div class="pnote">Avg. position genel ortalamasındaki hafif yükseliş model ağırlığıyla ilişkilendirilebilir:<ul class="bl"><li>ChatGPT koşuları eksik olduğundan sıra değeri bulunan mention'ların payı Gemini'ye kaymıştır (ChatGPT 42, Gemini 91; Temmuz 72 ve 102)</li><li>ChatGPT'de Özdilek'in ortalama sırası <b>3,4 → 2,5</b> ile iyileşmiştir</li><li>Cevap başına ortalama 8,4 marka listeleyen Gemini'de ortalama sıra 3,6 → 4,2 olmuştur</li></ul></div>
       </div>
       <div class="panel reveal" style="margin-top:22px">
         <div class="ph"><h3>Haftalık marka görünürlüğü · model bazında</h3><span class="pk">MARKA PERSPEKTİFİ · MENTION % · 2 TEMMUZ - 12 EYLÜL 2026</span></div>
         <div class="trendwrap" id="trend-chart"></div>
         <div class="legend"><span><i style="background:#10332F"></i> ChatGPT</span><span><i style="background:#F5A623"></i> Gemini</span><span><i style="background:#FF7B52"></i> AI Overview</span></div>
-        <div class="pnote">AI Overview'daki görünürlük Temmuz başından itibaren kademeli olarak yükselmiş ve 8 Ağustos'tan bu yana %69-89 bandında seyretmektedir. Gemini %71-89, ChatGPT %50-61 bandında dalgalanmaktadır. ChatGPT'nin 11 Temmuz, 8 Ağustos ve 22 Ağustos haftalarında 10'dan az cevap bulunduğu için bu noktalar grafikte gösterilmemektedir; değerler Inbound Visibility Tool'un mention alanından alınmıştır.</div>
+        <div class="pnote"><ul class="bl"><li><b>AI Overview:</b> Temmuz başından itibaren kademeli olarak yükselmiş, 8 Ağustos'tan bu yana %69-89 bandında seyretmektedir</li><li><b>Gemini:</b> %71-89 bandında</li><li><b>ChatGPT:</b> %50-61 bandında; 11 Temmuz, 8 Ağustos ve 22 Ağustos haftalarında 10'dan az cevap bulunduğu için bu noktalar gösterilmemektedir</li><li>Değerler Inbound Visibility Tool'un mention alanından alınmıştır</li></ul></div>
       </div>
     </section>
 
@@ -510,7 +532,8 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="crumb"><span class="s">03</span><span>|</span><span>Metodoloji</span></div>
       <div class="accent-line"></div>
       <h2>Nasıl ölçüldü</h2>
-      <p class="lede">Ölçüm <b>Inbound Visibility Tool</b> ile yapılmıştır. Soruların hiçbirinde marka adı geçmemektedir; soru seti haftalık olarak ChatGPT, Gemini ve Google AI Overview'da çalıştırılmakta, bu raporda 21 Ağustos - 12 Eylül 2026 arasındaki dört haftalık koşuda dönen 592 cevap kullanılmıştır. Cevapların tam metni üzerinde mention, sıra ve sentiment analizi yapılmıştır. Sorular iki perspektifte tasarlanmıştır: <b>marka perspektifi</b> ("hangisi iyi?") & <b>pazaryeri perspektifi</b> ("nereden alınır?").</p>
+      <p class="lede">Ölçüm <b>Inbound Visibility Tool</b> ile yapılmıştır:</p>
+      <ul class="bl lede-ul"><li>Soruların hiçbirinde marka adı geçmemektedir</li><li>Soru seti haftalık olarak ChatGPT, Gemini ve Google AI Overview'da çalıştırılmaktadır; bu raporda 21 Ağustos - 12 Eylül 2026 arasındaki dört haftalık koşuda dönen 592 cevap kullanılmıştır</li><li>Cevapların tam metni üzerinde mention, sıra ve sentiment analizi yapılmıştır</li><li><b>Marka perspektifi</b> ("hangisi iyi?") ve <b>pazaryeri perspektifi</b> ("nereden alınır?") olmak üzere iki soru grubu bulunmaktadır</li></ul>
       <div class="tiles">
         <div class="tile click q-open2 reveal" data-f="all"><div class="v">56</div><div class="k">marka-nötr prompt<br><u>soruları görüntüle</u></div></div>
         <div class="tile reveal"><div class="v">592</div><div class="k">cevap metni<br>286 marka + 306 pazaryeri</div></div>
@@ -548,11 +571,11 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="panel reveal">
         <div class="ph"><h3>53 markanın tamamı</h3><span class="pk q-open" data-f="m" style="cursor:pointer">28 SORU · CEVAP METNİ ANALİZİ</span></div>
         <div class="scrolly tall tscroll"><table class="rt" id="rank-m"></table></div>
-        <div class="pnote">Kolon tanımları için <a href="#metrikler">metrik sözlüğüne</a> bakılabilir. <b>POS</b> ve <b>1.</b> kolonları cevap metnindeki marka sırasından, üç model birlikte hesaplanmıştır; <b>1.</b> kolonu markanın listenin ilk sırasında yer alma sayısıdır. En az 2 cevapta geçen markalar listelenmiştir.</div>
+        <div class="pnote">Kolon tanımları için <a href="#metrikler">metrik sözlüğüne</a> bakılabilir.<ul class="bl"><li><b>POS</b> ve <b>1.</b> kolonları cevap metnindeki marka sırasından, üç model birlikte hesaplanmıştır</li><li><b>1.</b> kolonu markanın listenin ilk sırasında yer alma sayısıdır</li><li>En az 2 cevapta geçen markalar listelenmiştir</li></ul></div>
       </div>
       <div class="note reveal">
         <div class="nt">Not</div>
-        <p>Cevap metni analizinde Özdilek listenin ilk sırasında <b>70</b> kez yer almaktadır; bu sayı Karaca'da 57'dir. GPT / GEM / AIO kolonları modelin kendi cevap sayısına oranlanmıştır (marka sorularında ChatGPT 74, Gemini 112, AI Overview 100 cevap).</p>
+        <ul class="bl"><li>Cevap metni analizinde Özdilek listenin ilk sırasında <b>70</b> kez yer almaktadır; bu sayı Karaca'da 57'dir</li><li>GPT / GEM / AIO kolonları modelin kendi cevap sayısına oranlanmıştır (marka sorularında ChatGPT 74, Gemini 112, AI Overview 100 cevap)</li></ul>
       </div>
     </section>
 
@@ -568,7 +591,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       </div>
       <div class="note reveal">
         <div class="nt">Dikkat çeken nokta</div>
-        <p>Cevaplarda <b>Morhipo (%13,1)</b> ve <b>GittiGidiyor (%7,5)</b> hâlâ önerilmektedir; iki platform da yıllar önce kapanmıştır. Bu platformlar ChatGPT ve Gemini cevaplarında yer alırken AI Overview cevaplarında görülmemektedir. Modellerin platform bilgisi her zaman güncel değildir; görünürlüğün güncel ve taranabilir web varlığıyla birlikte değerlendirilmesi yerinde olur.</p>
+        <ul class="bl"><li>Cevaplarda <b>Morhipo (%13,1)</b> ve <b>GittiGidiyor (%7,5)</b> hâlâ önerilmektedir; iki platform da yıllar önce kapanmıştır</li><li>Bu platformlar ChatGPT ve Gemini cevaplarında yer alırken AI Overview cevaplarında görülmemektedir</li><li>Modellerin platform bilgisi her zaman güncel değildir; görünürlüğün güncel ve taranabilir web varlığıyla birlikte değerlendirilmesi yerinde olur</li></ul>
       </div>
     </section>
 
@@ -582,12 +605,12 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
           <div class="ph"><h3>Mention & source visibility</h3><span class="pk">MARKA PERSPEKTİFİ · %</span></div>
           <div id="dumbbell"></div>
           <div class="legend"><span><i style="background:var(--teal)"></i> Mention (cevap analizi)</span><span><i style="background:var(--coral)"></i> Source visibility (citation)</span></div>
-          <div class="pnote">Karaca dengeli bir profil çizmektedir: %75,5 mention'a karşılık %38,1 source visibility (karaca.com 90 + karaca-home.com 60 = <b>150 citation</b>). Özdilekteyim'de açıklık sürmektedir: %74,8 mention'a karşılık %8,0 source visibility.</div>
+          <div class="pnote"><ul class="bl"><li><b>Karaca:</b> %75,5 mention, %38,1 source visibility (karaca.com 90 + karaca-home.com 60 = 150 citation)</li><li><b>Özdilekteyim:</b> %74,8 mention, %8,0 source visibility</li></ul></div>
         </div>
         <div class="txt reveal">
           <p><span class="term" data-tip="Mention: markanın AI cevabı metninde yer alması.">Mention</span> ve <span class="term" data-tip="Source visibility: modelin cevabı yazarken o markaya ait sayfaları kaynak olarak okuma oranı.">source visibility</span> iki ayrı metriktir. İlki cevabın metninde yer almayı, ikincisi cevabın kaynakçasında yer almayı gösterir.</p>
-          <p>Özdilek neredeyse Karaca kadar sık mention edilmekte, ancak çok daha az kaynak gösterilmektedir: marka sorularındaki 2.732 citation'dan <b>27'si (%1,0)</b> ozdilekteyim.com'a aittir (Temmuz: 23, %0,8). Modeller Özdilek'i olumlu aktarırken dayanak olarak ağırlıkla üçüncü taraf listeleri ve rakip pazaryerlerini okumaktadır.</p>
-          <p>Hepsiburada'da ise örüntü tersine dönmektedir: marka sorularında %8,4 mention edildiği hâlde %19,9 oranında kaynak olarak okunmaktadır. Kaynak olarak okunmak, mention'ı beraberinde getirmemekte; iki metriğin birlikte değerlendirilmesi yerinde olur.</p>
+          <ul class="bl"><li><b>Özdilek:</b> neredeyse Karaca kadar sık mention edilmekte, ancak çok daha az kaynak gösterilmektedir. Marka sorularındaki 2.732 citation'dan <b>27'si (%1,0)</b> ozdilekteyim.com'a aittir (Temmuz: 23, %0,8)</li><li><b>Dayanak kaynaklar:</b> modeller Özdilek'i olumlu aktarırken ağırlıkla üçüncü taraf listeleri ve rakip pazaryerlerini okumaktadır</li><li><b>Hepsiburada:</b> örüntü tersine dönmektedir; marka sorularında %8,4 mention edildiği hâlde %19,9 oranında kaynak olarak okunmaktadır</li></ul>
+          <p>Kaynak olarak okunmak mention'ı beraberinde getirmemektedir; iki metriğin birlikte değerlendirilmesi yerinde olur.</p>
         </div>
       </div>
     </section>
@@ -597,7 +620,8 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="crumb"><span class="s">08</span><span>|</span><span>Sentiment analizi</span></div>
       <div class="accent-line"></div>
       <h2>Özdilek mention'larında sentiment</h2>
-      <p class="lede">Özdilek'in geçtiği <b>241 cevap</b> için Inbound Visibility Tool sentiment score ortalaması <b>66/100</b>'dür (ChatGPT 58, Gemini 66, AI Overview 69; Temmuz ortalaması 64). Skorun tema ve soru kırılımı aşağıdadır: anlatının nerede güçlü, nerede yüzeysel kaldığı bu kırılımdan okunmaktadır.</p>
+      <p class="lede">Özdilek'in geçtiği <b>241 cevap</b> için Inbound Visibility Tool sentiment score ortalaması <b>66/100</b>'dür (Temmuz: 64). Skorun tema ve soru kırılımı aşağıdadır.</p>
+      <ul class="bl lede-ul"><li><b>ChatGPT:</b> 58</li><li><b>Gemini:</b> 66</li><li><b>AI Overview:</b> 69</li></ul>
       <div class="two">
         <div class="panel reveal">
           <div class="ph"><h3>Sentiment dağılımı</h3><span class="pk">241 MENTION</span></div>
@@ -609,7 +633,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
               <p style="font-size:13px;margin-top:10px">Negatif sınıflanan tek cevap, AI Overview'daki yerli çeyiz sorusuna aittir; bağlam "Taç & Özdilek: ... yılların eskitemediği iki büyük yerli devdir" ifadesini içermektedir. Nötr sınıf, değer yargısı içermeyen ürün listelemeleridir.</p>
             </div>
           </div>
-          <div class="pnote">Donut, Inbound Visibility Tool sınıflandırmasıdır (241 mention): 128 pozitif / 112 nötr / 1 negatif. Pozitif payı Temmuz'daki %45'ten <b>%53</b>'e yükselmiştir; skoru en yüksek model <b>AI Overview (69/100)</b>'dur.</div>
+          <div class="pnote"><ul class="bl"><li>Donut, Inbound Visibility Tool sınıflandırmasıdır (241 mention)</li><li>Pozitif payı Temmuz'daki %45'ten <b>%53</b>'e yükselmiştir</li><li>Skoru en yüksek model <b>AI Overview (69/100)</b>'dur</li></ul></div>
         </div>
         <div class="panel reveal">
           <div class="ph"><h3>Cevaplarda öne çıkan temalar</h3><span class="pk">MENTION BAĞLAMLARINDAN</span></div>
@@ -636,7 +660,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="panel reveal" style="margin-top:22px">
         <div class="ph"><h3>Tema profili: Özdilek anlatısı neyden örülü?</h3><span class="pk">241 MENTION BAĞLAMI</span></div>
         <div class="theme-cols" id="chart-themes"></div>
-        <div class="pnote">Anlatı büyük ölçüde işlevsel övgü üzerine kuruludur: kalite, havlu & bornoz uzmanlığı, yerli marka kimliği ve pamuk & bambu. "Yerli & Türk markası" vurgusu Temmuz'daki 54 bağlamdan <b>84</b>'e çıkmıştır. Buna karşılık <b>mağaza & AVM ağı yalnızca 4</b>, <b>lisanslı çocuk ürünleri 6</b> bağlamda geçmekte; fiyat & uygunluk (32) da görece sınırlı kalmaktadır. Fiziksel mağaza ağı ve fiyat konumu, AI anlatısında en az işlenen başlıklardır.</div>
+        <div class="pnote">Anlatı büyük ölçüde işlevsel övgü üzerine kuruludur: kalite, havlu & bornoz uzmanlığı, yerli marka kimliği ve pamuk & bambu.<ul class="bl"><li>"Yerli & Türk markası" vurgusu Temmuz'daki 54 bağlamdan <b>84</b>'e çıkmıştır</li><li><b>Mağaza & AVM ağı yalnızca 4</b>, <b>lisanslı çocuk ürünleri 6</b> bağlamda geçmektedir</li><li>Fiyat & uygunluk (32) görece sınırlı kalmaktadır</li><li>Fiziksel mağaza ağı ve fiyat konumu, AI anlatısında en az işlenen başlıklardır</li></ul></div>
       </div>
       <div class="two">
         <div class="panel reveal">
@@ -656,7 +680,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
               <tr><td>Çocuk bornozu</td><td class="num c">10</td><td class="num c">53</td></tr>
             </tbody>
           </table></div>
-          <div class="pnote">Tabloda en yüksek altı ve en düşük dört konu yer almaktadır (en az 6 mention). Skorun en yüksek olduğu konular banyo paspası ve yerli-yabancı marka karşılaştırmasıdır (80). En düşük skorlar çocuk bornozu (53) ve peştemal & plaj havlusu (54) sorularında görülmektedir.</div>
+          <div class="pnote">Tabloda en yüksek altı ve en düşük dört konu yer almaktadır (en az 6 mention).<ul class="bl"><li>En yüksek skor: banyo paspası ve yerli-yabancı marka karşılaştırması (80)</li><li>En düşük skor: çocuk bornozu (53) ve peştemal & plaj havlusu (54)</li></ul></div>
         </div>
         <div class="panel reveal">
           <div class="ph"><h3>Model bazında sentiment score</h3><span class="pk">0-100 · INBOUND VISIBILITY TOOL</span></div>
@@ -674,7 +698,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
             <text x="290" y="222" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4A4A4A" font-family="Outfit,system-ui">Gemini</text>
             <text x="460" y="222" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4A4A4A" font-family="Outfit,system-ui">AI Overview</text>
           </svg>
-          <div class="pnote">Skor modele göre yükselmektedir: ChatGPT 58, Gemini 66, AI Overview 69 (Temmuz: 55, 66, 71). Pazaryeri sorularında Özdilek'in resmi sitesiyle birlikte önerildiği cevaplar dikkat çekmektedir: "Havlu ve bornoz setini online nereden almalıyım?" sorusunda AI Overview, ozdilekteyim.com/magaza/havlu-bornoz sayfasına doğrudan bağlantı vermektedir.</div>
+          <div class="pnote"><ul class="bl"><li>Skor modele göre yükselmektedir: ChatGPT 58, Gemini 66, AI Overview 69 (Temmuz: 55, 66, 71)</li><li>"Havlu ve bornoz setini online nereden almalıyım?" sorusunda AI Overview, ozdilekteyim.com/magaza/havlu-bornoz sayfasına doğrudan bağlantı vermektedir</li></ul></div>
         </div>
       </div>
     </section>
@@ -687,7 +711,9 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="split">
         <div class="txt reveal">
           <p>Marka sorularında dağıtılan <b>2.732 citation</b>'ın (21 Ağustos - 12 Eylül 2026) kaynak tipi dağılımı yanda görülmektedir. En büyük pay üçüncü taraf kurumsal sitelere (listicle, marka ve rehber siteleri) aittir.</p>
-          <p>ozdilekteyim.com'un payı <span class="num-b">27 citation (%1,0)</span> düzeyindedir (Temmuz: 23, %0,8). En çok citation alan kaynaklar sırasıyla trendyol.com (154), karaca.com (90), madamecoco.com (86), chakra.com.tr (83) ve eniyilerden.com (83) olarak ölçülmüştür. AI Overview'ın kaynak profili farklıdır: instagram.com'a giden 29 citation'ın tamamı AI Overview cevaplarındandır.</p>
+          <p>ozdilekteyim.com'un payı <span class="num-b">27 citation (%1,0)</span> düzeyindedir (Temmuz: 23, %0,8). En çok citation alan kaynaklar:</p>
+          <ul class="bl"><li><b>trendyol.com</b> · 154</li><li><b>karaca.com</b> · 90</li><li><b>madamecoco.com</b> · 86</li><li><b>chakra.com.tr</b> · 83</li><li><b>eniyilerden.com</b> · 83</li></ul>
+          <p>AI Overview'ın kaynak profili farklıdır: instagram.com'a giden 29 citation'ın tamamı AI Overview cevaplarındandır.</p>
         </div>
         <div class="panel reveal">
           <div class="ph"><h3>2.732 citation'ın kaynak tipi dağılımı</h3><span class="pk">MARKA PERSPEKTİFİ · 21 AĞU - 12 EYL</span></div>
@@ -735,12 +761,12 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="split">
         <div class="txt reveal">
           <p>Özdilek ekosisteminin marka perspektifindeki <b>55 citation</b>'ı iki domain arasında bölünmüştür: kurumsal tekstil sitesi ozdilekevtekstili.com.tr (28) ve e-ticaret sitesi ozdilekteyim.com (27). Temmuz'da 11 citation olan fark 1'e inmiştir.</p>
-          <p>Kaynak gösterilen ozdilekteyim.com adreslerinin tamamı <b>/magaza/ kategori ve ürün sayfalarıdır</b>: çocuk bornozu, battaniye, yatak örtüsü, aile seti, plaj havlusu, çeyiz setleri ve pike takımı sayfaları öne çıkmaktadır. ozdilekevtekstili.com.tr'ye giden 28 citation'ın 25'i ana sayfaya yöneliktir ve tamamı Gemini cevaplarındandır. Temmuz'da marka sorularında kaynak gösterilen kurumsal katalog PDF'leri bu ölçümde marka sorularında yer almamaktadır.</p>
+          <ul class="bl"><li>Kaynak gösterilen ozdilekteyim.com adreslerinin tamamı <b>/magaza/ kategori ve ürün sayfalarıdır</b>: çocuk bornozu, battaniye, yatak örtüsü, aile seti, plaj havlusu, çeyiz setleri ve pike takımı</li><li>ozdilekevtekstili.com.tr'ye giden 28 citation'ın 25'i ana sayfaya yöneliktir ve tamamı Gemini cevaplarındandır</li><li>Temmuz'da marka sorularında kaynak gösterilen kurumsal katalog PDF'leri bu ölçümde marka sorularında yer almamaktadır</li></ul>
         </div>
         <div class="panel reveal">
           <div class="ph"><h3>Ekosistemin 55 citation'ı</h3><span class="pk">MARKA PERSPEKTİFİ · 21 AĞU - 12 EYL</span></div>
           <div id="chart-eco"></div>
-          <div class="pnote">ozdilekteyim.com'un marka sorularındaki 27 citation'ının 13'ü AI Overview, 11'i Gemini, 3'ü ChatGPT cevaplarındandır. Pazaryeri perspektifinde ozdilekteyim.com 27 citation ile en çok kaynak gösterilen 13. sitedir (Temmuz: 10 citation); /magaza/havlu-bornoz (9) ve /magaza/nevresim-nevresim-takimi (6) sayfaları öne çıkmaktadır.</div>
+          <div class="pnote"><ul class="bl"><li>Marka sorularındaki 27 citation: 13 AI Overview · 11 Gemini · 3 ChatGPT</li><li>Pazaryeri perspektifinde ozdilekteyim.com 27 citation ile en çok kaynak gösterilen 13. sitedir (Temmuz: 10 citation)</li><li>Öne çıkan sayfalar: /magaza/havlu-bornoz (9) ve /magaza/nevresim-nevresim-takimi (6)</li></ul></div>
         </div>
       </div>
     </section>
@@ -767,7 +793,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
       <div class="panel reveal">
         <div class="ph"><h3>Market cluster'ı: 7 soru & kaynakları</h3><span class="pk">PAZARYERİ PERSPEKTİFİ · 21 AĞU - 12 EYL</span></div>
         <div class="tscroll" id="market-tbl"></div>
-        <div class="pnote">Son satırdaki soru Özdilekteyim'in hibrit modelini birebir tarif etmektedir; AI Overview bu soruda Özdilekteyim'i "Ev tekstili kökenli olmakla birlikte bünyesinde hem kendi tekstil ürünlerini barındırır hem de süpermarket/gıda alışverişi yapabileceğiniz market kategorisi sunar" ifadesiyle aktarmaktadır. <b>Gel-Al sorusunda Özdilekteyim'i AI Overview ve Gemini önermektedir</b> (12 cevabın 2'si; Temmuz'da yalnızca AI Overview). Market sorularının önemli kaynak tiplerinden biri uygulama mağazası sayfalarıdır: play.google.com (27) + apps.apple.com (22) toplam <b>49 citation</b>.</div>
+        <div class="pnote"><ul class="bl"><li><b>Hibrit platform sorusu</b> (son satır) Özdilekteyim'in modelini birebir tarif etmektedir; AI Overview Özdilekteyim'i "Ev tekstili kökenli olmakla birlikte bünyesinde hem kendi tekstil ürünlerini barındırır hem de süpermarket/gıda alışverişi yapabileceğiniz market kategorisi sunar" ifadesiyle aktarmaktadır</li><li><b>Gel-Al sorusu:</b> Özdilekteyim'i AI Overview ve Gemini önermektedir (12 cevabın 2'si; Temmuz'da yalnızca AI Overview)</li><li><b>Uygulama mağazası sayfaları:</b> play.google.com (27) + apps.apple.com (22) toplam 49 citation</li></ul></div>
       </div>
     </section>
 
@@ -791,11 +817,11 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <div class="ph"><h3>Görünürlük modele göre nasıl değişiyor?</h3><span class="pk">İLK 5 MARKA · MENTION %</span></div>
         <div id="model-lines"></div>
         <div class="legend" id="model-lines-leg"></div>
-        <div class="pnote">Gemini ilk beş markanın tamamında en yüksek görünürlüğü vermektedir. En büyük model farkı ChatGPT tarafında görülmektedir: Özdilek Gemini'de %82,1 iken ChatGPT'de %56,8'dir (25,3 puan); English Home (25,9 puan) ve Madame Coco'da (22,3 puan) da benzer bir fark bulunmaktadır. Taç ise üç modelde %61-67 bandında dengeli bir profil çizmektedir.</div>
+        <div class="pnote"><ul class="bl"><li>Gemini ilk beş markanın tamamında en yüksek görünürlüğü vermektedir</li><li>En büyük model farkı ChatGPT tarafındadır: Özdilek Gemini'de %82,1, ChatGPT'de %56,8 (25,3 puan)</li><li>English Home (25,9 puan) ve Madame Coco'da (22,3 puan) benzer bir fark bulunmaktadır</li><li>Taç üç modelde %61-67 bandında dengeli bir profil çizmektedir</li></ul></div>
       </div>
       <div class="note mint reveal">
         <div class="nt">Gözlem</div>
-        <p>Marka perspektifinde Karaca ile fark Gemini tarafında kapanmıştır (iki marka da <b>%82,1</b>); ChatGPT tarafında 6,7 puandır (%63,5'e karşı %56,8). Temmuz'da bu farklar sırasıyla 9,3 ve 11,5 puandı.</p>
+        <ul class="bl"><li><b>Gemini:</b> Karaca ile fark kapanmıştır (iki marka da %82,1; Temmuz: 9,3 puan)</li><li><b>ChatGPT:</b> fark 6,7 puandır (%63,5'e karşı %56,8; Temmuz: 11,5 puan)</li></ul>
       </div>
     </section>
 
@@ -813,7 +839,8 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
           <div class="tile"><div class="v">900 mn</div><div class="k">ChatGPT haftalık<br>aktif kullanıcı · Şubat 2026</div></div>
           <div class="tile"><div class="v">1 milyar</div><div class="k">Gemini uygulaması aylık<br>kullanıcı · Ağustos 2026</div></div>
         </div>
-        <p style="font-size:14px;margin-top:16px">Google, küresel arama pazarının yaklaşık <b>%90'ını</b> elinde tutmaktadır; arama-benzeri sorgu hacmi 2024 analizinde ChatGPT'nin <b>~373x</b>, 2025 güncellemesinde ~210x olarak ölçülmüştür. AI Overviews'ı kullanan aylık kişi sayısı (2,5 milyar+, Mayıs 2026), ChatGPT'nin haftalık (900 milyon, Şubat 2026) ve Gemini uygulamasının aylık (1 milyar, Ağustos 2026) kullanıcı sayısının üzerindedir; Google'ın AI Mode yüzeyi de 1 milyar aylık kullanıcıyı geçmiştir. Bir kullanıcının AI üretimi bir cevapla karşılaşma olasılığının en yüksek olduğu yer bir chatbot değil, <b>Google arama sonucu sayfasıdır</b>. Bu nedenle AI Overview görünürlüğü, iki chatbot'un ortalaması içinde eritilmeden ayrıca raporlanmaktadır.</p>
+        <ul class="bl"><li>Google, küresel arama pazarının yaklaşık <b>%90'ını</b> elinde tutmaktadır</li><li>Arama-benzeri sorgu hacmi 2024 analizinde ChatGPT'nin <b>~373x</b>, 2025 güncellemesinde ~210x olarak ölçülmüştür</li><li>AI Overviews'ı kullanan aylık kişi sayısı (2,5 milyar+, Mayıs 2026), ChatGPT'nin haftalık (900 milyon, Şubat 2026) ve Gemini uygulamasının aylık (1 milyar, Ağustos 2026) kullanıcı sayısının üzerindedir</li><li>Google'ın AI Mode yüzeyi de 1 milyar aylık kullanıcıyı geçmiştir</li></ul>
+        <p style="font-size:14px;margin-top:12px;max-width:none">Bir kullanıcının AI üretimi bir cevapla karşılaşma olasılığının en yüksek olduğu yer bir chatbot değil, <b>Google arama sonucu sayfasıdır</b>. Bu nedenle AI Overview görünürlüğü, iki chatbot'un ortalaması içinde eritilmeden ayrıca raporlanmaktadır.</p>
         <div class="pnote">Kaynaklar: <a href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/" target="_blank" rel="noopener">Google I/O 2026: AI Overviews 2,5 milyar+ ve AI Mode 1 milyar+ aylık kullanıcı (19 Mayıs 2026)</a> · <a href="https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/" target="_blank" rel="noopener">Google: Gemini uygulaması 1 milyar aylık kullanıcı (11 Ağustos 2026)</a> · <a href="https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users" target="_blank" rel="noopener">TechCrunch: ChatGPT 900 milyon haftalık kullanıcı (27 Şubat 2026)</a> · <a href="https://sparktoro.com/blog/new-research-google-search-grew-20-in-2024-receives-373x-more-searches-than-chatgpt/" target="_blank" rel="noopener">SparkToro & Datos: Google, ChatGPT'den ~373x daha fazla arama alıyor (2024)</a> · <a href="https://searchengineland.com/google-210x-bigger-chatgpt-search-462604" target="_blank" rel="noopener">Search Engine Land: 2025 güncellemesi (~210x)</a> · <a href="https://gs.statcounter.com/search-engine-market-share" target="_blank" rel="noopener">StatCounter: arama motoru pazar payları</a></div>
       </div>
       <div class="two">
@@ -832,8 +859,8 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <div class="ph"><h3>Tetiklenme & kaynak profili</h3><span class="pk">56 SORU · 21 AĞU - 12 EYL</span></div>
         <div class="two" style="margin-top:6px">
           <div>
-            <p style="font-size:14px"><b>Tetiklenme.</b> AI Overview bu pencerede 201 kez çalıştırılmış, yalnızca 3 koşu boş dönmüştür (Temmuz: 168 koşuda 23). Hiçbir soruda tüm koşuların boş kaldığı görülmemiştir. Görünürlük hesabı tam paydaya göredir; yalnızca dolu cevaplara oranlandığında Özdilek'in marka görünürlüğü <b>%80,8</b> olmaktadır.</p>
-            <p style="font-size:14px"><b>Kaynak profili.</b> AI Overview, ozdilekteyim.com'u marka sorularında <b>13</b>, pazaryeri sorularında <b>14</b> kez kaynak göstermiştir; ozdilekteyim.com'a giden 54 citation'ın 27'si AI Overview cevaplarındandır. instagram.com'a giden 32 citation'ın tamamı da AI Overview'dandır.</p>
+            <p style="font-size:14px;margin-bottom:0"><b>Tetiklenme</b></p><ul class="bl"><li>201 koşunun yalnızca 3'ü boş dönmüştür (Temmuz: 168 koşuda 23)</li><li>Hiçbir soruda tüm koşuların boş kaldığı görülmemiştir</li><li>Görünürlük tam paydaya göre hesaplanır; yalnızca dolu cevaplara oranlandığında Özdilek'in marka görünürlüğü <b>%80,8</b>'dir</li></ul>
+            <p style="font-size:14px;margin:14px 0 0"><b>Kaynak profili</b></p><ul class="bl"><li>ozdilekteyim.com: marka sorularında <b>13</b>, pazaryeri sorularında <b>14</b> citation</li><li>ozdilekteyim.com'a giden 54 citation'ın 27'si AI Overview cevaplarındandır</li><li>instagram.com'a giden 32 citation'ın tamamı AI Overview'dandır</li></ul>
           </div>
           <div class="quote" style="margin:0;padding-left:20px">
             <blockquote style="font-size:15px">"Özdilek: Türkiye'de havlu denince akla gelen ilk markadır. Uzun ömürlü, kalın ve su emiciliği yüksek setler için Özdilekteyim resmi sitesini ziyaret edebilirsiniz."</blockquote>
@@ -852,7 +879,7 @@ footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
         <div class="panel reveal">
           <div class="ph"><h3>Soru tipi cluster'larında visibility</h3><span class="pk">ÖZDİLEK · TÜM SORULAR</span></div>
           <div id="chart-clusters"></div>
-          <div class="pnote">"En iyi X" (best of) sorularında görünürlük <b>%52,3</b>, karşılaştırma (versus) sorularında %36,8, satın alma (nereden alınır) sorularında %9,6'dır (Temmuz: %41,5 · %15,4 · %6,9). "Amazon & Temu yerine yerli site" gibi alternatif sorularında Özdilek görülmemektedir.</div>
+          <div class="pnote"><ul class="bl"><li><b>Best of:</b> %52,3 (Temmuz %41,5)</li><li><b>Versus:</b> %36,8 (Temmuz %15,4)</li><li><b>Nereden alınır:</b> %9,6 (Temmuz %6,9)</li><li><b>Alternatives:</b> "Amazon & Temu yerine yerli site" gibi sorularda Özdilek görülmemektedir</li></ul></div>
         </div>
         <div class="txt reveal">
           <p>Görünürlük soru tipine göre farklılaşmaktadır. Karşılaştırma sorularındaki görünürlük Temmuz'a göre belirgin biçimde artmıştır; buna karşılık kullanıcı "X yerine ne kullanılır?" veya "nereden alınır?" diye sorduğunda Özdilek'in mention edilme olasılığı düşük kalmaktadır.</p>
